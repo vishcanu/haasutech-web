@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import styles from './Navbar.module.css';
-import { Link } from 'astro/components';
+
 
 export default function Navbar() {
   return (
