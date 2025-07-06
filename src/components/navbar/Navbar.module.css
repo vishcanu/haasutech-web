@@ -1,0 +1,20 @@
+.navbar {
+    background-color: #0f172a; /* Dark Navy */
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .links a {
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  

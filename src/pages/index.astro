@@ -1,0 +1,39 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import HeroSection from '../components/hero/HeroSection.jsx';
+import CoursesPreview from '../components/courses/CoursesPreview.jsx';
+import NewsletterForm from '../components/newsletter/NewsletterForm.jsx';
+import Testimonials from '../components/testimonials/Testimonials.jsx';
+---
+<head>
+  <title>Haasutech AI - Learn AI from IITians</title>
+  <meta name="description" content="Master AI, ML, DSA from IITians & industry experts. Build job-ready skills with Haasutech AI." />
+  <meta property="og:title" content="Haasutech AI - Learn AI from IITians" />
+  <meta property="og:description" content="Join courses crafted by top IIT graduates and professionals." />
+  <meta property="og:image" content="/ai-og.png" />
+
+  <!-- 👇 JSON-LD Structured Review -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "author": "Aarav Mehta",
+      "reviewBody": "Haasutech AI gave me real industry-level knowledge in ML.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "itemReviewed": {
+        "@type": "Organization",
+        "name": "Haasutech AI"
+      }
+    }
+  </script>
+</head>
+
+<MainLayout>
+  <HeroSection />
+  <CoursesPreview />
+  <NewsletterForm />
+  <Testimonials />
+</MainLayout>

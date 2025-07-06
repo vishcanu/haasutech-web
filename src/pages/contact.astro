@@ -1,0 +1,36 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout>
+  <head>
+    <title>Contact Us | Haasutech AI</title>
+    <meta name="description" content="Have questions about AI courses, pricing, or career advice? Contact the Haasutech AI team today." />
+    <meta name="keywords" content="Contact Haasutech AI, AI courses support, career advice" />
+    <meta property="og:title" content="Contact Haasutech AI" />
+    <meta property="og:description" content="Reach out to Haasutech AI for course queries, support, or partnership opportunities." />
+    <meta property="og:image" content="/ai-og.png" />
+  </head>
+
+  <section style="padding: 3rem 2rem;">
+    <h1 style="font-size: 2rem; margin-bottom: 1rem;">Get in Touch</h1>
+    <p>Have questions? Fill out the form below or email us at <strong>support@haasutech.ai</strong>.</p>
+
+    <form name="contact" method="POST" data-netlify="true" style="margin-top: 2rem; max-width: 600px;">
+      <input type="hidden" name="form-name" value="contact" />
+      <div style="margin-bottom: 1rem;">
+        <label>Your Name</label><br />
+        <input type="text" name="name" required style="width: 100%; padding: 0.5rem;" />
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label>Your Email</label><br />
+        <input type="email" name="email" required style="width: 100%; padding: 0.5rem;" />
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label>Your Message</label><br />
+        <textarea name="message" required style="width: 100%; padding: 0.5rem;" rows="5"></textarea>
+      </div>
+      <button type="submit" style="padding: 0.5rem 1rem;">Send</button>
+    </form>
+  </section>
+</MainLayout>

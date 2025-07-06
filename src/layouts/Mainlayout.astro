@@ -1,0 +1,32 @@
+---
+import Navbar from '../components/navbar/Navbar.jsx';
+import Footer from '../components/footer/Footer.jsx';
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Learn AI, ML, and DSA from industry experts and IITians at Haasutech AI." />
+    <meta name="keywords" content="AI courses, Machine Learning, DSA, IITians, Upskill, Career switch" />
+    <meta name="author" content="Haasutech AI" />
+    <meta property="og:title" content="Haasutech AI - Learn AI from IITians" />
+    <meta property="og:description" content="Upskill in AI, Data Science, and DSA with Haasutech AI's expert-led courses." />
+    <meta property="og:image" content="/ai-og.png" />
+    <meta property="og:type" content="website" />
+    <title>Haasutech AI - Learn AI from IITians</title>
+
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P255M5Q3R7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P255M5Q3R7');
+  </script>
+  
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+</html>

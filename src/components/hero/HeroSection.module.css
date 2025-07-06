@@ -1,0 +1,29 @@
+.heroSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .heroContent {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .heroImage {
+    flex: 1;
+    max-width: 500px;
+  }
+  
