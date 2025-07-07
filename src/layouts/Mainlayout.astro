@@ -4,6 +4,7 @@ import Footer from '../components/footer/Footer.jsx';
 ---
 <html lang="en">
   <head>
+  <slot name="head" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="Learn AI, ML, and DSA from industry experts and IITians at Haasutech AI." />
@@ -22,7 +23,7 @@ import Footer from '../components/footer/Footer.jsx';
     gtag('js', new Date());
     gtag('config', 'G-P255M5Q3R7');
   </script>
-  
+
   </head>
   <body>
     <Navbar />

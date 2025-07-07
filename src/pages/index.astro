@@ -4,35 +4,38 @@ import HeroSection from '../components/hero/HeroSection.jsx';
 import CoursesPreview from '../components/courses/CoursesPreview.jsx';
 import NewsletterForm from '../components/newsletter/NewsletterForm.jsx';
 import Testimonials from '../components/testimonials/Testimonials.jsx';
+import { Fragment } from 'astro/jsx-runtime';
 ---
-<head>
-  <title>Haasutech AI - Learn AI from IITians</title>
-  <meta name="description" content="Master AI, ML, DSA from IITians & industry experts. Build job-ready skills with Haasutech AI." />
-  <meta property="og:title" content="Haasutech AI - Learn AI from IITians" />
-  <meta property="og:description" content="Join courses crafted by top IIT graduates and professionals." />
-  <meta property="og:image" content="/ai-og.png" />
-  <meta name="google-site-verification" content="6FG4xXrv6XD7Xe-YSBf5HArEdUzaZou3UAzc0Ojud_A" />
-
-  <!-- 👇 JSON-LD Structured Review -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      "author": "Aarav Mehta",
-      "reviewBody": "Haasutech AI gave me real industry-level knowledge in ML.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5"
-      },
-      "itemReviewed": {
-        "@type": "Organization",
-        "name": "Haasutech AI"
-      }
-    }
-  </script>
-</head>
 
 <MainLayout>
+  <Fragment slot="head">
+    <title>Haasutech AI - Learn AI from IITians</title>
+    <meta name="description" content="Master AI, ML, DSA from IITians & industry experts. Build job-ready skills with Haasutech AI." />
+    <meta property="og:title" content="Haasutech AI - Learn AI from IITians" />
+    <meta property="og:description" content="Join courses crafted by top IIT graduates and professionals." />
+    <meta property="og:image" content="/ai-og.png" />
+    <meta name="google-site-verification" content="6FG4xXrv6XD7Xe-YSBf5HArEdUzaZou3UAzc0Ojud_A" />
+
+    <!-- 👇 JSON-LD Structured Review -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "author": "Aarav Mehta",
+        "reviewBody": "Haasutech AI gave me real industry-level knowledge in ML.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "Haasutech AI"
+        }
+      }
+    </script>
+  </Fragment>
+
+  <!-- Page Content -->
   <HeroSection />
   <CoursesPreview />
   <NewsletterForm />
