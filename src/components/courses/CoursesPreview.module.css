@@ -1,42 +1,267 @@
-.courseSection {
-    padding: 3rem 2rem;
-    background-color: #f9f9f9;
-    text-align: center;
+.section {
+  padding: 2rem 1rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  min-height: 300px !important;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #fff;
+}
+
+.card:hover {
+   transform: translateY(-3px);
+  border-color: #ffc107; /* Yellow border on hover */
+}
+
+.cardTop {
+  height: 175px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.courseIcon {
+  color: white;
+  font-size: 5rem !important;
+}
+
+.badge {
+  position: absolute !important;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #ffc107 !important;
+  font-size: 0.4rem !important;
+  font-weight: bold !important;
+  text-transform: uppercase;
+  padding: 0.25rem 0.3rem !important;
+  border-radius: 6px;
+  color: #f6f2f2 !important;
+}
+
+.cardContent {
+  padding: 1rem;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.5rem !important;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  color: #333;
+  gap: 0.2rem;
+  font-size: 0.5rem !important;
+  font-weight: bold;
+}
+
+.courseTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  line-height: 1 !important;
+  min-height: 2rem;
+}
+
+.details {
+  font-size: 0.8rem !important;
+  color: #555;
+  margin-bottom: 0.1rem !important;
+  min-height: 1.4rem;
+}
+
+.priceRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+.oldPrice {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 0.85rem;
+}
+
+.progress {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #eee;
+  margin-bottom: 0.2rem;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #4339f2;
+  border-radius: 4px;
+}
+
+.progressText {
+  font-size: 0.75rem !important;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.enrollBtn {
+  background-color: #4339f2 !important;
+  color: white !important;
+  font-weight: bold !important;
+  text-transform: none !important;
+  font-size: 0.875rem !important;
+  padding: 0.5rem 1rem !important;
+  margin-top: auto;
+  transition: background 0.2s ease;
+}
+
+.enrollBtn:hover {
+  background-color: #372cdf !important;
+}
+
+.limitedOffer {
+  background: linear-gradient(135deg, #5b4df1, #7b6cf9);
+  color: white;
+  border-radius: 16px;
+  width: 90%;
+  padding: 1rem 0.75rem;
+  margin: 3rem auto 0 auto; 
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(91, 77, 241, 0.3);
+  transition: transform 0.3s ease;
+}
+
+
+.limitedOffer:hover {
+  transform: translateY(-3px);
+}
+
+.limitedOffer h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.limitedOffer p {
+  font-size: 1rem;
+  color: #f1f1f1;
+  margin-bottom: 1.8rem;
+  line-height: 1.5;
+}
+
+.limitedOffer .ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.limitedOffer .callBtn,
+.limitedOffer .whatsappBtn {
+  color: #fff !important;
+  padding: 0.85rem 1.8rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  font-weight: 600;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.callBtn {
+  background-color: #00c851 !important;
+  color: white;
+}
+
+.callBtn:hover {
+  background-color: #01602c !important;
+}
+
+.whatsappBtn {
+  background-color: #25d366 !important;
+  color: white;
+}
+
+.whatsappBtn:hover {
+  background-color:#01602c !important;
+}
+
+.limitedOffer .footerText {
+  font-size: 0.75rem;
+  color: #e0e0e0;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .card {
+    min-height: 460px;
   }
-  
-  .sectionTitle {
-    margin-bottom: 2rem;
-    font-weight: 700;
-  }
-  
-  .courseGrid {
-    justify-content: center;
-  }
-  
-  .courseCard {
-    height: 100%;
-    display: flex;
+
+  .limitedOffer .ctaButtons {
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
-    transition: transform 0.3s ease;
+    gap: 0.75rem;
   }
-  
-  .courseCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  .limitedOffer h3 {
+    font-size: 1.1rem;
   }
-  
-  .courseTitle {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  
-  .courseDescription {
-    margin-bottom: 1rem;
-  }
-  
-  .courseButton {
-    text-transform: none;
-  }
-  
+}

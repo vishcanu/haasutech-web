@@ -36,8 +36,8 @@ import { Fragment } from 'astro/jsx-runtime';
   </Fragment>
 
   <!-- Page Content -->
-  <HeroSection />
-  <CoursesPreview />
-  <NewsletterForm />
+  <HeroSection client:load />
+  <CoursesPreview client:load />
+  <NewsletterForm client:load/>
   <Testimonials />
 </MainLayout>
