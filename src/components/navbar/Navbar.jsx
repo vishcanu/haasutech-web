@@ -34,11 +34,11 @@ export default function Navbar() {
       <AppBar position="sticky" className={styles.navbar}>
         <Toolbar className={styles.toolbar}>
           <Box className={styles.brand}>
-            <img
+            {/* <img
               src="src/assets/haasutech_ai_logo.jpg"
               alt="HaasuTech AI Logo"
               className={styles.logoImage}
-            />
+            /> */}
             <Typography variant="h6" component="div">
               <a href="/" className={styles.logo}>HaasuTech AI</a>
             </Typography>
