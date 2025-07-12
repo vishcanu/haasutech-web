@@ -5,7 +5,7 @@ import styles from './NewsletterForm.module.css';
 export default function NewsletterForm() {
   return (
     <Box className={styles.newsletterSection}>
-      <Typography variant="h5" gutterBottom>
+      <Typography variant="h5" className={styles.heading}>
         Subscribe to our Newsletter
       </Typography>
       <Typography variant="body2" className={styles.subtitle}>
@@ -16,11 +16,24 @@ export default function NewsletterForm() {
         name="newsletter"
         method="POST"
         data-netlify="true"
-        style={{ display: 'flex', flexDirection: 'column', maxWidth: 400, marginTop: '1rem' }}
+        className={styles.form}
       >
         <input type="hidden" name="form-name" value="newsletter" />
-        <TextField label="Your Email" name="email" required type="email" sx={{ marginBottom: 2 }} />
-        <Button type="submit" variant="contained">Subscribe</Button>
+        <TextField
+          label="Your Email"
+          name="email"
+          required
+          type="email"
+          fullWidth
+          className={styles.emailInput}
+        />
+        <Button
+          type="submit"
+          variant="contained"
+          className={styles.subscribeButton}
+        >
+          Subscribe
+        </Button>
       </form>
     </Box>
   );
