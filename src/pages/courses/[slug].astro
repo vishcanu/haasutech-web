@@ -1,0 +1,47 @@
+---
+import { courseData } from '../../components/maincourses/coursesData.js';
+import MainLayout from '../../layouts/Mainlayout.astro';
+import CourseDetail from '../../components/coursedetail/CourseDetail.jsx';
+
+export async function getStaticPaths() {
+  return courseData.map((course) => ({
+    params: { slug: course.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const course = courseData.find(c => c.slug === slug);
+
+if (!course) {
+  throw new Error(`Course not found for slug: ${slug}`);
+}
+
+const siteURL = "https://www.haasutech.ai"; // Replace with your actual domain
+const pageUrl = `${siteURL}/courses/${slug}`;
+const ogImage = course.image || "/default-og-image.png";
+---
+
+<head>
+  <title>{course.title} | Haasutech AI Courses</title>
+  <meta name="description" content={course.description} />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={pageUrl} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={`${course.title} | Haasutech AI Courses`} />
+  <meta property="og:description" content={course.description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={pageUrl} />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Haasutech AI" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${course.title} | Haasutech AI Courses`} />
+  <meta name="twitter:description" content={course.description} />
+  <meta name="twitter:image" content={ogImage} />
+</head>
+
+<MainLayout>
+  <CourseDetail course={course} client:load />
+</MainLayout>

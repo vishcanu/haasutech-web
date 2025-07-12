@@ -58,18 +58,33 @@
 }
 .links a.active {
   color: #5b4df1 !important;
-  font-weight: 600;
+  font-weight: 700;
+  position: relative;
 }
+
 .links a.active::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -4px;
-  height: 2px;
+  bottom: -6px;
+  height: 3px;
   width: 100%;
-  background-color: #5b4df1;
-  border-radius: 2px;
+  background: linear-gradient(to right, #7c3aed, #5b4df1, #3b82f6);
+  border-radius: 4px;
+  animation: underlineSlide 0.4s ease-in-out;
 }
+
+@keyframes underlineSlide {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
 
 .callBtn {
   background: #00c853 !important;

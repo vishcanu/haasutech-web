@@ -1,40 +1,144 @@
 .testimonialsSection {
-    background-color: #f9f9f9;
-    padding: 4rem 2rem;
-    text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f9fafb;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-weight: bold !important;
+  font-size: 2rem !important;
+  margin-bottom: 0.25rem;
+  background: linear-gradient(90deg, #7C3AED, #4F46E5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+.cardGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: stretch; /* ✅ Align items to equal height */
+}
+
+.testimonialCard {
+  flex: 1 1 320px; /* ✅ Enforce consistent width */
+  max-width: 360px;
+  min-width: 300px;
+  border-radius: 1rem;
+  background: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* ✅ Allow height to stretch */
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  box-sizing: border-box; /* ✅ Prevent overflow issues */
+}
+
+
+.testimonialCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a202c;
+}
+
+.role {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.feedback {
+  font-size: 0.95rem;
+  color: #2d3748;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* ⭐ Star rating */
+.stars {
+  color: #fbbf24; /* Amber-400 */
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* 🎖️ Badge */
+.badge {
+  display: inline-block;
+  background-color: #e6fffa;
+  color: #059669;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* 🌀 Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  .title {
-    font-weight: 700;
-    margin-bottom: 2rem;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .cardGrid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
   .testimonialCard {
-    padding: 1.5rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    flex: 1 1 100%;
   }
-  
-  .avatar {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 1rem;
+
+  .heading {
+    font-size: 1.6rem;
   }
-  
-  .text {
-    font-style: italic;
-    margin-bottom: 1rem;
+
+  .feedback {
+    font-size: 0.9rem;
   }
-  
-  .name {
-    font-weight: bold;
-    margin-bottom: 0.25rem;
+
+  .badge {
+    font-size: 0.7rem;
   }
-  
-  .titleText {
-    color: #555;
-  }
-  
+}

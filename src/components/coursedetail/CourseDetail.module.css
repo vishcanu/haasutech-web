@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* ---------- GLOBAL WRAPPER ---------- */
+.courseWrapper {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f1f5f9; /* light slate */
+  border-radius: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+.titleSection {
+    
+  background: linear-gradient(135deg,#0072ff, #00c6ff );
+  padding: 0.5rem !important;
+  border-radius: 2px;
+  margin-top: -1.5rem !important;
+  margin-bottom: 1rem !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-size: 2rem !important;
+  font-weight: 700;
+  color: #f8fafc; 
+  margin-top: 0 !important;
+  margin-bottom: -0.5rem !important;
+  line-height: 1.2 !important;
+}
+
+.description {
+  font-size: 1rem !important;
+  color: #e2e8f0; 
+  margin-bottom: 1rem !important;
+  line-height: 1.6;
+}
+
+
+
+/* ---------- MODULE HEADING ---------- */
+.moduleHeading {
+  font-size: 1.5rem;
+  margin-bottom: -1rem !important;
+  font-weight: 600;
+  color: #334155; /* slate-700 */
+}
+
+/* ---------- MODULE ACCORDION LIST ---------- */
+.moduleList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ---------- ACCORDION CARD ---------- */
+.moduleCard {
+  border-radius: 12px;
+  background: linear-gradient(to right, #ffffff, #f8fafc);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.moduleCard:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ---------- MUI OVERRIDES ---------- */
+:global(.MuiAccordionSummary-root) {
+  padding: 0.6rem 1rem !important;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe) !important;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px 8px 0 0;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+:global(.MuiAccordionSummary-root:hover) {
+  background: linear-gradient(135deg, #93c5fd, #60a5fa) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+:global(.MuiAccordionSummary-content) {
+  margin: 0 !important;
+}
+
+:global(.MuiAccordionSummary-expandIconWrapper) {
+  color: #1e40af;
+}
+
+:global(.MuiAccordionDetails-root) {
+  background-color: #f8fafc;
+  padding: 0.8rem 1.2rem !important;
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid #e2e8f0;
+}
+
+
+/* ---------- TYPOGRAPHY ---------- */
+.MuiTypography-root {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+/* ---------- TOPICS LIST ---------- */
+.topicList {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.moduleTitle {
+  font-size: 0.9rem !important;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+.topicItem {
+  font-size: 0.95rem;
+  color: #334155;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.whySection {
+  margin-top: 2rem;
+  background-color: #fef3c7; /* soft yellow background */
+  border: 1px solid #facc15;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whyList {
+  margin: 1.5rem 0 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  list-style-position: outside; 
+  text-align: left; 
+  max-width: 600px;
+}
+
+.whyItem {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+
+
+.moduleLayout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: nowrap; 
+}
+
+.moduleList {
+  width: 60%;
+}
+
+.sidebar {
+  width: 40%;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.illustration {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.ctaBox {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center items horizontally */
+  justify-content: center;    /* center items vertically (if space allows) */
+  text-align: center;         /* center text */
+  width: 100%;
+}
+
+.ctaButton {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.8rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(to right, #00f2fe, #4facfe);
+}
+
+
+
+
+
+/* ------------------ RESPONSIVE BREAKPOINTS ------------------ */
+
+/* Mobile (XS) */
+@media (max-width: 575px) {
+  .courseWrapper {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: -0.5rem !important;
+  }
+
+  .description {
+    font-size: 0.8rem !important;
+  }
+
+  .moduleHeading {
+    font-size: 1rem !important;
+  }
+.moduleTitle {
+  font-size: 0.8rem !important;
+  font-weight: 400;
+  color: #1e293b;
+  line-height: 1 !important;
+}
+  .topicItem {
+    font-size: 0.70rem !important;
+  }
+  .whyItem {
+  font-size: 0.70rem !important;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  line-height: 1.2 !important;
+}
+ .moduleLayout {
+    flex-direction: column;
+  }
+
+  .moduleList,
+  .sidebar {
+    width: 100%;
+  }
+
+}
+
+
+
+/* Tablets (SM–MD) */
+@media (min-width: 576px) and (max-width: 1023px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .moduleHeading {
+    font-size: 1.35rem;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .moduleHeading {
+    font-size: 1.5rem;
+  }
+
+  .topicItem {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,22 @@
+---
+import MainLayout from '../../layouts/Mainlayout.astro';
+
+import MainCourses from '../../components/maincourses/MainCourses.jsx';
+
+const pageTitle = "Courses | Haasutech AI";
+const pageDescription = "Explore AI, Data Science, and DSA courses by industry experts and IITians.";
+const ogImage = "/ai-og.png";
+---
+
+<head>
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={pageDescription} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:type" content="website" />
+</head>
+
+<MainLayout>
+  <MainCourses client:load />
+</MainLayout>

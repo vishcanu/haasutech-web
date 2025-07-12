@@ -7,14 +7,57 @@
 }
 
 /* Hero Section */
+
+
+
 .heroSection {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 1rem;
-  background: linear-gradient(135deg, #6b5de7, #563bb7);
-  color: white;
+  padding:  1.5rem 1rem;
+ 
+ background: linear-gradient(135deg, #005f73, #40a9b6,  #86d2df);
+color: white;
   gap: 2rem;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
+
+
+/* 🍃 Soft organic shapes for modern aesthetic */
+.heroSection::before,
+.heroSection::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.08;
+  filter: blur(60px);
+}
+
+.heroSection::before {
+  width: 450px;
+  height: 450px;
+  background: #f0fae1;  /* very light pistachio */
+  top: -100px;
+  left: -120px;
+}
+
+.heroSection::after {
+  width: 350px;
+  height: 350px;
+  background: #cfe9bc;  /* deeper pistachio */
+  bottom: -80px;
+  right: -100px;
+}
+
+/* Inner content remains sharp */
+.heroSection > * {
+  position: relative;
+  z-index: 1;
+}
+
+
 
 /* Container */
 .container {
@@ -36,28 +79,35 @@
 }
 
 
-/* Left Content */
+/* 🌿 Left Content */
 .left {
   width: 100%;
 }
 
+/* 🎯 Title + Subtitle with Elegant Contrast */
 .title {
-  font-size: 1.3rem;
+  font-size: 4rem !important;          
   font-weight: bold;
   margin-bottom: 1.5rem !important;
-  line-height: 0.9 !important;
+  line-height: 0.8 !important;
+  color: #f5faff;
 }
 
 .highlight {
-  color: #FFD600;
+  color:#FFC107;
+  font-size: 4rem !important;           
+  font-weight: 600 !important;  
+  font-family:  sans-serif;          
 }
 
 .subtitle {
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 1.5rem !important;
+  color: #dceef2;
 }
 
+/* 🎯 Buttons */
 .buttonGroup {
   display: flex;
   flex-direction: column;
@@ -66,17 +116,65 @@
   margin-bottom: 1.5rem;
 }
 
+/* 🌟 Primary Button */
 .primaryBtn {
-  background-color: #FFD600 !important;
-  color: #000 !important;
+  background-color:#FFC107 !important; /* AI Violet */
+  color: #ffffff !important;
   font-weight: 600;
+  border-radius: 12px;
+  padding: 0.6rem 1.5rem;
+  box-shadow: 
+    8px 8px 20px rgba(131, 111, 255, 0.2),
+    -6px -6px 14px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  background-color: #6b5de7 !important;
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
 }
 
 .secondaryBtn {
-  border: 1px solid white !important;
-  color: white !important;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff !important;
   font-weight: 600;
+  border-radius: 12px;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  backdrop-filter: blur(8px);
+  box-shadow: 
+    8px 8px 20px rgba(0, 0, 0, 0.15),
+    -6px -6px 14px rgba(255, 255, 255, 0.08);
+  transition: all 0.35s ease;
+  transform: scale(1);
+  cursor: pointer;
+  animation: flickerBtn 1.8s ease-in-out infinite;
 }
+
+.secondaryBtn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.3),
+    0 0 10px rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+@keyframes flickerBtn {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(140, 85, 255, 0.6), 0 0 20px rgba(140, 85, 255, 0.3);
+    transform: scale(1.09);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(140, 85, 255, 0.9), 0 0 40px rgba(140, 85, 255, 0.6);
+    transform: scale(1.03);
+  }
+}
+
+
+
 
 /* Stats Section */
 .stats {
@@ -93,22 +191,35 @@
 
 /* Offer Box */
 .offerBox {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 1.2rem;
   text-align: center;
-   margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), inset 0 0 6px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.offerBox:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2), inset 0 0 8px rgba(255, 255, 255, 0.07);
 }
 
 .offerTitle {
-  font-weight: 600;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #FEE440;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  margin-bottom: 0.4rem;
 }
 
 .offerSubtitle {
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #f5faff;
+  opacity: 0.95;
+  margin-bottom: 1.2rem;
 }
 
 .contactButtons {
@@ -117,82 +228,117 @@
   gap: 0.75rem;
 }
 
+/* Call Button */
+
 .callBtn {
-  background-color: #43a047 !important;
-  color: white !important;
-  font-size: 0.875rem;
+  background: linear-gradient(135deg, #34d058, #168f3e) !important; /* Brighter tech green */
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.6rem 1.4rem;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 4px 12px rgba(52, 208, 88, 0.3),
+    inset 0 -2px 2px rgba(0, 0, 0, 0.1);
 }
 
-.whatsappBtn {
-  background-color: #25D366 !important;
-  color: white !important;
-  font-size: 0.875rem;
+.callBtn:hover {
+  background: linear-gradient(135deg, #2ab34c, #127c36) !important;
+  transform: scale(1.05);
+  box-shadow:
+    0 6px 18px rgba(52, 208, 88, 0.35),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.15);
 }
+
+
+/* 💬 WhatsApp Button */
+.whatsappBtn {
+  background: linear-gradient(135deg, #1ed760, #0c8e60) !important; /* Vibrant green blend */
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.6rem 1.4rem;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 4px 12px rgba(30, 215, 96, 0.3),
+    inset 0 -2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.whatsappBtn:hover {
+  background: linear-gradient(135deg, #17b44d, #0a6f4c) !important;
+  transform: scale(1.05);
+  box-shadow:
+    0 6px 18px rgba(30, 215, 96, 0.35),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.15);
+}
+
+
 
 /* Right Section */
 .right {
-  background-color: #fff;
-  color: #222;
+  background-color: #f9fafc; /* Soft tech-gray background */
+  color: #1c1c1e;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  max-width: 350px;
-  margin: 0 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  max-width: 325px;
+  margin: 0 0;
   margin-top: 75px;
-  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', sans-serif;
+  border: 1px solid #e4e7ec;
 }
 
+/* Title */
 .pathTitle {
-  font-size: 1rem;
-  font-weight: bold !important;
-  margin-bottom: 1rem !important;
+  font-size: 1.3rem !important;
+  font-weight: 600;
+  margin-bottom: 1.2rem !important;
   text-align: center;
+  color: #222;
 }
 
-/* Selectable Options */
+/* Option Wrapper */
 .pathOption {
   display: flex;
   align-items: flex-start;
   gap: 0.8rem;
-  background: #f0f0f0;
-  padding: 0.8rem 1rem;
+  background: rgba(171, 202, 249, 0.6);
+  padding: 0.9rem 1.1rem;
   margin-bottom: 1rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: all 0.25s ease;
- border: 1px solid #ddd;
+  border: 1px solid rgba(91, 77, 241, 0.15);
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05), -2px -2px 6px rgba(255, 255, 255, 0.4);
 }
 
 .pathOption:hover {
-  border-color: #5b4df1;
-  background-color: #eae6ff;
+  background: #f4f0ff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(91, 77, 241, 0.1);
+  border-color: #6b5de7;
 }
 
 .pathOptionSelected {
-  border-color: #5b4df1 !important;
-  background-color: #e0dbff !important;
+  background: #e9e4ff;
+  border: 2px solid #5b4df1;
+  box-shadow: 0 6px 18px rgba(91, 77, 241, 0.15);
 }
 
 .icon {
   color: #5b4df1;
-  font-size: 1.5rem;
-  margin-top: 0.2rem;
+  font-size: 1.6rem;
+  margin-top: 0.1rem;
 }
 
 .pathOption span {
-  font-size: 0.75rem;
-  color: #666;
+  font-size: 0.78rem;
+  color: #555;
 }
 
-.recommendBtn {
-  background-color: #5b4df1 !important;
-  color: white !important;
-  font-weight: bold;
-  width: 100%;
-  font-size: 0.875rem;
-  margin-top: 1rem;
-}
+
+
 
 /* Wrapper to contain path option and dropdown */
 .pathOptionWrapper {
@@ -336,6 +482,9 @@
 /* Responsive for small mobile devices */
 @media (max-width: 360px) {
    .title {
+    font-size: 2rem !important;
+  }
+  .highlight{
     font-size: 2.3rem !important;
   }
    .subtitle {
