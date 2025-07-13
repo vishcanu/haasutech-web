@@ -215,7 +215,7 @@ export default function CoursesPreview() {
   return (
     <Box className={styles.section}>
       <Typography variant="h5" className={styles.title}>
-        🔥 Most Popular Courses
+       Most Popular Courses
       </Typography>
       <Typography className={styles.subtitle}>
         Join thousands of students in our top-rated courses

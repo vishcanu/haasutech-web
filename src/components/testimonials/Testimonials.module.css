@@ -41,7 +41,7 @@
   max-width: 360px;
   min-width: 300px;
   border-radius: 1rem;
-  background: #ffffff;
+  background: #f5e8bd;
   padding: 1.5rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   text-align: left;
@@ -142,3 +142,5 @@
     font-size: 0.7rem;
   }
 }
+
+
