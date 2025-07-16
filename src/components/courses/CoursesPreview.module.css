@@ -142,7 +142,12 @@
   font-size: 0.95rem !important;
 }
 
-
+ .limitedOfferWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  width: 100%;
+}
 
 /* 🎁 Offer Section */
 .limitedOffer {
@@ -230,6 +235,7 @@
 
 /* 📱 Mobile Responsive */
 @media (max-width: 768px) {
+ 
   .limitedOffer {
     padding: 1.5rem 1rem;
   }

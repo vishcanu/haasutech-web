@@ -10,8 +10,10 @@ import {
   MenuItem,
   Snackbar,
   Alert,
+  Divider,
 } from "@mui/material";
-
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import PhoneIcon from "@mui/icons-material/Phone";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import SchoolIcon from "@mui/icons-material/School";
@@ -20,11 +22,13 @@ import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 
 import styles from "./HeroSection.module.css";
+import FloatingAIBot from "../aibot/AiBot";
 
 export default function HeroSection() {
   const [selectedPath, setSelectedPath] = useState("");
   const [hoveredPath, setHoveredPath] = useState("");
   const [openModal, setOpenModal] = useState(false);
+  const [recommendedPath, setRecommendedPath] = useState("professional");
   const [toast, setToast] = useState({
     open: false,
     message: "",
@@ -50,6 +54,18 @@ export default function HeroSection() {
       seconds: String(Math.floor((diff / 1000) % 60)).padStart(2, "0"),
     };
   }
+
+  useEffect(() => {
+  const paths = ["student", "professional", "career"];
+  const interval = setInterval(() => {
+    setRecommendedPath((prev) => {
+      const nextIndex = (paths.indexOf(prev) + 1) % paths.length;
+      return paths[nextIndex];
+    });
+  }, 4000); // change every 4 seconds
+
+  return () => clearInterval(interval);
+}, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -168,43 +184,18 @@ export default function HeroSection() {
   return (
     <>
       <Box className={styles.heroSection}>
-        <Box className={styles.limitedBanner}>
-          <Box className={styles.bannerLeft}>
-            <Typography variant="h6" className={styles.bannerTitle}>
-              Limited Time Offer Ends In:
-            </Typography>
-            <Typography className={styles.bannerSubtitle}>
-              Don't miss out on 30% savings!
-            </Typography>
-          </Box>
-
-          <Box className={styles.timerWrapper}>
-            <Box className={styles.timerBox}>
-              <strong>{hours}</strong>
-              <span>Hours</span>
-            </Box>
-            <Box className={styles.timerBox}>
-              <strong>{minutes}</strong>
-              <span>Minutes</span>
-            </Box>
-            <Box className={styles.timerBox}>
-              <strong>{seconds}</strong>
-              <span>Seconds</span>
-            </Box>
-          </Box>
-
-          <Button variant="contained" className={styles.ctaBtn}>
-            Claim Offer!
-          </Button>
-        </Box>
+          
+       
 
         <Box className={styles.container}>
           {/* Left Section */}
+          
           <Box className={styles.left}>
-            <Typography variant="h2" className={styles.title}>
-              Transform Your Career with{" "}
-              <span className={styles.highlight}>Expert-Led Courses</span>
-            </Typography>
+          <Typography variant="h6" className={styles.title}>
+  Real Skills. Real Mentors. Real Results.
+  <br />
+  <span className={styles.highlight}>Learn AI & Tech from IITians</span>
+</Typography>
 
             <Typography className={styles.subtitle}>
               Whether you're a student starting out, a professional upskilling,
@@ -247,7 +238,14 @@ export default function HeroSection() {
               </div>
             </Box>
           </Box>
-
+{/* <Box className={styles.aiAssistant}>
+   <div className={styles.aiBubble}>
+    <p>Let's start your career journey.<br /><strong>Get trained by IITians!</strong></p>
+  </div>
+  <img src="/assets/ai-bot.png" alt="AI Assistant" className={styles.aiImage} />
+ 
+</Box> */}
+<FloatingAIBot />
           {/* Right Section */}
           
           <Box className={styles.right}>
@@ -272,9 +270,9 @@ export default function HeroSection() {
                 }}
               >
                 <Box
-                  className={`${styles.pathOption} ${
-                    selectedPath === type ? styles.pathOptionSelected : ""
-                  }`}
+                  className={`${styles.pathOption} 
+  ${selectedPath === type ? styles.pathOptionSelected : ""} 
+  ${recommendedPath === type ? styles.pathOptionRecommended : ""}`}
                 >
                   {type === "student" && <SchoolIcon className={styles.icon} />}
                   {type === "professional" && (
@@ -300,6 +298,9 @@ export default function HeroSection() {
                         : "Switch to a new field"}
                     </span>
                   </div>
+                  {recommendedPath === type && (
+  <span className={styles.recommendBadge}>AI Recommended</span>
+)}
                 </Box>
 
                 {(hoveredPath === type || selectedPath === type) && (
@@ -318,6 +319,36 @@ export default function HeroSection() {
             ))}
           </Box>
         </Box>
+      
+         {/* <Box className={styles.limitedBanner}>
+          <Box className={styles.bannerLeft}>
+            <Typography variant="h6" className={styles.bannerTitle}>
+              Limited Time Offer Ends In:
+            </Typography>
+            <Typography className={styles.bannerSubtitle}>
+              Don't miss out on 30% savings!
+            </Typography>
+          </Box>
+
+          <Box className={styles.timerWrapper}>
+            <Box className={styles.timerBox}>
+              <strong>{hours}</strong>
+              <span>Hours</span>
+            </Box>
+            <Box className={styles.timerBox}>
+              <strong>{minutes}</strong>
+              <span>Minutes</span>
+            </Box>
+            <Box className={styles.timerBox}>
+              <strong>{seconds}</strong>
+              <span>Seconds</span>
+            </Box>
+          </Box>
+
+          <Button variant="contained" className={styles.ctaBtn}>
+            Claim Offer!
+          </Button>
+        </Box> */}
       </Box>
 
       {/* Register Modal */}
@@ -328,8 +359,16 @@ export default function HeroSection() {
           className: styles.dialogPaper,
         }}
       >
+        <div className={styles.dialogBanner}>
         <DialogTitle className={styles.dialogTitle}>
           Start your journey today!
+           {/* <IconButton
+    aria-label="close"
+    onClick={() => setOpenModal(false)}
+    className={styles.closeButton}
+  >
+    <CloseIcon />
+  </IconButton> */}
         </DialogTitle>
 
         <DialogContent>
@@ -386,6 +425,7 @@ export default function HeroSection() {
             </Button>
           </form>
         </DialogContent>
+        </div>
       </Dialog>
 
       <Snackbar

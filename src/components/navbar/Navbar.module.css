@@ -1,6 +1,6 @@
 /* 🌐 Navbar Container */
 .navbar {
-  background-color: #fff !important;
+  background: linear-gradient(to bottom, #0a0f1c, #172a45) !important;
   color: #222;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   z-index: 999;
@@ -26,10 +26,25 @@
   gap: 0.3rem;
 }
 .logo {
-  color: #5b4df1;
   font-weight: 700;
   font-size: 1.25rem;
   text-decoration: none;
+  background: linear-gradient(90deg, #00f2fe, #5b4df1, #00f2fe);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineText 4s linear infinite;
+}
+@keyframes shineText {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
 }
 .logoImage {
   height: 32px;
@@ -38,41 +53,60 @@
 }
 
 /* 🔗 Nav Links */
-.links {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-.links a {
+
+.navLink {
   position: relative;
   text-decoration: none;
-  color: #222;
+  color: #f7f4f4;
   font-weight: 500;
   font-size: 0.95rem;
   padding: 6px 4px;
-  transition: all 0.25s ease;
-}
-.links a:hover {
-  color: #5b4df1;
-  transform: scale(1.03);
-}
-.links a.active {
-  color: #5b4df1 !important;
-  font-weight: 700;
-  position: relative;
+  transition: all 0.3s ease;
 }
 
-.links a.active::after {
-  content: '';
+/* Hover Effect */
+.navLink:hover {
+  color: #5790e6 !important;
+  transform: scale(1.05);
+}
+
+/* Active Link Styling */
+.navLink.active {
+  color: #5b6fed !important;
+  font-weight: 700;
+}
+
+/* Animated underline for active link */
+.navLink.active::after {
+  content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
-  height: 3px;
+  bottom: -2px;
   width: 100%;
-  background: linear-gradient(to right, #7c3aed, #5b4df1, #3b82f6);
-  border-radius: 4px;
-  animation: underlineSlide 0.4s ease-in-out;
+  height: 2px;
+  background-color: #5b6fed !important;
+  border-radius: 2px;
+  transition: width 0.3s ease;
 }
+
+/* Smooth hover underline for non-active links */
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: #5b6fed !important;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+
 
 @keyframes underlineSlide {
   from {
@@ -87,31 +121,181 @@
 
 
 .callBtn {
-  background: #00c853 !important;
-  color: white !important;
-  border-radius: 12px;
-  padding: 0.4rem 1rem;
+  position: relative;
+  background: rgba(0, 255, 128, 0.08);
+  color: #00ffab !important;
+  border-radius: 14px;
+  padding: 0.6rem 1.6rem;
   font-weight: 600;
-  box-shadow: 0 6px 14px rgba(0, 200, 83, 0.3), inset 0 -2px 4px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
+  font-size: 0.95rem;
   text-transform: none;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 4px 20px rgba(0, 255, 128, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  animation: pulseBtn 2.8s infinite ease-in-out;
+  transition: all 0.4s ease;
 }
+
+/* 🌀 Gradient animated border */
+.callBtn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(130deg, #00ffab, #5b4df1, #00ffab);
+  background-size: 400% 400%;
+  animation: gradientBorder 6s ease infinite;
+  z-index: -1;
+
+  /* Mask fix for WebKit (only supported on Chrome/Safari) */
+  -webkit-mask-image: linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+
+  /* Mask fix for Firefox */
+  mask-image: linear-gradient(#fff 0 0);
+}
+
+/* ✨ Text Shine */
+.callBtn span {
+  background: linear-gradient(90deg, #00ffab, #ffffff, #00ffab);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineText 4s linear infinite;
+}
+
+/* 🔆 Focus Glow Ring */
+.callBtn:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(91, 77, 241, 0.35),
+    0 0 14px rgba(91, 77, 241, 0.6);
+  animation: pulseFocus 1.5s ease-in-out infinite;
+}
+
+/* 🖱️ Hover state */
 .callBtn:hover {
-  background-color: #00b94f;
-  transform: scale(1.03);
+  background: rgba(0, 255, 128, 0.15);
+  transform: scale(1.06);
+  color: #ffffff !important;
 }
+
+/* 💫 Icon bounce on hover */
+.callBtn:hover .MuiButton-startIcon {
+  transform: rotate(-6deg) scale(1.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 💧 Ripple Effect */
+.callBtn::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  background: rgba(91, 77, 241, 0.4);
+  animation: none;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.callBtn:active::after {
+  animation: ripple 0.6s ease-out;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+}
+
+/* 🎞️ Animations */
+@keyframes gradientBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseBtn {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 255, 128, 0.2);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 255, 128, 0.25);
+  }
+}
+
+@keyframes pulseFocus {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(91, 77, 241, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 12px 6px rgba(91, 77, 241, 0.6);
+  }
+}
+
+@keyframes shineText {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.4;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
 
 /* 🍔 Hamburger */
 .menuButton {
   display: none !important;
-  color: #333 !important;
+  color:white;
 }
 
 /* 🗂 Drawer Styles */
 .drawer {
   width: 200px !important;
   padding: 1rem;
+  background: linear-gradient(to bottom right, #10151f, #1e2c45); 
+  color: #f0f0f0; 
   animation: slideIn 0.3s ease-in-out;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3); 
 }
 @keyframes slideIn {
   from {
@@ -128,28 +312,61 @@
   .links {
     display: none;
   }
-
+  .logo {
+  font-weight: 700;
+  font-size: 0.9rem !important;
+  }
   .callBtn {
     display: none !important;
   }
 
- .menuButton {
+.menuButton {
   display: block !important;
-  
-  border-radius: 4px !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(245, 243, 243, 0.5);
-  padding: 4px;
+  color: #f4f4f6 !important;
+  width: 40px;                 /* 👈 Set fixed width */
+  height: 40px;                /* 👈 Set fixed height */
+  border-radius: 50%;          /* 👈 Make it circular */
+  box-shadow: 0 4px 10px rgba(250, 247, 247, 0.1),
+              inset 0 1px 2px rgba(245, 243, 243, 0.5);
+  padding: 8px;
   transition: all 0.3s ease;
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #5b4df1 !important;
+  background-color: transparent; /* Optional: ensure no background initially */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menuButton:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 18px rgba(91, 77, 241, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 18px rgba(91, 77, 241, 0.3),
+              inset 0 1px 2px rgba(255, 255, 255, 0.4);
   background-color: rgba(91, 77, 241, 0.1);
-  color: #372cdf !important;
+  color: #e7e7ec;
 }
+
+
+/* 🔗 Nav Links */
+.navLink {
+  display: block;
+  font-size: 1rem;
+  color: #e0e0e0;
+  padding: 2px 0  !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navLink:hover {
+  color: #5b4df1;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.navLink.active {
+  color: #5b4df1;
+  font-weight: 600;
+  background-color: rgba(91, 77, 241, 0.1);
+}
+
+
 
 }
