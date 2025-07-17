@@ -1,18 +1,40 @@
+/* Core Footer Styles */
 .footer {
   background-color: #0f172a;
   color: #ffffff;
-  padding: 2rem 1.5rem;
-  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+  font-family: 'Inter', sans-serif;
 }
 
+/* Footer Titles */
 .footerTitle {
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
+/* Footer Body Text */
+.footerText {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.footerText a {
+  color: #6ab3f7;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.footerText a:hover {
+  text-decoration: underline;
+}
+
+/* List Styles */
 .footerList {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
   margin: 0;
 }
 
@@ -21,29 +43,75 @@
 }
 
 .footerList a {
-  color: #e0e0e0;
+  font-size: 0.95rem;
+  color: #d1d5db;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footerList a:hover {
+  color: #a5b4fc;
   text-decoration: underline;
 }
 
+/* Bottom copyright bar */
 .bottomBar {
-  text-align: center;
+  border-top: 1px solid #334155;
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid #ffffff20;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #9ca3af;
 }
 
-/* Responsive layout from tablet upward */
-@media (min-width: 768px) {
+/* Responsive Layout */
+
+/* Small Mobile */
+@media (max-width: 576px) {
   .footer {
-    padding: 3rem 2rem 1.5rem;
+    padding: 2rem 1rem;
   }
 
-  .footerList,
   .footerTitle {
+    font-size: 1.1rem;
     text-align: center;
+  }
+
+  .footerText,
+  .footerList {
+    text-align: center;
+  }
+
+  .footerList a {
+    display: inline-block;
+    margin: 0 0.3rem;
+  }
+}
+
+/* Tablets (577px - 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .footer {
+    padding: 2.5rem 2rem;
+  }
+
+  .footerText,
+  .footerList {
+    text-align: left;
+  }
+
+  .footerList a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Laptops and Desktops (≥ 993px) */
+@media (min-width: 993px) {
+  .footer {
+    padding: 3rem 5rem;
+  }
+
+  .footerText,
+  .footerList {
+    text-align: left;
   }
 }

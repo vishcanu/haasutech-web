@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Box,
   Typography,
@@ -12,8 +12,8 @@ import {
   Alert,
   Divider,
 } from "@mui/material";
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
 import PhoneIcon from "@mui/icons-material/Phone";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import SchoolIcon from "@mui/icons-material/School";
@@ -42,6 +42,75 @@ export default function HeroSection() {
   });
   const [submitting, setSubmitting] = useState(false);
   const [timeLeft, setTimeLeft] = useState(getRemainingTime());
+  const [openBot, setOpenBot] = useState(false);
+
+  const steps = [
+    {
+      name: "name",
+      prompt: "Hi! I'm your course assistant 🤖 What's your name?",
+    },
+    { name: "email", prompt: "Great, {name}! \nWhat's your email address?" },
+    { name: "phone", prompt: "Thanks! Could you share your phone number?" },
+    { name: "course", prompt: "Which course are you interested in?" },
+  ];
+
+  const [stepIndex, setStepIndex] = useState(0);
+  const [botMessage, setBotMessage] = useState(steps[0].prompt);
+  const [inputValue, setInputValue] = useState("");
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    // Personalize prompt after collecting name
+    if (stepIndex > 0) {
+      setBotMessage(steps[stepIndex].prompt.replace("{name}", formData.name));
+    } else {
+      setBotMessage(steps[stepIndex].prompt);
+    }
+    setInputValue(""); // Clear input at each step
+    setTimeout(() => {
+      if (inputRef.current) inputRef.current.focus();
+    }, 200);
+  }, [stepIndex, formData.name, openBot]);
+
+  // Handler for each bot input/step
+  const handleBotSubmit = async (e) => {
+    e.preventDefault();
+    // Save input:
+    setFormData((prev) => ({
+      ...prev,
+      [steps[stepIndex].name]: inputValue,
+    }));
+
+    // If not last step, increment step index after short delay
+    if (stepIndex < steps.length - 1) {
+      setTimeout(() => setStepIndex((prev) => prev + 1), 600); // Simulate "AI thinking"
+    } else {
+      // Submit form (at last step)
+      setSubmitting(true);
+      try {
+        const response = await fetch("https://getform.io/f/bnlxgjeb", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...formData, course: inputValue }),
+        });
+        if (response.ok) {
+          setBotMessage("🎉 Registered successfully! Welcome aboard.");
+          setTimeout(() => {
+            setOpenBot(false);
+            setFormData({ name: "", email: "", phone: "", course: "" });
+            setStepIndex(0);
+            setInputValue("");
+          }, 1800);
+        } else {
+          setBotMessage("❌ Submission failed. Try again!");
+        }
+      } catch (err) {
+        setBotMessage("❌ Submission failed. Try again!");
+      } finally {
+        setSubmitting(false);
+      }
+    }
+  };
 
   function getRemainingTime() {
     const targetTime = new Date().setHours(24, 0, 0, 0); // today 24:00
@@ -56,16 +125,16 @@ export default function HeroSection() {
   }
 
   useEffect(() => {
-  const paths = ["student", "professional", "career"];
-  const interval = setInterval(() => {
-    setRecommendedPath((prev) => {
-      const nextIndex = (paths.indexOf(prev) + 1) % paths.length;
-      return paths[nextIndex];
-    });
-  }, 4000); // change every 4 seconds
+    const paths = ["student", "professional", "career"];
+    const interval = setInterval(() => {
+      setRecommendedPath((prev) => {
+        const nextIndex = (paths.indexOf(prev) + 1) % paths.length;
+        return paths[nextIndex];
+      });
+    }, 4000); // change every 4 seconds
 
-  return () => clearInterval(interval);
-}, []);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -131,8 +200,8 @@ export default function HeroSection() {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => setOpenModal(true), 30000);
-    return () => clearTimeout(timer);
+    const t = setTimeout(() => setOpenBot(true), 3000);
+    return () => clearTimeout(t);
   }, []);
 
   const handleChange = (e) => {
@@ -184,18 +253,17 @@ export default function HeroSection() {
   return (
     <>
       <Box className={styles.heroSection}>
-          
-       
-
         <Box className={styles.container}>
           {/* Left Section */}
-          
+
           <Box className={styles.left}>
-          <Typography variant="h6" className={styles.title}>
-  Real Skills. Real Mentors. Real Results.
-  <br />
-  <span className={styles.highlight}>Learn AI & Tech from IITians</span>
-</Typography>
+            <Typography variant="h6" className={styles.title}>
+              Real Skills. Real Mentors. Real Results.
+              <br />
+              <span className={styles.highlight}>
+                Learn AI & Tech from IITians
+              </span>
+            </Typography>
 
             <Typography className={styles.subtitle}>
               Whether you're a student starting out, a professional upskilling,
@@ -214,12 +282,100 @@ export default function HeroSection() {
               <Button
                 variant="outlined"
                 className={styles.secondaryBtn}
-                onClick={() => setOpenModal(true)}
+                onClick={() => setOpenBot(true)}
               >
                 Register Now
               </Button>
             </Box>
+            {/* AI Chat-Bot Modal */}
+            {openBot && (
+              <div className={styles.botOverlay}>
+                <div className={styles.botModal}>
+                  <IconButton
+                    className={styles.botCloseIcon}
+                    onClick={() => setOpenBot(false)}
+                    size="large"
+                    aria-label="Close registration dialog"
+                  >
+                    <CloseIcon fontSize="inherit" />
+                  </IconButton>
+                  <div className={styles.aiBotContainer}>
+                    <img
+                      src="/assets/ai-bot.png"
+                      alt="AI Bot"
+                      className={styles.aiBotSpinner} // see CSS below
+                      style={{ width: 75, height: 75 }}
+                    />
 
+                    <div className={styles.aiBubble}>
+                      {botMessage.split("\n").map((line, i) => (
+                        <span key={i}>
+                          {line}
+                          {i < botMessage.split("\n").length - 1 && <br />}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Conversational Form */}
+                  <form onSubmit={handleBotSubmit} className={styles.botForm}>
+                    {stepIndex < 3 ? (
+                      <input
+                        ref={inputRef}
+                        type={
+                          steps[stepIndex].name === "email"
+                            ? "email"
+                            : steps[stepIndex].name === "phone"
+                            ? "tel"
+                            : "text"
+                        }
+                        placeholder={
+                          steps[stepIndex].name === "phone"
+                            ? "eg. 9999999999"
+                            : "Type here..."
+                        }
+                        value={inputValue}
+                        disabled={submitting}
+                        onChange={(e) => setInputValue(e.target.value)}
+                        className={styles.botInput}
+                        required
+                      />
+                    ) : (
+                      // Step 4: Choose course with dropdown
+                      <select
+                        ref={inputRef}
+                        value={inputValue}
+                        onChange={(e) => setInputValue(e.target.value)}
+                        className={styles.botInput}
+                        required
+                      >
+                        <option value="" disabled>
+                          Select course...
+                        </option>
+                        {courses.map((course) => (
+                          <option key={course} value={course}>
+                            {course}
+                          </option>
+                        ))}
+                      </select>
+                    )}
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      className={styles.botBtn}
+                      disabled={submitting || !inputValue}
+                      sx={{ mt: 1 }}
+                    >
+                      {submitting
+                        ? "Submitting..."
+                        : stepIndex < 3
+                        ? "Next"
+                        : "Finish"}
+                    </Button>
+                  </form>
+                </div>
+              </div>
+            )}
             <Box className={styles.stats}>
               <div>
                 <strong>10K+</strong>
@@ -238,16 +394,10 @@ export default function HeroSection() {
               </div>
             </Box>
           </Box>
-{/* <Box className={styles.aiAssistant}>
-   <div className={styles.aiBubble}>
-    <p>Let's start your career journey.<br /><strong>Get trained by IITians!</strong></p>
-  </div>
-  <img src="/assets/ai-bot.png" alt="AI Assistant" className={styles.aiImage} />
- 
-</Box> */}
-<FloatingAIBot />
+
+          <FloatingAIBot />
           {/* Right Section */}
-          
+
           <Box className={styles.right}>
             <Typography className={styles.pathTitle}>
               Find Your Perfect Path
@@ -299,8 +449,10 @@ export default function HeroSection() {
                     </span>
                   </div>
                   {recommendedPath === type && (
-  <span className={styles.recommendBadge}>AI Recommended</span>
-)}
+                    <span className={styles.recommendBadge}>
+                      AI Recommended
+                    </span>
+                  )}
                 </Box>
 
                 {(hoveredPath === type || selectedPath === type) && (
@@ -319,114 +471,7 @@ export default function HeroSection() {
             ))}
           </Box>
         </Box>
-      
-         {/* <Box className={styles.limitedBanner}>
-          <Box className={styles.bannerLeft}>
-            <Typography variant="h6" className={styles.bannerTitle}>
-              Limited Time Offer Ends In:
-            </Typography>
-            <Typography className={styles.bannerSubtitle}>
-              Don't miss out on 30% savings!
-            </Typography>
-          </Box>
-
-          <Box className={styles.timerWrapper}>
-            <Box className={styles.timerBox}>
-              <strong>{hours}</strong>
-              <span>Hours</span>
-            </Box>
-            <Box className={styles.timerBox}>
-              <strong>{minutes}</strong>
-              <span>Minutes</span>
-            </Box>
-            <Box className={styles.timerBox}>
-              <strong>{seconds}</strong>
-              <span>Seconds</span>
-            </Box>
-          </Box>
-
-          <Button variant="contained" className={styles.ctaBtn}>
-            Claim Offer!
-          </Button>
-        </Box> */}
       </Box>
-
-      {/* Register Modal */}
-      <Dialog
-        open={openModal}
-        onClose={() => setOpenModal(false)}
-        PaperProps={{
-          className: styles.dialogPaper,
-        }}
-      >
-        <div className={styles.dialogBanner}>
-        <DialogTitle className={styles.dialogTitle}>
-          Start your journey today!
-           {/* <IconButton
-    aria-label="close"
-    onClick={() => setOpenModal(false)}
-    className={styles.closeButton}
-  >
-    <CloseIcon />
-  </IconButton> */}
-        </DialogTitle>
-
-        <DialogContent>
-          <form onSubmit={handleSubmit} className={styles.dialogForm}>
-            <TextField
-              name="name"
-              label="Name"
-              value={formData.name}
-              onChange={handleChange}
-              fullWidth
-              required
-            />
-            <TextField
-              name="email"
-              label="Email"
-              type="email"
-              value={formData.email}
-              onChange={handleChange}
-              fullWidth
-              required
-            />
-            <TextField
-              name="phone"
-              label="Phone"
-              type="tel"
-              value={formData.phone}
-              onChange={handleChange}
-              fullWidth
-              required
-            />
-            <TextField
-              name="course"
-              label="Select Course"
-              select
-              value={formData.course}
-              onChange={handleChange}
-              fullWidth
-              required
-            >
-              {courses.map((course) => (
-                <MenuItem key={course} value={course}>
-                  {course}
-                </MenuItem>
-              ))}
-            </TextField>
-
-            <Button
-              type="submit"
-              variant="contained"
-              disabled={submitting}
-              className={styles.dialogSubmitBtn}
-            >
-              {submitting ? "Submitting..." : "Submit"}
-            </Button>
-          </form>
-        </DialogContent>
-        </div>
-      </Dialog>
 
       <Snackbar
         open={toast.open}

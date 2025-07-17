@@ -628,6 +628,269 @@ color: white;
   font-size: 0.8rem;
   white-space: nowrap;
 }
+/* Overlay: dark with a blue/purple hue */
+.botOverlay {
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(20,22,45,0.88) 55%, rgba(50,22,110,0.86) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s;
+}
+
+/* Modal: rich dark with subtle border glow */
+.botModal {
+  background: linear-gradient(135deg, #181a29 80%, #1c1633 100%);
+  border-radius: 24px;
+  box-shadow: 0 12px 64px rgba(60, 32, 160, 0.37), 0 0 12px 3px #5c6eeea0;
+   position: relative;
+  min-width: 324px;
+  max-width: 94vw;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.8rem 1.7rem 1.8rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  border: 1px solid #394375;
+  animation: botModalEnter 0.41s cubic-bezier(0.41, 0.32, 0.36, 1.18);
+}
+@keyframes botModalEnter {
+  0% { opacity: 0; transform: scale(0.93) translateY(90px);}
+  100% { opacity: 1; transform: scale(1) translateY(0);}
+}
+.botForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.aiBotSpinner {
+  animation: spin 1.5s linear infinite;
+  /* margin-top: -4rem !important; */
+  display: block;
+  margin: -4rem auto 1rem auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 28px rgba(93,83,208,0.29);
+  background: radial-gradient(circle at 35% 26%, #3c42bb 15%, #181a29 80%);
+  width: 75px; height: 75px;
+  border: 3px solid #302f7e44;
+}
+
+/* Animated typing dots for effect! */
+@keyframes typingDots {
+  0% { opacity:0.2; } 20% { opacity:1; } 100% { opacity:0.2; }
+}
+.typingDots span {
+  display: inline-block;
+  font-size:1.5rem;
+  color: #43e8ff;
+  animation: typingDots 1.2s infinite;
+}
+.typingDots span:nth-child(2) { animation-delay: 0.25s; }
+.typingDots span:nth-child(3) { animation-delay: 0.5s; }
+
+.aiBubble {
+  background: linear-gradient(115deg, #24315a 0%, #282246 100%);
+  color: #b8e2fc;
+  border-radius: 1.6rem;
+  font-size: 1.11rem;
+  padding: 15px 23px 14px 21px;
+  margin-bottom: 11px;
+  min-width: 238px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 28px rgba(61,107,255,0.13);
+  font-family: 'Inter', 'Roboto', sans-serif;
+  letter-spacing: 0.01em;
+  position: relative;
+}
+.aiBubble:before {
+  content: '';
+  position: absolute; left: 36px; bottom: -13px;
+  width: 22px; height: 13px;
+  background: radial-gradient(circle at 80% 0, #1a2041 60%, transparent 100%);
+  border-radius: 18px 18px 0 0;
+  filter: blur(0.8px);
+  z-index: 0;
+}
+
+.userBubble {
+  background: linear-gradient(120deg, #5761f3 0%, #2895ef 100%);
+  color: #fff;
+  border-radius: 1.6rem 1.6rem 1.6rem 0.35rem;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: 3px;
+  box-shadow: 0 2px 12px rgba(89,75,208,0.09);
+  min-width: 110px;
+  display: inline-block;
+}
+
+/* Input styling: modern, glowing on focus */
+.botInput,
+.botInput:focus,
+.botInput:active,
+.botInput select,
+.botInput option {
+  width: 100%;
+  max-width: 320px;
+  margin: 12px auto 16px auto;
+  text-align: center;            /* Align text and placeholder center */
+  justify-content: center;       /* For select */
+  align-items: center;
+  display: flex;
+  font-size: 1.14rem;
+}.botInput, .botInput:focus, .botInput:active, .botInput select, .botInput option {
+  display: block;
+  width: 100%;
+  font-size: 1.12rem;
+  border-radius: 0.9rem;
+  border: 1.5px solid #2d3175;
+  background: #16182d;
+  color: #caf8fd;
+  padding: 11px 16px;
+  margin: 10px 0 12px 0;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.21s;
+  box-shadow: 0 3px 15px rgba(51,82,205,.08);
+}
+.botInput:focus {
+  border-color: #43e8ff;
+  box-shadow: 0 0 8px #43e8ff80;
+}
+::placeholder {
+  color: #528dc5b7;
+  font-size: 1rem;
+  opacity: .85;
+}
+
+.botBtn {
+  margin-top: 2px;
+  width: 100%;
+  border-radius: 0.77rem !important;
+  text-transform: none !important;
+  background: linear-gradient(90deg, #43e8ff 0%, #5761f3 94%);
+  color: #140d33;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-size: 1.13rem;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 12px #43e8ff33;
+  transition: background .2s, color .2s;
+}
+.botBtn:disabled { opacity: 0.74; filter: grayscale(.17); }
+
+.botCloseIcon {
+  position: absolute;
+  top: -40px !important;
+  left: 160px;
+  color: #528dc5;
+  background: none !important;
+  z-index: 22;
+  padding: 2px;
+}
+.botCloseIcon:hover {
+  color: #43e8ff;
+  background: none !important;
+}
+
+
+@media (max-width: 575px) {
+  .botModal {
+    min-width: 0;                 /* Don't force a minimum width */
+    width: 250px !important;                  /* Modal almost fills mobile width */
+    padding: 1.3rem 0.6rem 1.15rem 0.6rem;
+    border-radius: 20px;
+  }
+  .aiBubble, .userBubble {
+    min-width: unset;
+    padding-left: 11px;
+    padding-right: 11px;
+    font-size: 0.8rem !important;
+    width: 225px;
+    height: 30px !important;
+    word-break: break-word;
+  }
+  .aiBotSpinner {
+    width: 57px !important;
+    height: 57px !important;
+    margin-top: -2.4rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+  .botForm {
+    width: 225px !important;
+    align-items: center;
+  }
+  .botInput, .botInput:focus, .botInput:active, .botInput select, .botInput option {
+    width: 225px !important;
+    font-size: 1rem;
+    padding: 9px 8px;
+    margin: 7px 0 14px 0;
+  }
+  .botBtn {
+    width: 100%;
+    max-width: 96vw;
+    font-size: 1rem;
+    border-radius: 10px !important;
+    margin-bottom: 0.3rem;
+  }
+  .botCloseIcon {
+    /* Always top right inside modal, responsive placement */
+    position: absolute;
+    top: -20px !important;
+    
+    left: 110px !important;
+    color: #43e8ff;
+    background: none !important;
+    z-index: 23;
+    padding: 3px;
+    font-size: 2rem;
+  }
+}
+
+/* 
+For even narrower screens (like ~320-360px, very small phones): 
+You may want additional tweaks such as smaller font, smaller padding, or wider modal.
+*/
+
+@media (max-width: 370px) {
+  .botModal {
+    padding: 0.6rem 0.2rem 0.9rem 0.2rem;
+    border-radius: 13px;
+  }
+  .aiBubble,
+  .userBubble {
+    font-size: 0.97rem;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .botBtn, .botInput, .botInput:focus, .botInput:active {
+    font-size: 0.96rem;
+    padding: 8px 4px;
+  }
+}
+
+/* Always keep modal and overlay at full height/width */
+.botOverlay {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(20,22,45,0.88) 55%, rgba(50,22,110,0.86) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s;
+}
+
 
 
 

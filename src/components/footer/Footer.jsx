@@ -9,7 +9,7 @@ export default function Footer() {
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6" className={styles.footerTitle}>Haasutech AI</Typography>
           <Typography variant="body2" className={styles.footerText}>
-            Learn AI, ML, and DSA from IITians & industry experts. Future-proof your career.
+            Learn AI, ML, and <br />DSA from IITians & industry experts. <br /> Future-proof your career.
           </Typography>
         </Grid>
 
