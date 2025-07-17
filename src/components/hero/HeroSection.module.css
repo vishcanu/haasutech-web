@@ -754,7 +754,7 @@ You may want additional tweaks such as smaller font, smaller padding, or wider m
 
 
 
-/* Tablet View */
+
 @media (min-width: 481px) and (max-width: 767px) {
   .MuiDialog-paper {
     padding: 1.5rem !important;
