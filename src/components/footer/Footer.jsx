@@ -13,7 +13,7 @@ export default function Footer() {
           </Typography>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={2}>
+        <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6" className={styles.footerTitle}>Explore</Typography>
           <ul className={styles.footerList}>
             <li><Link href="/courses" underline="none">Courses</Link></li>
