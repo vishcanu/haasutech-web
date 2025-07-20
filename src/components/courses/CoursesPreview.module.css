@@ -46,6 +46,7 @@
 /* ⬇️ Wrapper for Grid to Center Cards */
 .gridWrapper {
   display: flex;
+  
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
@@ -56,7 +57,7 @@
 /* 📦 Course Card */
 .card {
   flex: 1 1 300px;
-  
+  text-align: center;
   width: 275px;
   height: 350px;
   background: #fff;
