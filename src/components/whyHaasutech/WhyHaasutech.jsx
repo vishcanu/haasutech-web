@@ -1,5 +1,6 @@
+
 import React from 'react';
-import styles from './whyHaasutech.module.css';
+import styles from './WhyHaasutech.module.css';
 import { Grid } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import CodeIcon from '@mui/icons-material/Code';
@@ -42,7 +43,7 @@ const cards = [
 ];
 
 
-const whyHaasutech = () => {
+const WhyHaasutech = () => {
   return (
    <section className={styles.wrapper}>
   <h3 className={styles.heading}>Why Thousands Trust Haasutech to Learn AI Right!</h3>
@@ -62,4 +63,4 @@ const whyHaasutech = () => {
   );
 };
 
-export default whyHaasutech;
+export default WhyHaasutech;
