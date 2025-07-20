@@ -42,7 +42,7 @@ const cards = [
 ];
 
 
-const WhyHaasutech = () => {
+const whyHaasutech = () => {
   return (
    <section className={styles.wrapper}>
   <h3 className={styles.heading}>Why Thousands Trust Haasutech to Learn AI Right!</h3>
@@ -62,4 +62,4 @@ const WhyHaasutech = () => {
   );
 };
 
-export default WhyHaasutech;
+export default whyHaasutech;
