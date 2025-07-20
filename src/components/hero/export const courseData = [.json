@@ -1,0 +1,305 @@
+export const courseData = [
+  {
+    id: 1,
+    title: "AI Fundamentals",
+    level: "Beginner",
+    badge: "Beginner",
+    badgeColor: "#22c55e", // Green
+    duration: "12 weeks",
+    students: 3247,
+  
+    tag: "AI & Machine Learning",
+    description: "Master the basics of artificial intelligence, machine learning concepts, and neural networks.",
+    modules: [
+      "Introduction to AI & ML",
+      "Neural Networks Basics",
+      "Hands-on Projects"
+    ],
+    topColor: "linear-gradient(to right, #ec4899, #8b5cf6)", // Pink to Purple
+    difficultyBar: "#22c55e"
+  },
+  {
+    id: 2,
+    title: "Deep Learning Mastery",
+    level: "Intermediate",
+    badge: "Intermediate",
+    badgeColor: "#f97316", // Orange
+    duration: "16 weeks",
+    students: 1892,
+   
+    tag: "AI & Machine Learning",
+    description: "Advanced neural networks, CNNs, RNNs, and transformer architectures.",
+    modules: [
+      "CNN & Computer Vision",
+      "RNN & NLP",
+      "Transformer Models"
+    ],
+    topColor: "linear-gradient(to right, #3b82f6, #6366f1)", // Blue to Indigo
+    difficultyBar: "#facc15"
+  },
+  {
+    id: 3,
+    title: "MLOps & Production AI",
+    level: "Advanced",
+    badge: "Advanced",
+    badgeColor: "#ef4444", // Red
+    duration: "14 weeks",
+    students: 967,
+  
+    tag: "Cybersecurity",
+    description: "Deploy, monitor, and scale machine learning models in production.",
+    modules: [
+      "Model Deployment",
+      "CI/CD for ML",
+      "Monitoring & Scaling"
+    ],
+    topColor: "linear-gradient(to right, #10b981, #3b82f6)", // Green to Blue
+    difficultyBar: "#ef4444"
+  },
+ {
+  id: 1,
+   slug: "dsa-course",
+  title: "Data Structures & Algorithms (DSA) Mastery",
+  level: "Beginner to Intermediate",
+  badge: "Beginner",
+  badgeColor: "#22c55e", // Green
+  duration: "10 weeks",
+  students: 8234,
+  tag: "Programming Fundamentals",
+  description: "Master core data structures and algorithms for technical interviews and real-world problem solving.",
+  image: "/assets/images/courses/dsa-icon.png",
+  modules: [
+    {
+      title: "Module 1: DSA Foundations & Arrays",
+      topics: [
+        "Time and Space Complexity",
+        "Arrays and Memory Layout",
+        "Sliding Window Technique",
+        "Two Pointer Technique"
+      ]
+    },
+    {
+      title: "Module 2: Strings and Recursion",
+      topics: [
+        "String Manipulation",
+        "Pattern Searching",
+        "Recursion Basics",
+        "Backtracking Problems"
+      ]
+    },
+    {
+      title: "Module 3: Linked Lists, Stacks, and Queues",
+      topics: [
+        "Singly and Doubly Linked Lists",
+        "Stack and Its Applications",
+        "Queue and Circular Queue",
+        "Dequeue & Problems"
+      ]
+    },
+    {
+      title: "Module 4: Trees & Graphs",
+      topics: [
+        "Binary Tree and Binary Search Tree (BST)",
+        "Tree Traversals: Inorder, Preorder, Postorder",
+        "Graphs: BFS, DFS",
+        "Graph Representations"
+      ]
+    },
+    {
+      title: "Module 5: Sorting & Searching",
+      topics: [
+        "Merge Sort and Quick Sort",
+        "Binary Search Applications",
+        "Heap Sort",
+        "Sorting Problems"
+      ]
+    },
+    {
+      title: "Module 6: Hashing & Greedy Techniques",
+      topics: [
+        "Hash Tables and Hash Sets",
+        "Frequency Maps",
+        "Greedy Algorithms",
+        "Greedy Case Studies"
+      ]
+    },
+    {
+      title: "Module 7: Dynamic Programming",
+      topics: [
+        "Introduction to DP",
+        "Memoization vs Tabulation",
+        "Fibonacci, Knapsack, LIS",
+        "2D DP Patterns"
+      ]
+    },
+    {
+      title: "Module 8: Interview Preparation",
+      topics: [
+        "Top 50 Coding Interview Problems",
+        "Mock Tests and Solutions",
+        "Resume & Portfolio Guidance",
+        "DSA in System Design (Intro)"
+      ]
+    }
+  ],
+  topColor: "linear-gradient(to right, #f97316, #facc15)", // Orange to Yellow
+  difficultyBar: "#facc15"
+},
+
+
+  {
+    "id": 1,
+    "title": "Data Science Certification Course",
+    "level": "Intermediate",
+    "badge": "Intermediate",
+    "badgeColor": "#facc15",
+    "duration": "6 months",
+    "students": 15213,
+    "tag": "Data Science",
+    "description": "Comprehensive lifecycle: data collection, cleansing, transformation, predictive modelling, deployment.",
+    "modules": [
+      "Project Life Cycle & EDA",
+      "Python & Statistics",
+      "Machine Learning & Deep Learning",
+      "Capstone Projects"
+    ],
+    "topColor": "linear-gradient(to right, #3b82f6, #6366f1)",
+    "difficultyBar": "#facc15"
+  },
+  {
+    "id": 2,
+    "title": "Data Analyst Training Course",
+    "level": "Beginner to Intermediate",
+    "badge": "Beginner",
+    "badgeColor": "#22c55e",
+    "duration": "6 months (150+ hrs)",
+    "students": 10210,
+    "tag": "Data Analytics",
+    "description": "Tools like Excel, Tableau, SQL, Power BI, R & Python for business analytics.",
+    "modules": [
+      "Advanced Excel & SQL",
+      "Data Visualization with Tableau/Power BI",
+      "Python & R Basics",
+      "Real-world Case Studies"
+    ],
+    "topColor": "linear-gradient(to right, #10b981, #047857)",
+    "difficultyBar": "#22c55e"
+  },
+  {
+    "id": 3,
+    "title": "Artificial Intelligence (AI) Course",
+    "level": "Beginner",
+    "badge": "Beginner",
+    "badgeColor": "#22c55e",
+    "duration": "6 months",
+    "students": 7250,
+    "tag": "AI & Machine Learning",
+    "description": "Foundations of AI & ML: algorithms, Python, neural networks and real-world use-cases.",
+    "modules": [
+      "Intro to ML Algorithms",
+      "Python for AI",
+      "Neuron & Deep Learning Basics",
+      "Applications in NLP & CV"
+    ],
+    "topColor": "linear-gradient(to right, #06b6d4, #3b82f6)",
+    "difficultyBar": "#22c55e"
+  },
+  {
+    "id": 4,
+    "title": "Machine Learning Course",
+    "level": "Intermediate",
+    "badge": "Intermediate",
+    "badgeColor": "#facc15",
+    "duration": "Varies",
+    "students": null,
+    "tag": "AI & Machine Learning",
+    "description": "Focus on ANN, CNN, RNN, LSTM, Autoencoders, with live industry case studies.",
+    "modules": [
+      "Supervised & Unsupervised Models",
+      "Deep Learning Architectures",
+      "Time Series & NLP Models",
+      "Industry Projects"
+    ],
+    "topColor": "linear-gradient(to right, #3b82f6, #9333ea)",
+    "difficultyBar": "#facc15"
+  },
+   {
+    "id": 5,
+    "title": "PG Program in Data Science and AI (Steinbeis)",
+    "level": "Advanced",
+    "badge": "Advanced",
+    "badgeColor": "#ef4444",
+    "duration": "11 months (400+ hrs)",
+    "students": 2725,
+    "tag": "Advanced AI & Data Science",
+    "description": "University‑accredited PG diploma with global recognition and deep specialization.",
+    "modules": [
+      "Micro‑ML & Advanced DL",
+      "Big Data, AWS/GCP",
+      "12+ Projects",
+      "Research Paper & Publication"
+    ],
+    "topColor": "linear-gradient(to right, #ef4444, #9f1239)",
+    "difficultyBar": "#ef4444"
+  },
+  {
+    "id": 6,
+    "title": "Diploma in Artificial Intelligence (Steinbeis)",
+    "level": "Intermediate",
+    "badge": "Intermediate",
+    "badgeColor": "#facc15",
+    "duration": "6 months",
+    "students": 7250,
+    "tag": "Advanced AI",
+    "description": "Deep Learning & AI diploma accredited by Steinbeis, including alumni status.",
+    "modules": [
+      "ANN/CNN/RNN",
+      "Deep Learning",
+      "AI Applications",
+      "Hands‑on Projects"
+    ],
+    "topColor": "linear-gradient(to right, #ec4899, #8b5cf6)",
+    "difficultyBar": "#facc15"
+  },
+   {
+    "id": 7,
+    "title": "Generative AI Course",
+    "level": "Beginner to Intermediate",
+    "badge": "Beginner",
+    "badgeColor": "#22c55e",
+    "duration": "100 hours",
+    "students": 2213,
+    "tag": "Generative AI",
+    "description": "Prompt engineering, ChatGPT, hands‑on GenAI tools and job‑readiness capstone.",
+    "modules": [
+      "Intro to Generative AI",
+      "Prompt Design",
+      "LLM-based Tools",
+      "Industry Projects"
+    ],
+    "topColor": "linear-gradient(to right, #a855f7, #ec4899)",
+    "difficultyBar": "#22c55e"
+  },
+  {
+    "id": 8,
+    "title": "Agentic AI Course",
+    "level": "Intermediate to Advanced",
+    "badge": "Intermediate",
+    "badgeColor": "#facc15",
+    "duration": "6 months",
+    "students": 7250,
+    "tag": "Agentic AI",
+    "description": "Build autonomous AI agents using LangChain, AutoGPT, RAG—corporate/enterprise focused.",
+    "modules": [
+      "Agentic AI Architecture",
+      "LangChain & AutoGPT",
+      "RAG Systems",
+      "Real‑time Use‑case Projects"
+    ],
+    "topColor": "linear-gradient(to right, #f97316, #b45309)",
+    "difficultyBar": "#facc15"
+  },
+
+  
+
+];

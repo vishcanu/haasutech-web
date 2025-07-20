@@ -124,6 +124,7 @@ export default function Navbar() {
   const handleClose = () => setDrawerOpen(false);
 
   const navLinks = [
+     { label: "Home", href: "/" },
     { label: "Courses", href: "/courses" },
     { label: "Career Switch", href: "/career-switch" },
     { label: "Upskill", href: "/upskill" },

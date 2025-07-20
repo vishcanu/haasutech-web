@@ -1,0 +1,183 @@
+.placementSection {
+  background-color: #f8f9fc;
+  padding: 60px 0;
+  text-align: center;
+ 
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700 !important;
+   margin-top: -2rem !important;
+  margin-bottom: 0.25rem !important;
+  background: linear-gradient(
+    90deg,
+    #2e225d,
+    #3a2d91,
+    #4b3fa9,
+    #5d51bf,
+    #6e63d5,
+    #2e225d
+  );
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s linear infinite;
+}
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.subtitle {
+  margin-bottom: 1rem !important;
+  color: #555;
+  font-size: 1rem;
+}
+
+.sliderWrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  width: fit-content;
+}
+
+.marqueeContent {
+  display: flex;
+}
+
+.logoContainer {
+  flex: 0 0 auto;
+  margin: 0 30px;
+}
+
+.logo {
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 1440px) {
+  .logo {
+    height: 55px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    height: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  .logo {
+    height: 45px;
+  }
+  .logoContainer {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .logo {
+    height: 40px;
+  }
+  .logoContainer {
+    margin: 0 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.4rem !important;
+     margin-bottom: 0.25rem !important;
+  }
+  .subtitle {
+    font-size: 0.9rem !important;
+    line-height: 1 !important;
+     margin-bottom: 0.25rem !important;
+  }
+  .logo {
+    height: 40px !important;
+  }
+  .logoContainer {
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 475px) {
+  .title {
+    font-size: 1.3rem !important;
+     margin-bottom: 0.25rem !important;
+  }
+  .subtitle {
+    font-size: 0.8rem !important;
+    line-height: 1 !important;
+     margin-bottom: 0.25rem !important;
+  }
+  .logo {
+    height: 35px !important;
+  }
+  .logoContainer {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .subtitle {
+    font-size: 0.7rem !important;
+    line-height: 1 !important;
+     margin-bottom: 0.25rem !important;
+  }
+  .logo {
+    height: 35px !important;
+  }
+  .logoContainer {
+    margin: 0 8px;
+  }
+}
+
+/* Animation Keyframe */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

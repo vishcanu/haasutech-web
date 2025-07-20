@@ -1,7 +1,6 @@
 
 
 
-
 import React from 'react';
 import {
   Box,
@@ -12,6 +11,7 @@ import {
   Chip,
   Button,
   LinearProgress,
+  Tooltip
 } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -24,77 +24,77 @@ export default function CoursesPreview() {
 
   return (
     <Box className={styles.section}>
-      <Typography variant="h5" className={styles.title}>
-       Most Popular Courses
+      <Typography variant="h3" className={styles.title}>
+        Most Popular Courses
       </Typography>
       <Typography className={styles.subtitle}>
-        Join thousands of students in our top-rated courses
+        Join thousands of learners. Interactive, job-ready tech courses for everyone.
       </Typography>
 
       <Grid container spacing={3} className={styles.grid}>
-        <div className={styles.gridWrapper}>
         {featuredCourses.map((course, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Box height="100%">
-              <Card className={styles.card}>
-                <Box className={styles.cardTop} style={{ background: course.topColor }}>
-                  <Box className={styles.courseIcon}>{course.icon}</Box>
-                  <Chip label={course.badge || 'POPULAR'} className={styles.badge} />
-                </Box>
-
-                <CardContent className={styles.cardContent}>
-                  <Box className={styles.infoRow}>
-                  
+            <Card
+              className={styles.card}
+              tabIndex={0}
+              aria-label={`View details for ${course.title}`}
+            >
+              <Box
+                className={styles.cardTop}
+                style={{ background: course.topColor || '#6366f1' }}
+              >
+                <span className={styles.courseIcon}>
+                  {/* Avatar/icon can be an SVG or <img> */}
+                  {course.icon}
+                </span>
+                <Chip
+                  label={course.badge || 'POPULAR'}
+                  className={styles.badge}
+                  size="small"
+                />
+              </Box>
+              <CardContent className={styles.cardContent}>
+                <Box className={styles.infoRow}>
+                  <Tooltip title={`Rating: ${course.rating || 4.5}`}>
                     <Typography className={styles.rating}>
-                      <StarIcon fontSize="small" /> {course.rating || '4.5'} 
+                      <StarIcon fontSize="small" />
+                      {course.rating || '4.5'}
                     </Typography>
-                  </Box>
-
-                  <Typography variant="h6" className={styles.courseTitle}>
-                    {course.title}
+                  </Tooltip>
+                  <Typography className={styles.students}>
+                    {course.students.toLocaleString()} students
                   </Typography>
-
-                  <Typography className={styles.details}>
-                    {course.duration} · {course.students.toLocaleString()} students enrolled
-                  </Typography>
-
-                  <LinearProgress
-                    variant="determinate"
-                    value={course.progress || 80}
-                    className={styles.progress}
-                  />
-                  <Typography className={styles.progressText}>
-                    {course.progress || 80}% full
-                  </Typography>
-
-                  <Button
-                    variant="contained"
-                    startIcon={<PhoneIcon />}
-                    fullWidth
-                    className={styles.enrollBtn}
-                  >
-                    Call to Enroll: +91-8871732621
-                  </Button>
-                </CardContent>
-              </Card>
-            </Box>
+                </Box>
+                <Typography variant="h6" className={styles.courseTitle}>
+                  {course.title}
+                </Typography>
+                <Typography className={styles.details}>
+                  {course.duration} &middot; {course.level}
+                </Typography>
+                <LinearProgress
+                  variant="determinate"
+                  value={course.progress || 80}
+                  className={styles.progress}
+                  aria-valuenow={course.progress || 80}
+                  aria-label="Enrollment progress"
+                />
+                <Typography className={styles.progressText}>
+                  {course.progress || 80}% full
+                </Typography>
+                <Button
+                  variant="contained"
+                  startIcon={<PhoneIcon />}
+                  fullWidth
+                  className={styles.enrollBtn}
+                  aria-label={`Call to enroll in ${course.title}`}
+                >
+                 view course
+                </Button>
+              </CardContent>
+            </Card>
           </Grid>
         ))}
-        </div>
       </Grid>
-<Box className={styles.limitedOfferWrapper}>
-      <Box className={styles.limitedOffer}>
-        <h3>⏰ Limited Time: 50% OFF All Courses!</h3>
-        <p>Don't miss out! Call now to secure your spot and save big</p>
-        <Box className={styles.ctaButtons}>
-          <Button className={styles.callBtn}>📞 Call Now: (+91) 88717 32621</Button>
-          <Button className={styles.whatsappBtn}>💬 WhatsApp Us</Button>
-        </Box>
-        <div className={styles.footerText}>
-          🔥 Offer expires in 48 hours | 💳 Easy payment plans available
-        </div>
-      </Box>
-      </Box>
     </Box>
   );
 }

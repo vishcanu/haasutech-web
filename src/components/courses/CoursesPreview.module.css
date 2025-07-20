@@ -6,10 +6,34 @@
 }
 
 .title {
-  font-weight: bold;
-  color: #4339f2;
-  margin-bottom: 0.4rem;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700 !important;
+   margin-top: -1rem !important;
+  margin-bottom: 0.25rem !important;
+  background: linear-gradient(
+    90deg,
+    #2e225d,
+    #3a2d91,
+    #4b3fa9,
+    #5d51bf,
+    #6e63d5,
+    #2e225d
+  );
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s linear infinite;
+}
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .subtitle {

@@ -5,7 +5,7 @@ import styles from './NewsletterForm.module.css';
 export default function NewsletterForm() {
   return (
     <Box className={styles.newsletterSection}>
-      <Typography variant="h5" className={styles.heading}>
+      <Typography variant="h3" className={styles.heading}>
         Subscribe to our Newsletter
       </Typography>
       <Typography variant="body2" className={styles.subtitle}>
