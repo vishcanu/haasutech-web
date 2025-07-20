@@ -67,13 +67,13 @@ background: linear-gradient(145deg, #f8fbff, #e8f0fa);
     0 0 10px rgba(122, 104, 250, 0.25),
     0 12px 32px rgba(255, 255, 255, 0.12);
   border-color: #7a68fa;
-  background: linear-gradient(135deg, #f0f4ff, #e6e6ff); /* slightly cooler gradient */
+  background: linear-gradient(135deg, #f0f4ff, #e6e6ff); 
 }
 
 .iconWrapper {
-  font-size: 3.6rem; /* increased icon size */
+  font-size: 3.6rem; 
   color: #7a68fa;
-  margin-bottom: 0.5rem; /* reduced bottom margin */
+  margin-bottom: 0.5rem; 
   display: flex;
   justify-content: center;
   align-items: center;
