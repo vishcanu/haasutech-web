@@ -20,6 +20,7 @@
     #2e225d
   );
   background-size: 400% auto;
+   background-clip: text; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientFlow 6s linear infinite;
@@ -40,7 +41,7 @@
 
 .subtitle {
   margin-bottom: 1rem !important;
-  color: #555;
+  color: #666;
   font-size: 1rem;
 }
 
@@ -120,11 +121,11 @@
 
 @media (max-width: 576px) {
   .title {
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
      margin-bottom: 0.25rem !important;
   }
   .subtitle {
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
     line-height: 1 !important;
      margin-bottom: 0.25rem !important;
   }
@@ -138,7 +139,7 @@
 
 @media (max-width: 475px) {
   .title {
-    font-size: 1.3rem !important;
+    font-size: 1.5rem !important;
      margin-bottom: 0.25rem !important;
   }
   .subtitle {
@@ -156,11 +157,11 @@
 
 @media (max-width: 320px) {
   .title {
-    font-size: 1.2rem !important;
+    font-size: 1.5rem !important;
     margin-bottom: 0.25rem !important;
   }
   .subtitle {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
     line-height: 1 !important;
      margin-bottom: 0.25rem !important;
   }

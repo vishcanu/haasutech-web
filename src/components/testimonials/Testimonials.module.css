@@ -22,6 +22,7 @@
     #2e225d
   );
   background-size: 400% auto;
+   background-clip: text; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientFlow 6s linear infinite;
@@ -40,7 +41,7 @@
 }
 
 .subheading {
-  color: #475569;
+  color: #666;
   margin-bottom: 1rem !important;
   font-size: 1rem !important;
   line-height: 1 ;
