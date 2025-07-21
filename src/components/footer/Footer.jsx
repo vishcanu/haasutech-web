@@ -26,7 +26,7 @@ export default function Footer() {
           <Typography variant="h6" className={styles.footerTitle}>For Learners</Typography>
           <ul className={styles.footerList}>
             <li><Link href="/career-switch" underline="none">Career Switchers</Link></li>
-            <li><Link href="/upskill" underline="none">Upskilling Employees</Link></li>
+            <li><Link href="/blog" underline="none">Blogs</Link></li>
             <li><Link href="#" underline="none">College Students</Link></li>
           </ul>
         </Grid>
