@@ -46,20 +46,19 @@
 /* ⬇️ Wrapper for Grid to Center Cards */
 .gridWrapper {
   display: flex;
-  
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  width: 100%;
+  max-width: 1600px; /* Enough to fit 5 cards with spacing */
   margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 /* 📦 Course Card */
 .card {
-  flex: 1 1 300px;
+  width: 280px; 
+  height :200px;
   text-align: center;
-  width: 275px;
-  height: 350px;
   background: #fff;
   border-radius: 18px !important;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
@@ -75,6 +74,7 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
   border-color: #4339f2;
 }
+
 
 .cardTop {
   height: 100px !important;
@@ -135,7 +135,21 @@
   font-weight: 700;
   margin: 0.5rem 0;
   line-height: 1.2;
+  color: white !important;
+  text-align: center;
+  animation: fadeInUp 0.6s ease-in-out;
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .details {
   font-size: 0.85rem !important;
@@ -157,16 +171,31 @@
 }
 
 .enrollBtn {
-  margin-top: auto !important; 
-  background: linear-gradient(to right, #4facfe, #00f2fe) !important;
-  color: #fff !important;
-  border-radius: 10px;
-  padding: 0.5rem 1rem;
-  font-weight: 400;
-  width: 100%;
-  text-transform: none !important; /* ✅ This line fixes uppercase issue */
-  font-size: 0.95rem !important;
+  border-radius: 50px !important;
+  text-align: center;
+  text-transform: none !important;
+  font-size: 0.75rem !important; /* smaller font size */
+  padding: 0.35rem 0.75rem !important; /* smaller padding */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: auto !important; /* pushes the button to the bottom of the flex column */
+  width: fit-content !important; /* button won’t take full width */
+  align-self: center; /* center horizontally */
 }
+
+.enrollBtn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.hookLine {
+  font-size: 0.8rem;
+  margin: 0.75rem 0 0.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+
 
 
 /* 📱 Mobile Responsive */
@@ -211,6 +240,11 @@
     line-height: 1 !important;
      margin-bottom: 0.25rem !important;
   }
+  
+   .card {
+  width: 280px; 
+  height :100px !important;
+  }
 }
 
 @media (max-width: 475px) {
@@ -223,17 +257,48 @@
     line-height: 1 !important;
      margin-bottom: 0.25rem !important;
   }
+ 
+   .card {
+  width: 280px; 
+  height :100px !important;
+  }
 }
 
 @media (max-width: 320px) {
- .title {
+  .title {
     font-size: 1.5rem !important;
-     margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
   }
+
   .subtitle {
     font-size: 0.8rem !important;
     line-height: 1 !important;
-     margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
   }
-  
+
+  .card {
+    width: 260px !important;
+    height: 180px !important;
+    padding: 0.5rem !important;
+    overflow: hidden;
+  }
+
+  .cardContent {
+    padding: 0.5rem !important;
+  }
+
+  .courseTitle {
+    font-size: 0.9rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .enrollBtn {
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
+  }
+
+  .hookLine {
+    font-size: 0.7rem !important;
+  }
 }
+

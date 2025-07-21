@@ -34,64 +34,44 @@ export default function CoursesPreview() {
       <Grid container spacing={3} className={styles.grid}>
         {featuredCourses.map((course, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card
-              className={styles.card}
-              tabIndex={0}
-              aria-label={`View details for ${course.title}`}
-            >
-              <Box
-                className={styles.cardTop}
-                style={{ background: course.topColor || '#6366f1' }}
-              >
-                <span className={styles.courseIcon}>
-                  {/* Avatar/icon can be an SVG or <img> */}
-                  {course.icon}
-                </span>
-                <Chip
-                  label={course.badge || 'POPULAR'}
-                  className={styles.badge}
-                  size="small"
-                />
-              </Box>
-              <CardContent className={styles.cardContent}>
-                <Box className={styles.infoRow}>
-                  <Tooltip title={`Rating: ${course.rating || 4.5}`}>
-                    <Typography className={styles.rating}>
-                      <StarIcon fontSize="small" />
-                      {course.rating || '4.5'}
-                    </Typography>
-                  </Tooltip>
-                  <Typography className={styles.students}>
-                    {course.students.toLocaleString()} students
-                  </Typography>
-                </Box>
-                <Typography variant="h6" className={styles.courseTitle}>
-                  {course.title}
-                </Typography>
-                <Typography className={styles.details}>
-                  {course.duration} &middot; {course.level}
-                </Typography>
-                <LinearProgress
-                  variant="determinate"
-                  value={course.progress || 80}
-                  className={styles.progress}
-                  aria-valuenow={course.progress || 80}
-                  aria-label="Enrollment progress"
-                />
-                <Typography className={styles.progressText}>
-                  {course.progress || 80}% full
-                </Typography>
-                <Button
-                  variant="contained"
-                  startIcon={<PhoneIcon />}
-                  fullWidth
-                  className={styles.enrollBtn}
-                  aria-label={`Call to enroll in ${course.title}`}
-                >
-                 view course
-                </Button>
-              </CardContent>
-            </Card>
+            <Card className={styles.card} tabIndex={0}>
+  <Box className={styles.cardTop} style={{ background: course.topColor || '#6366f1' }}>
+    <span className={styles.courseIcon}>{course.icon}</span>
+    <Typography variant="h6" className={styles.courseTitle}>
+      {course.title}
+    </Typography>
+  </Box>
+  <CardContent className={styles.cardContent}>
+    <Box className={styles.infoRow}>
+      <Tooltip title={`Rating: ${course.rating || 4.5}`}>
+        <Typography className={styles.rating}>
+          <StarIcon fontSize="small" />
+          {course.rating || '4.5'}
+        </Typography>
+      </Tooltip>
+    </Box>
+     <Typography variant="body2" className={styles.hookLine}>
+    Kickstart your journey in {course.title.toLowerCase()} today!
+  </Typography>
+   
+    <Button
+  variant="outlined"
+  fullWidth
+  size="small"
+  href={`/courses/${course.slug}`}
+  className={styles.enrollBtn}
+  style={{
+    background: course.topColor || '#6366f1',
+    color: '#fff',
+    fontWeight: 500
+  }}
+>
+  View
+</Button>
+
+  </CardContent>
+</Card>
+
           </Grid>
         ))}
       </Grid>

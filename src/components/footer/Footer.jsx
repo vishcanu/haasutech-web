@@ -5,7 +5,7 @@ import styles from './Footer.module.css';
 export default function Footer() {
   return (
     <Box className={styles.footer}>
-      <Grid container spacing={4} justifyContent="center" alignItems="flex-start">
+      <Grid container spacing={10} justifyContent="center" alignItems="flex-start">
         <Grid item xs={12} sm={6} md={3}>
           <Typography variant="h6" className={styles.footerTitle}>Haasutech AI</Typography>
           <Typography variant="body2" className={styles.footerText}>

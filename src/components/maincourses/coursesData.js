@@ -377,7 +377,7 @@ export const courseData = [
 {
   id: 5,
   slug: "ai-ml-certification",
-  title: "Artificial Intelligence & Machine Learning (AI-ML) Certification Course",
+  title: "Artificial Intelligence & Machine Learning (AI-ML) Certification",
   level: "Beginner to Advanced",
   badge: "Advanced",
   badgeColor: "#8b5cf6", // Violet
@@ -483,6 +483,7 @@ export const courseData = [
   badgeColor: "#0ea5e9", // Sky Blue
   duration: "14 weeks",
   students: 9873,
+  isFeatured: true,
   tag: "AI & Machine Learning",
   description: "Master the entire Machine Learning workflow using Python, from data preprocessing to building and deploying predictive models in real-world scenarios.",
   image: "/assets/images/courses/ml-python-icon.png",
@@ -583,6 +584,7 @@ export const courseData = [
   duration: "12 weeks",
   students: 7910,
   tag: "AI & Machine Learning",
+  isFeatured: true,
   description: "Master deep learning from the ground up. Build real-world neural networks using TensorFlow/Keras and solve problems in vision, NLP, and AI product development.",
   image: "/assets/images/courses/deep-learning-icon.png",
   why: {
@@ -782,6 +784,7 @@ export const courseData = [
   duration: "10 weeks",
   students: 5214,
   tag: "Generative AI",
+  isFeatured: true,
   description: "Learn to build, fine-tune, and deploy cutting-edge generative models, from image synthesis with Stable Diffusion to text generation with GPT and beyond.",
   image: "/assets/images/courses/genai-mastery-icon.png",
   why: {
@@ -926,6 +929,7 @@ export const courseData = [
   duration: "8 weeks",
   students: 3211,
   tag: "Agentic AI",
+  isFeatured: true,
   description: "Build autonomous AI agents using LangGraph, LangChain, and OpenAI Tools. Design multi-step, goal-seeking AI that reasons, acts, and adapts.",
   image: "/assets/images/courses/agentic-ai-icon.png",
   why: {
@@ -1026,6 +1030,7 @@ export const courseData = [
   badgeColor: "#22c55e",
   duration: "16 weeks",
   students: 20000,
+  isFeatured: true,
   tag: "Data Science & Analytics",
   description: "Focused on Python-powered data science, this course teaches Pandas, ML, DL, and data storytelling, ideal for analysts and aspiring data scientists.",
   image: "/assets/images/courses/python-ds-icon.png",
@@ -1059,6 +1064,7 @@ export const courseData = [
   badgeColor: "#f59e0b",
   duration: "6 weeks",
   students: 15000,
+  isFeatured: true,
   tag: "Data Science & Analytics",
   description: "Master business reporting with Excel, data modelling, Power BI, DAX, and dashboard storytelling, the essential skills for BI and analyst roles.",
   image: "/assets/images/courses/powerbi-icon.png",
@@ -1091,6 +1097,7 @@ export const courseData = [
   badgeColor: "#ef4444",
   duration: "8 weeks",
   students: 9405,
+  isFeatured: true,
   tag: "Data Science & Analytics",
   description: "Use R for statistical analysis, data visualization, reporting, and analytics, perfect for analysts in finance, marketing, and research.",
   image: "/assets/images/courses/r-analytics-icon.png",
@@ -1124,6 +1131,7 @@ export const courseData = [
   duration: "35 hours",
   students: 15213,
   tag: "Cloud & DevOps",
+  isFeatured: true,
   description: "Master AWS core services, architecture best practices, and deployment strategies needed to pass the SAA‑C03 exam and build scalable cloud solutions.",
   image: "/assets/images/courses/aws-architect-icon.png",
   why: {
