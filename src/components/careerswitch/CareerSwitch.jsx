@@ -66,7 +66,7 @@ export default function CareerSwitch() {
         </div>
 
         <div className={styles.rightIllustration}>
-          <img src="/assets/ai-career-illustration.svg" alt="AI Career Switch" />
+          <img src="/assets/careerswitch2.png" alt="AI Career Switch" />
         </div>
       </section>
 

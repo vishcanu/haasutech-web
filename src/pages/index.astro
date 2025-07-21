@@ -6,6 +6,7 @@ import WhyHaasutech from '../components/whyHaasutech/WhyHaasutech.jsx';
 import Placement from '../components/placement/Placement.jsx';
 import NewsletterForm from '../components/newsletter/NewsletterForm.jsx';
 import Testimonials from '../components/testimonials/Testimonials.jsx';
+import Blog from '../components/blog/Blog.jsx';
 import { Fragment } from 'astro/jsx-runtime';
 ---
 
@@ -13,6 +14,16 @@ import { Fragment } from 'astro/jsx-runtime';
   <Fragment slot="head">
     <title>Haasutech AI - Learn AI from IITians</title>
     <meta name="description" content="Master AI, ML, DSA from IITians & industry experts. Build job-ready skills with Haasutech AI." />
+<meta name="keywords" content="
+AI courses, AI training Noida, AI training Bangalore, learn AI from IITians,
+data science courses, data science internship India, machine learning certification,
+online AI training India, best AI institute India, Python for AI,
+free AI internship, BTech AI internship, AI for students,
+job-ready AI skills, industry-led AI bootcamp, AI and ML placement support,
+UI UX with React, full stack developer courses India, cloud computing for beginners,
+top tech institute in India,Haasutech, Haasutech AI, No.1 AI institute, tech career switch
+" />
+``
     <meta property="og:title" content="Haasutech AI - Learn AI from IITians" />
     <meta property="og:description" content="Join courses crafted by top IIT graduates and professionals." />
     <meta property="og:image" content="/ai-og.png" />
@@ -31,7 +42,8 @@ import { Fragment } from 'astro/jsx-runtime';
         },
         "itemReviewed": {
           "@type": "Organization",
-          "name": "Haasutech AI"
+          "name": "Haasutech",
+           "sameAs": "https://haasutech.in"
         }
       }
     </script>
@@ -45,5 +57,5 @@ import { Fragment } from 'astro/jsx-runtime';
   <Placement client:load />
   <Testimonials client:load />
   <NewsletterForm client:load/>
-  
+  <Blog client:load/>
 </MainLayout>

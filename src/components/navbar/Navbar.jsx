@@ -127,7 +127,7 @@ export default function Navbar() {
      { label: "Home", href: "/" },
     { label: "Courses", href: "/courses" },
     { label: "Career Switch", href: "/career-switch" },
-    { label: "Upskill", href: "/upskill" },
+    { label: "Blog", href: "/blog" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" }
   ];

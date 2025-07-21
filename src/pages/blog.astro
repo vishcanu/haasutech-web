@@ -1,0 +1,23 @@
+---
+import MainLayout from '../layouts/Mainlayout.astro';
+import Blog from '../components/blog/Blog.jsx';
+---
+
+<head>
+  <title>Trending Tech Blogs | AI, Data Science, Machine Learning | Haasutech AI</title>
+  <meta name="description" content="Stay updated with the latest trends in Artificial Intelligence, Data Science, Machine Learning, Cloud, and Tech Careers. Read Haasutech AI’s expert blogs." />
+
+  <!-- SEO Keywords -->
+<meta name="keywords" content="AI blogs, data science blogs, machine learning articles, cloud computing trends, tech career switch, Haasutech AI, full stack AI learning, trending tech blogs, deep learning, react blogs, TypeScript, UI UX design tips, Noida AI training, Bangalore data science institute, No.1 training institute for AI, best AI course in Noida, top machine learning institute Bangalore, AI career switch Noida, Haasutech AI Noida, AI courses Bangalore" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Latest Blogs on AI, Data Science & Tech | Haasutech AI" />
+  <meta property="og:description" content="Learn about AI, ML, Cloud Computing, React, TypeScript, and more. Blogs crafted for working professionals and tech enthusiasts." />
+  <meta property="og:image" content="/ai-og.png" />
+  <meta property="og:url" content="https://haasutech.in/blog" />
+  <meta property="og:type" content="website" />
+</head>
+
+<MainLayout>
+  <Blog client:load />
+</MainLayout>
