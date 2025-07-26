@@ -1,14 +1,25 @@
-.section {
+/* .section {
   padding: 2rem 1rem;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+} */
+ .section {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
 
 .title {
   font-size: 2.5rem;
   font-weight: 700 !important;
-   margin-top: -1rem !important;
+  margin-top: -1rem !important;
   margin-bottom: 0.25rem !important;
   background: linear-gradient(
     90deg,
@@ -20,7 +31,7 @@
     #2e225d
   );
   background-size: 400% auto;
-   background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientFlow 6s linear infinite;
@@ -43,29 +54,44 @@
   margin-bottom: 1rem !important;
 }
 
-/* ⬇️ Wrapper for Grid to Center Cards */
-.gridWrapper {
+
+
+
+.gridWrapper
+ {
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* Centers horizontally */
+  align-items: flex-start;   /* Aligns cards from the top */
   flex-wrap: wrap;
-  gap: 2rem;
-  max-width: 1600px; /* Enough to fit 5 cards with spacing */
+  gap: 1rem;
+  padding: 2rem 1rem;
   margin: 0 auto;
+}
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* Always 4 columns */
+  gap: 2rem;
+  justify-items: center;
+  width: 100%;
   padding: 2rem 1rem;
 }
 
-/* 📦 Course Card */
 .card {
-  width: 280px; 
-  height :200px;
+  width: 100%;
+  max-width: 280px;
+  height: 375px;
   text-align: center;
-  background: #fff;
-  border-radius: 18px !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  background: linear-gradient(145deg, #f9fafb, #ffffff);
+  border-radius: 12px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ddd;
+  border: 1px solid #e5e7eb;
+  margin-top: -1rem !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -77,12 +103,13 @@
 
 
 .cardTop {
-  height: 100px !important;
+  flex: 0 0 15%;
+  background: #6366f1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #6366f1;
-  color: white;
+  padding: 1rem;
   position: relative;
 }
 
@@ -122,7 +149,7 @@
 
 .rating {
   display: flex;
-   justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
   color: #f59e0b;
   gap: 0.25rem;
@@ -131,14 +158,17 @@
 }
 
 .courseTitle {
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', sans-serif;
   font-size: 1rem !important;
-  font-weight: 700;
+  font-weight: bolder !important;
   margin: 0.5rem 0;
   line-height: 1.2;
   color: white !important;
   text-align: center;
+  letter-spacing: 0.2px; /* subtle spacing */
   animation: fadeInUp 0.6s ease-in-out;
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -150,24 +180,83 @@
   }
 }
 
-
-.details {
-  font-size: 0.85rem !important;
-  color: #555;
-  margin-bottom: 0.75rem;
+/* Group wrapper */
+.pillGroup {
+  margin: 0.1rem 0 0.5rem;
 }
 
-.progress {
-  height: 8px;
-  border-radius: 4px;
-  background-color: #e0e0e0;
-  margin-bottom: 0.5rem;
+.pillLabel {
+  font-weight: bolder !important;
+  font-size: 0.65rem !important;
+  margin-bottom: 0.12rem !important;
+  color: #0551f5;
 }
 
-.progressText {
-  font-size: 0.75rem !important;
-  color: #333;
-  text-align: right;
+.pillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+
+.toolChip {
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe) !important;
+  color: #1e3a8a !important; /* Darker indigo for contrast */
+  font-size: 0.55rem !important;
+  font-weight: 500 !important;
+  border-radius: 14px !important;
+  padding: 2px 5px !important;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+
+/* Career chips - gradient green */
+.careerChip {
+  background: linear-gradient(135deg, #ecfdf5, #bbf7d0) !important;
+  color: #065f46 !important; /* Darker green for contrast */
+  font-size: 0.55rem !important;
+  font-weight: 500 !important;
+  border-radius: 14px !important;
+  padding: 2px 5px !important;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -0.5rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.byIITians {
+  top: 5px !important;
+  left: 5px !important;
+  font-size: 0.7rem !important;
+  font-weight: 400;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.3px;
+  text-transform: none;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fbbf24;
+}
+.rating svg {
+  margin-right: 2px;
 }
 
 .enrollBtn {
@@ -179,92 +268,300 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: auto !important; /* pushes the button to the bottom of the flex column */
   width: fit-content !important; /* button won’t take full width */
+  height: 25px !important;
+    cursor: pointer;
   align-self: center; /* center horizontally */
 }
 
 .enrollBtn:hover {
   transform: scale(1.03);
+    cursor: pointer;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 .hookLine {
-  font-size: 0.8rem;
+  font-size: 0.7rem !important;
   margin: 0.75rem 0 0.5rem;
   color: #333;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
+  background: linear-gradient(90deg, #333, #6366f1, #333);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
+.viewAllBtn {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff !important;
+     background: linear-gradient(180deg, #8e2de2 0%, #4a00e0 50%, #0f0c29 100%);
+  border: none;
+  border-radius: 50px;
+  text-transform: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatUp 2s ease-in-out infinite;
+}
 
+.viewAllBtn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
 
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
 
-/* 📱 Mobile Responsive */
-@media (max-width: 768px) {
- 
- 
+/* 📱 Responsive */
+@media (max-width: 1024px) {
 
 
   .ctaButtons {
     flex-direction: column;
     gap: 0.75rem;
   }
-
-  
+   .grid {
+    grid-template-columns: repeat(3, 1fr); /* 2 cards per row for tablets */
+  }
 }
-
 
 /* 📱 Responsive */
 @media (max-width: 768px) {
   .card {
-    max-width: 100%;
-    min-height: 400px;
+  height: 350px !important;
   }
+
 
   .ctaButtons {
     flex-direction: column;
     gap: 0.75rem;
   }
-
- 
-
- 
+   .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
+  }
 }
 
 @media (max-width: 576px) {
+  .card {
+  height: 350px !important;
+  }
   .title {
     font-size: 1.5rem !important;
-     margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
   }
   .subtitle {
     font-size: 0.8rem !important;
     line-height: 1 !important;
-     margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
   }
-  
-   .card {
-  width: 280px; 
-  height :100px !important;
+
+
+  .grid {
+    grid-template-columns: 1fr; /* 1 card per row for mobile */
   }
+  .pillGroup {
+  margin: 0.1rem 0 0.5rem;
+}
+
+.pillLabel {
+  font-weight: 300;
+  font-size: 0.55rem !important;
+  margin-bottom: 0.15rem !important;
+  color: #0551f5;
+}
+
+.pillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+
+.toolChip {
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe) !important;
+  color: #1e3a8a !important; /* Darker indigo for contrast */
+  font-size: 0.55rem !important;
+  font-weight: 400 !important;
+  border-radius: 14px !important;
+  padding: 2px 5px !important;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+
+/* Career chips - gradient green */
+.careerChip {
+  background: linear-gradient(135deg, #ecfdf5, #bbf7d0) !important;
+  color: #065f46 !important; /* Darker green for contrast */
+  font-size: 0.55rem !important;
+  font-weight: 400 !important;
+  border-radius: 14px !important;
+  padding: 2px 5px !important;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem !important;
+}
+
+.byIITians {
+  top: 5px !important;
+  left: 5px !important;
+  font-size: 0.5rem !important;
+  font-weight: 400;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.3px;
+  text-transform: none;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: #fbbf24;
+}
+.rating svg {
+  margin-right: 2px;
+}
 }
 
 @media (max-width: 475px) {
+  .card {
+  height: 350px !important;
+  }
   .title {
     font-size: 1.5rem !important;
-     margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
   }
   .subtitle {
     font-size: 0.8rem !important;
     line-height: 1 !important;
-     margin-bottom: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
   }
+
  
-   .card {
-  width: 280px; 
-  height :100px !important;
+  .grid {
+    grid-template-columns: 1fr; /* 1 card per row for mobile */
   }
+  .pillGroup {
+  margin: 0.1rem 0 0.5rem;
+}
+
+.pillLabel {
+  font-weight: 300;
+  font-size: 0.55rem !important;
+  margin-bottom: 0.15rem !important;
+  color: #0551f5;
+}
+
+.pillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+
+.toolChip {
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe) !important;
+  color: #1e3a8a !important; /* Darker indigo for contrast */
+  font-size: 0.55rem !important;
+  font-weight: 400 !important;
+  border-radius: 14px !important;
+  padding: 2px 5px !important;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+
+/* Career chips - gradient green */
+.careerChip {
+  background: linear-gradient(135deg, #ecfdf5, #bbf7d0) !important;
+  color: #065f46 !important; /* Darker green for contrast */
+  font-size: 0.55rem !important;
+  font-weight: 400 !important;
+  border-radius: 14px !important;
+  padding: 2px 5px !important;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem !important;
+}
+
+.byIITians {
+  top: 5px !important;
+  left: 5px !important;
+  font-size: 0.5rem !important;
+  font-weight: 400;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.3px;
+  text-transform: none;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: #fbbf24;
+}
+.rating svg {
+  margin-right: 2px;
+}
 }
 
 @media (max-width: 320px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 card per row for mobile */
+  }
+  .card {
+  height: 325px !important;
+  }
   .title {
     font-size: 1.5rem !important;
     margin-bottom: 0.25rem !important;
@@ -276,12 +573,7 @@
     margin-bottom: 0.25rem !important;
   }
 
-  .card {
-    width: 260px !important;
-    height: 180px !important;
-    padding: 0.5rem !important;
-    overflow: hidden;
-  }
+
 
   .cardContent {
     padding: 0.5rem !important;
@@ -291,6 +583,82 @@
     font-size: 0.9rem !important;
     line-height: 1.1 !important;
   }
+  .pillGroup {
+  margin: 0.1rem 0 0.5rem;
+}
+
+.pillLabel {
+  font-weight: 300;
+  font-size: 0.55rem !important;
+  margin-bottom: 0.15rem !important;
+  color: #0551f5;
+}
+
+.pillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+
+.toolChip {
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe) !important;
+  color: #1e3a8a !important; /* Darker indigo for contrast */
+  font-size: 0.55rem !important;
+  font-weight: 400 !important;
+  border-radius: 14px !important;
+  padding: 2px 5px !important;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+
+/* Career chips - gradient green */
+.careerChip {
+  background: linear-gradient(135deg, #ecfdf5, #bbf7d0) !important;
+  color: #065f46 !important; /* Darker green for contrast */
+  font-size: 0.55rem !important;
+  font-weight: 400 !important;
+  border-radius: 14px !important;
+  padding: 2px 5px !important;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem !important;
+}
+
+.byIITians {
+  top: 5px !important;
+  left: 5px !important;
+  font-size: 0.5rem !important;
+  font-weight: 400;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.3px;
+  text-transform: none;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: #fbbf24;
+}
+.rating svg {
+  margin-right: 2px;
+}
 
   .enrollBtn {
     font-size: 0.75rem !important;
@@ -301,4 +669,3 @@
     font-size: 0.7rem !important;
   }
 }
-

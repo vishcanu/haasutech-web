@@ -8,7 +8,7 @@
 
 /* -------------------- Hero Section -------------------- */
 .hero {
-  background: linear-gradient(135deg, #005f73, #40a9b6,  #86d2df);
+  background: linear-gradient(to bottom, #005f73, #40a9b6);
   color: white;
   padding: 2rem 1rem;
   border-radius: 5px;

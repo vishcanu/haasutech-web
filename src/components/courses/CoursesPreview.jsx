@@ -1,20 +1,18 @@
 
 
 
+
 import React from 'react';
 import {
   Box,
   Typography,
-  Grid,
   Card,
   CardContent,
   Chip,
   Button,
-  LinearProgress,
   Tooltip
 } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
-import PhoneIcon from '@mui/icons-material/Phone';
 
 import styles from './CoursesPreview.module.css';
 import { courseData } from '../maincourses/coursesData';
@@ -31,50 +29,82 @@ export default function CoursesPreview() {
         Join thousands of learners. Interactive, job-ready tech courses for everyone.
       </Typography>
 
-      <Grid container spacing={3} className={styles.grid}>
+      {/* ✅ Using CSS Grid */}
+      <Box className={styles.grid}>
         {featuredCourses.map((course, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card className={styles.card} tabIndex={0}>
-  <Box className={styles.cardTop} style={{ background: course.topColor || '#6366f1' }}>
-    <span className={styles.courseIcon}>{course.icon}</span>
-    <Typography variant="h6" className={styles.courseTitle}>
-      {course.title}
-    </Typography>
-  </Box>
-  <CardContent className={styles.cardContent}>
-    <Box className={styles.infoRow}>
-      <Tooltip title={`Rating: ${course.rating || 4.5}`}>
-        <Typography className={styles.rating}>
-          <StarIcon fontSize="small" />
-          {course.rating || '4.5'}
-        </Typography>
-      </Tooltip>
-    </Box>
-     <Typography variant="body2" className={styles.hookLine}>
-    Kickstart your journey in {course.title.toLowerCase()} today!
-  </Typography>
-   
-    <Button
-  variant="outlined"
-  fullWidth
-  size="small"
-  href={`/courses/${course.slug}`}
-  className={styles.enrollBtn}
-  style={{
-    background: course.topColor || '#6366f1',
-    color: '#fff',
-    fontWeight: 500
-  }}
->
-  View
-</Button>
+          <Card className={styles.card} tabIndex={0} key={index}>
+            <Box
+              className={styles.cardTop}
+              style={{ background: course.topColor || '#6366f1' }}
+            >
+              <span className={styles.courseIcon}>{course.icon}</span>
+              <Typography variant="h6" className={styles.courseTitle}>
+                {course.title}
+              </Typography>
+            </Box>
 
-  </CardContent>
-</Card>
+            <CardContent className={styles.cardContent}>
+              <Box className={styles.infoRow}>
+                <Typography className={styles.byIITians}>By IITians</Typography>
+                <Tooltip title={`Rating: ${course.rating || 4.5}`}>
+                  <Typography className={styles.rating}>
+                    <StarIcon fontSize="small" />
+                    {course.rating || '4.5'}
+                  </Typography>
+                </Tooltip>
+              </Box>
 
-          </Grid>
+              {course.tools?.length > 0 && (
+                <Box className={styles.pillGroup}>
+                  <Typography className={styles.pillLabel}>
+                    Tools &amp; Technologies:
+                  </Typography>
+                  <Box className={styles.pillsRow}>
+                    {course.tools.slice(0, 3).map((t, i) => (
+                      <Chip key={i} label={t} size="small" className={styles.toolChip} />
+                    ))}
+                  </Box>
+                </Box>
+              )}
+
+              {course.careers?.length > 0 && (
+                <Box className={styles.pillGroup}>
+                  <Typography className={styles.pillLabel}>Career Outcomes:</Typography>
+                  <Box className={styles.pillsRow}>
+                    {course.careers.slice(0, 3).map((c, i) => (
+                      <Chip key={i} label={c} size="small" className={styles.careerChip} />
+                    ))}
+                  </Box>
+                </Box>
+              )}
+
+              <Typography variant="body2" className={styles.hookLine}>
+                Kickstart your journey today!
+              </Typography>
+
+              <Button
+                variant="outlined"
+                fullWidth
+                size="small"
+                href={`/courses/${course.slug}`}
+                className={styles.enrollBtn}
+                style={{
+                  background: course.topColor || '#6366f1',
+                  color: '#fff',
+                  fontWeight: 500
+                }}
+              >
+                View
+              </Button>
+            </CardContent>
+          </Card>
         ))}
-      </Grid>
+      </Box>
+
+      {/* Floating "View All Courses" button */}
+      <Button className={styles.viewAllBtn} href="/courses">
+        View All Courses
+      </Button>
     </Box>
   );
 }

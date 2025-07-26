@@ -1,18 +1,30 @@
 export const courseData = [
  
- {
+{
   id: 1,
   slug: "dsa-course",
   title: "Data Structures & Algorithms (DSA) Mastery",
   level: "Beginner to Intermediate",
   badge: "Beginner",
-  badgeColor: "#22c55e", // Green
+  badgeColor: "#22c55e",
   duration: "10 weeks",
-   isFeatured: true,
+  isFeatured: true,
   students: 8234,
   tag: "Programming Fundamentals",
-  description: "Master core data structures and algorithms for technical interviews and real-world problem solving.",
-  image: "/assets/images/courses/dsa-icon.png",
+  description:
+    "Master core data structures and algorithms for technical interviews and real-world problem solving.",
+  topColor: "linear-gradient(to bottom, #f97316, #facc15)",
+  difficultyBar: "#facc15",
+
+  tools: ["C++ / Java / Python", "Time & Space Complexity", "Recursion", "Dynamic Programming"],
+  careers: ["SDE I / II", "Competitive Programmer", "Backend Developer"],
+
+  industryInsights: {
+    relevance: "90%",
+    marketDemand: "High",
+    avgSalary: "10 LPA+"
+  },
+
   why: {
     heading: "Why learn Data Structures & Algorithms (DSA)?",
     points: [
@@ -24,188 +36,109 @@ export const courseData = [
     ]
   },
   modules: [
-    {
-      title: "Module 1: DSA Foundations & Arrays",
-      topics: [
-        "Time and Space Complexity",
-        "Arrays and Memory Layout",
-        "Sliding Window Technique",
-        "Two Pointer Technique"
-      ]
-    },
-    {
-      title: "Module 2: Strings and Recursion",
-      topics: [
-        "String Manipulation",
-        "Pattern Searching",
-        "Recursion Basics",
-        "Backtracking Problems"
-      ]
-    },
-    {
-      title: "Module 3: Linked Lists, Stacks, and Queues",
-      topics: [
-        "Singly and Doubly Linked Lists",
-        "Stack and Its Applications",
-        "Queue and Circular Queue",
-        "Dequeue & Problems"
-      ]
-    },
-    {
-      title: "Module 4: Trees & Graphs",
-      topics: [
-        "Binary Tree and Binary Search Tree (BST)",
-        "Tree Traversals: Inorder, Preorder, Postorder",
-        "Graphs: BFS, DFS",
-        "Graph Representations"
-      ]
-    },
-    {
-      title: "Module 5: Sorting & Searching",
-      topics: [
-        "Merge Sort and Quick Sort",
-        "Binary Search Applications",
-        "Heap Sort",
-        "Sorting Problems"
-      ]
-    },
-    {
-      title: "Module 6: Hashing & Greedy Techniques",
-      topics: [
-        "Hash Tables and Hash Sets",
-        "Frequency Maps",
-        "Greedy Algorithms",
-        "Greedy Case Studies"
-      ]
-    },
-    {
-      title: "Module 7: Dynamic Programming",
-      topics: [
-        "Introduction to DP",
-        "Memoization vs Tabulation",
-        "Fibonacci, Knapsack, LIS",
-        "2D DP Patterns"
-      ]
-    },
-    {
-      title: "Module 8: Interview Preparation",
-      topics: [
-        "Top 50 Coding Interview Problems",
-        "Mock Tests and Solutions",
-        "Resume & Portfolio Guidance",
-        "DSA in System Design (Intro)"
-      ]
-    }
+    { title: "Module 1: DSA Foundations & Arrays", topics: ["Time and Space Complexity", "Arrays and Memory Layout", "Sliding Window Technique", "Two Pointer Technique"] },
+    { title: "Module 2: Strings and Recursion", topics: ["String Manipulation", "Pattern Searching", "Recursion Basics", "Backtracking Problems"] },
+    { title: "Module 3: Linked Lists, Stacks, and Queues", topics: ["Singly and Doubly Linked Lists", "Stack and Its Applications", "Queue and Circular Queue", "Dequeue & Problems"] },
+    { title: "Module 4: Trees & Graphs", topics: ["Binary Tree and Binary Search Tree (BST)", "Tree Traversals: Inorder, Preorder, Postorder", "Graphs: BFS, DFS", "Graph Representations"] },
+    { title: "Module 5: Sorting & Searching", topics: ["Merge Sort and Quick Sort", "Binary Search Applications", "Heap Sort", "Sorting Problems"] },
+    { title: "Module 6: Hashing & Greedy Techniques", topics: ["Hash Tables and Hash Sets", "Frequency Maps", "Greedy Algorithms", "Greedy Case Studies"] },
+    { title: "Module 7: Dynamic Programming", topics: ["Introduction to DP", "Memoization vs Tabulation", "Fibonacci, Knapsack, LIS", "2D DP Patterns"] },
+    { title: "Module 8: Interview Preparation", topics: ["Top 50 Coding Interview Problems", "Mock Tests and Solutions", "Resume & Portfolio Guidance", "DSA in System Design (Intro)"] }
   ],
-  topColor: "linear-gradient(to right, #f97316, #facc15)", // Orange to Yellow
-  difficultyBar: "#facc15"
+  roadmap: [
+    { id: 1, title: "Foundations & Complexity", desc: "Big-O, arrays, pointers, memory model", hours: 10 },
+    { id: 2, title: "Recursion & Strings", desc: "Pattern searching, backtracking, problems", hours: 12 },
+    { id: 3, title: "Linked Lists / Stacks / Queues", desc: "Implementation & key interview Qs", hours: 14 },
+    { id: 4, title: "Trees & Graphs", desc: "Traversals, BFS/DFS, shortest paths", hours: 16 },
+    { id: 5, title: "Sorting, Searching, Hashing", desc: "Binary search, heaps, hash maps", hours: 14 },
+    { id: 6, title: "Greedy & Dynamic Programming", desc: "Knapsack, LIS, tabulation vs memo", hours: 16 },
+    { id: 7, title: "Mock Interviews + Top 50 Problems", desc: "Timed tests + editorials", hours: 8 }
+  ]
 },
 
 
 
-  {
+
+{
   id: 2,
   slug: "python-programming",
   title: "Python Programming Essentials",
   level: "Beginner",
   badge: "Beginner",
-  badgeColor: "#3b82f6", // Blue
+  badgeColor: "#3b82f6",
   duration: "8 weeks",
-   isFeatured: true,
+  isFeatured: true,
   students: 9561,
   tag: "Programming Fundamentals",
   description: "Start your programming journey with Python, the most beginner-friendly and versatile language in tech today.",
-  image: "/assets/images/courses/python-icon.png",
+  topColor: "linear-gradient(to right, #06b6d4, #3b82f6)",
+  difficultyBar: "#3b82f6",
+
+  tools: ["VS Code / PyCharm", "Pandas & NumPy (Intro)", "Flask (Basics)", "OOP in Python", "Git & GitHub"],
+  careers: ["Backend Developer (Python)", "Automation Engineer", "Data Science Intern", "Entry-level Python Developer"],
+
+  industryInsights: {
+    relevance: "85%",
+    marketDemand: "High",
+    avgSalary: "6 LPA+"
+  },
+
   why: {
     heading: "Why learn Python Programming?",
     points: [
       "Python is the most beginner-friendly language with simple syntax.",
       "Used in AI, Data Science, Web Development, Automation, and more.",
-      "It’s the top choice for startups, MNCs, and research projects.",
+      "Top choice for startups, MNCs, and research projects.",
       "Huge community support, extensive libraries, and high job demand.",
       "Learning Python builds a strong base for advanced tech domains."
     ]
   },
+
   modules: [
-    {
-      title: "Module 1: Python Basics",
-      topics: [
-        "Installing Python & Setting Up VS Code",
-        "Variables, Data Types, and Input/Output",
-        "Operators and Expressions",
-        "Basic Programs and Debugging"
-      ]
-    },
-    {
-      title: "Module 2: Control Structures",
-      topics: [
-        "Conditional Statements (if, elif, else)",
-        "Loops: for, while",
-        "Loop Control: break, continue, pass",
-        "Hands-on Exercises"
-      ]
-    },
-    {
-      title: "Module 3: Data Structures in Python",
-      topics: [
-        "Lists, Tuples, and Sets",
-        "Dictionaries and Nested Collections",
-        "List Comprehensions",
-        "Real-world Use Cases"
-      ]
-    },
-    {
-      title: "Module 4: Functions and Modules",
-      topics: [
-        "Defining & Calling Functions",
-        "Arguments and Return Types",
-        "Lambda & Recursion",
-        "Importing Modules & Built-in Libraries"
-      ]
-    },
-    {
-      title: "Module 5: Object-Oriented Programming (OOP)",
-      topics: [
-        "Classes and Objects",
-        "Encapsulation, Inheritance, Polymorphism",
-        "Constructor & Dunder Methods",
-        "OOP Design Principles"
-      ]
-    },
-    {
-      title: "Module 6: File Handling & Exceptions",
-      topics: [
-        "Reading & Writing Files",
-        "Working with Text, CSV, and JSON",
-        "Exception Handling (try, except, finally)",
-        "Practical File Projects"
-      ]
-    },
-    {
-      title: "Module 7: Python Projects & Practice",
-      topics: [
-        "Mini Project: Calculator / Quiz App",
-        "Hands-on Coding Practice",
-        "Python Best Practices",
-        "Real-world Scenarios"
-      ]
-    }
+    { title: "Module 1: Python Basics", topics: ["Installing Python & Setting Up VS Code", "Variables, Data Types, and Input/Output", "Operators and Expressions", "Basic Programs and Debugging"] },
+    { title: "Module 2: Control Structures", topics: ["Conditional Statements (if, elif, else)", "Loops: for, while", "Loop Control: break, continue, pass", "Hands-on Exercises"] },
+    { title: "Module 3: Data Structures in Python", topics: ["Lists, Tuples, and Sets", "Dictionaries and Nested Collections", "List Comprehensions", "Real-world Use Cases"] },
+    { title: "Module 4: Functions and Modules", topics: ["Defining & Calling Functions", "Arguments and Return Types", "Lambda & Recursion", "Importing Modules & Built-in Libraries"] },
+    { title: "Module 5: Object-Oriented Programming (OOP)", topics: ["Classes and Objects", "Encapsulation, Inheritance, Polymorphism", "Constructor & Dunder Methods", "OOP Design Principles"] },
+    { title: "Module 6: File Handling & Exceptions", topics: ["Reading & Writing Files", "Working with Text, CSV, and JSON", "Exception Handling (try, except, finally)", "Practical File Projects"] },
+    { title: "Module 7: Python Projects & Practice", topics: ["Mini Project: Calculator / Quiz App", "Hands-on Coding Practice", "Python Best Practices", "Real-world Scenarios"] }
   ],
-  topColor: "linear-gradient(to right, #06b6d4, #3b82f6)", // Cyan to Blue
-  difficultyBar: "#3b82f6"
-},
+
+  roadmap: [
+    { id: 1, title: "Python Setup & Syntax", desc: "IDE, basics, syntax, first program", hours: 8 },
+    { id: 2, title: "Control Flow Mastery", desc: "if-else, loops, control keywords", hours: 8 },
+    { id: 3, title: "Core Data Structures", desc: "Lists, sets, dicts + comprehensions", hours: 10 },
+    { id: 4, title: "Functions & Modules", desc: "Functions, lambdas, recursion, modules", hours: 8 },
+    { id: 5, title: "OOP in Python", desc: "Classes, inheritance, polymorphism", hours: 10 },
+    { id: 6, title: "Files & Exceptions", desc: "File IO, error handling, JSON/CSV", hours: 6 },
+    { id: 7, title: "Mini Projects & Best Practices", desc: "Project + code quality + debugging", hours: 10 }
+  ]
+}
+,
+
 {
   id: 3,
   slug: "java-programming",
   title: "Java Programming Essentials",
   level: "Beginner to Intermediate",
   badge: "Beginner",
-  badgeColor: "#f97316", // Orange
+  badgeColor: "#f97316",
   duration: "9 weeks",
   students: 7812,
   tag: "Programming Fundamentals",
   description: "Build a strong foundation in Java, a powerful object-oriented programming language used in backend, Android, and enterprise development.",
-  image: "/assets/images/courses/java-icon.png",
+  topColor: "linear-gradient(to right, #f97316, #fb923c)",
+  difficultyBar: "#fb923c",
+
+  tools: ["IntelliJ IDEA / Eclipse", "Java Collections Framework", "JUnit", "Maven/Gradle", "Git & GitHub"],
+  careers: ["Java Backend Developer", "Android Developer (Kotlin/Java base)", "Software Engineer (Java Stack)", "Spring Boot Developer"],
+
+  industryInsights: {
+    relevance: "88%",
+    marketDemand: "High",
+    avgSalary: "7 LPA+"
+  },
+
   why: {
     heading: "Why learn Java Programming?",
     points: [
@@ -216,86 +149,52 @@ export const courseData = [
       "Used by companies like Amazon, Netflix, Uber, and many banks."
     ]
   },
+
   modules: [
-    {
-      title: "Module 1: Introduction to Java",
-      topics: [
-        "Setting Up Java & IDE (IntelliJ / Eclipse)",
-        "First Java Program: Hello World",
-        "Java Syntax, Variables, and Data Types",
-        "Type Casting and Input Handling"
-      ]
-    },
-    {
-      title: "Module 2: Operators & Control Flow",
-      topics: [
-        "Arithmetic, Relational, and Logical Operators",
-        "Conditional Statements: if, switch",
-        "Loops: for, while, do-while",
-        "Jump Statements: break, continue"
-      ]
-    },
-    {
-      title: "Module 3: Arrays and Strings",
-      topics: [
-        "1D and 2D Arrays",
-        "String Class and StringBuilder",
-        "String Methods and Manipulation",
-        "Common Array/String Problems"
-      ]
-    },
-    {
-      title: "Module 4: Object-Oriented Programming",
-      topics: [
-        "Classes and Objects",
-        "Constructors and this Keyword",
-        "Inheritance and Polymorphism",
-        "Abstraction and Interfaces"
-      ]
-    },
-    {
-      title: "Module 5: Exception Handling & File I/O",
-      topics: [
-        "try-catch-finally & throw/throws",
-        "Checked vs Unchecked Exceptions",
-        "Reading/Writing Files using Streams",
-        "Serialization in Java"
-      ]
-    },
-    {
-      title: "Module 6: Collections & Frameworks",
-      topics: [
-        "ArrayList, LinkedList, HashMap, HashSet",
-        "Iterators and Generics",
-        "Collections Utilities",
-        "Use Cases in Real Projects"
-      ]
-    },
-    {
-      title: "Module 7: Java Project",
-      topics: [
-        "Mini Project: Student Management / Banking App",
-        "OOP + File + Collections Integration",
-        "Clean Code & Best Practices",
-        "Debugging and Testing"
-      ]
-    }
+    { title: "Module 1: Introduction to Java", topics: ["Setting Up Java & IDE (IntelliJ / Eclipse)", "First Java Program: Hello World", "Java Syntax, Variables, and Data Types", "Type Casting and Input Handling"] },
+    { title: "Module 2: Operators & Control Flow", topics: ["Arithmetic, Relational, and Logical Operators", "Conditional Statements: if, switch", "Loops: for, while, do-while", "Jump Statements: break, continue"] },
+    { title: "Module 3: Arrays and Strings", topics: ["1D and 2D Arrays", "String Class and StringBuilder", "String Methods and Manipulation", "Common Array/String Problems"] },
+    { title: "Module 4: Object-Oriented Programming", topics: ["Classes and Objects", "Constructors and this Keyword", "Inheritance and Polymorphism", "Abstraction and Interfaces"] },
+    { title: "Module 5: Exception Handling & File I/O", topics: ["try-catch-finally & throw/throws", "Checked vs Unchecked Exceptions", "Reading/Writing Files using Streams", "Serialization in Java"] },
+    { title: "Module 6: Collections & Frameworks", topics: ["ArrayList, LinkedList, HashMap, HashSet", "Iterators and Generics", "Collections Utilities", "Use Cases in Real Projects"] },
+    { title: "Module 7: Java Project", topics: ["Mini Project: Student Management / Banking App", "OOP + File + Collections Integration", "Clean Code & Best Practices", "Debugging and Testing"] }
   ],
-  topColor: "linear-gradient(to right, #f97316, #fb923c)", // Orange gradient
-  difficultyBar: "#fb923c"
-},
+
+  roadmap: [
+    { id: 1, title: "Java Setup & Syntax", desc: "JDK, IDE, first program, variables", hours: 8 },
+    { id: 2, title: "Control Flow & Operators", desc: "If/else, loops, switch, break/continue", hours: 8 },
+    { id: 3, title: "Arrays & Strings", desc: "1D/2D arrays, String & StringBuilder", hours: 10 },
+    { id: 4, title: "OOP Core", desc: "Classes, objects, inheritance, interfaces", hours: 12 },
+    { id: 5, title: "Exceptions & IO", desc: "Checked/unchecked, file IO, serialization", hours: 8 },
+    { id: 6, title: "Collections Framework", desc: "Lists, sets, maps, generics", hours: 10 },
+    { id: 7, title: "Project & Testing", desc: "Mini-project + unit testing + clean code", hours: 12 }
+  ]
+}
+,
+
 {
   id: 4,
   slug: "c-cpp-programming",
   title: "C/C++ Programming Foundations",
   level: "Beginner",
   badge: "Beginner",
-  badgeColor: "#10b981", // Emerald green
+  badgeColor: "#10b981",
   duration: "9 weeks",
   students: 6520,
   tag: "Programming Fundamentals",
   description: "Learn core programming logic using C and C++. Build a strong foundation in memory management, problem solving, and object-oriented design.",
-  image: "/assets/images/courses/cpp-icon.png",
+  topColor: "linear-gradient(to right, #0ea5e9, #10b981)",
+  difficultyBar: "#10b981",
+
+  tools: ["GCC / MinGW", "GDB Debugger", "VS Code / Code::Blocks", "STL (vector, map, set)", "Make/CMake (Intro)"],
+  careers: ["System Programmer", "Embedded Systems Engineer", "Game Developer (Unreal/C++)", "Competitive Programmer"],
+
+  industryInsights: {
+    relevance: "82%",
+    marketDemand: "Medium-High",
+    avgSalary: "6 LPA+"
+  },
+
   why: {
     heading: "Why learn C/C++ Programming?",
     points: [
@@ -306,87 +205,64 @@ export const courseData = [
       "C++ is the go-to language in many coding interviews and ICPC competitions."
     ]
   },
+
   modules: [
-    {
-      title: "Module 1: C Programming Basics",
-      topics: [
-        "Installing GCC Compiler",
-        "Structure of C Program",
-        "Variables, Data Types, I/O",
-        "Operators and Expressions"
-      ]
-    },
-    {
-      title: "Module 2: Control Flow and Loops",
-      topics: [
-        "If, If-Else, Nested Ifs",
-        "Switch-Case Statement",
-        "While, Do-While, and For Loops",
-        "Loop Control (break, continue)"
-      ]
-    },
-    {
-      title: "Module 3: Functions and Arrays",
-      topics: [
-        "Function Declaration and Definition",
-        "Pass by Value vs Reference",
-        "1D and 2D Arrays",
-        "String Handling in C"
-      ]
-    },
-    {
-      title: "Module 4: Pointers and Memory",
-      topics: [
-        "Pointer Basics and Addressing",
-        "Pointer Arithmetic",
-        "Dynamic Memory (malloc, free)",
-        "Pointer to Array and Functions"
-      ]
-    },
-    {
-      title: "Module 5: Structures and File Handling",
-      topics: [
-        "Structs and Nested Structs",
-        "Union vs Struct",
-        "File Reading/Writing in C",
-        "Practical File Projects"
-      ]
-    },
-    {
-      title: "Module 6: Introduction to C++",
-      topics: [
-        "Difference between C and C++",
-        "Basic C++ Syntax and IO",
-        "OOP Concepts in C++",
-        "Classes, Objects, and Constructors"
-      ]
-    },
-    {
-      title: "Module 7: C++ OOP & STL",
-      topics: [
-        "Encapsulation, Inheritance, Polymorphism",
-        "Function Overloading & Operator Overloading",
-        "Standard Template Library (STL): vector, map, set",
-        "Project Using OOP + STL"
-      ]
-    }
+    { title: "Module 1: C Programming Basics", topics: ["Installing GCC Compiler", "Structure of C Program", "Variables, Data Types, I/O", "Operators and Expressions"] },
+    { title: "Module 2: Control Flow and Loops", topics: ["If, If-Else, Nested Ifs", "Switch-Case Statement", "While, Do-While, and For Loops", "Loop Control (break, continue)"] },
+    { title: "Module 3: Functions and Arrays", topics: ["Function Declaration and Definition", "Pass by Value vs Reference", "1D and 2D Arrays", "String Handling in C"] },
+    { title: "Module 4: Pointers and Memory", topics: ["Pointer Basics and Addressing", "Pointer Arithmetic", "Dynamic Memory (malloc, free)", "Pointer to Array and Functions"] },
+    { title: "Module 5: Structures and File Handling", topics: ["Structs and Nested Structs", "Union vs Struct", "File Reading/Writing in C", "Practical File Projects"] },
+    { title: "Module 6: Introduction to C++", topics: ["Difference between C and C++", "Basic C++ Syntax and IO", "OOP Concepts in C++", "Classes, Objects, and Constructors"] },
+    { title: "Module 7: C++ OOP & STL", topics: ["Encapsulation, Inheritance, Polymorphism", "Function Overloading & Operator Overloading", "Standard Template Library (STL): vector, map, set", "Project Using OOP + STL"] }
   ],
-  topColor: "linear-gradient(to right, #0ea5e9, #10b981)", // Blue to green
-  difficultyBar: "#10b981"
-},
+
+  roadmap: [
+    { id: 1, title: "C Language Basics", desc: "Syntax, IO, data types, operators", hours: 8 },
+    { id: 2, title: "Control Flow & Loops", desc: "Conditionals, loops, logic patterns", hours: 8 },
+    { id: 3, title: "Functions & Arrays", desc: "Functions, arrays, strings", hours: 10 },
+    { id: 4, title: "Pointers & Memory", desc: "Pointers, malloc/free, pointer arithmetic", hours: 10 },
+    { id: 5, title: "Structs & File Handling", desc: "Struct/union, file IO, mini projects", hours: 8 },
+    { id: 6, title: "C++ Basics & OOP Intro", desc: "Syntax, classes/objects, constructors", hours: 8 },
+    { id: 7, title: "Advanced OOP + STL", desc: "Inheritance, polymorphism, STL containers", hours: 12 }
+  ]
+}
+,
+
 {
   id: 5,
   slug: "ai-ml-certification",
-  title: "Artificial Intelligence & Machine Learning (AI-ML) Certification",
+  title: "Artificial Intelligence & Machine Learning (AI-ML)",
   level: "Beginner to Advanced",
   badge: "Advanced",
   badgeColor: "#8b5cf6", // Violet
   duration: "16 weeks",
   students: 11238,
-   isFeatured: true,
+  isFeatured: true,
   tag: "AI & Machine Learning",
   description: "A comprehensive AI & ML course covering foundations, machine learning algorithms, deep learning, NLP, and real-world deployment with Python.",
   image: "/assets/images/courses/ai-ml-icon.png",
+
+  tools: [
+    "Python, NumPy, Pandas",
+    "Scikit-learn, TensorFlow, Keras",
+    "Matplotlib, Seaborn",
+    "NLTK, Hugging Face Transformers",
+    "Flask / Streamlit for Deployment"
+  ],
+  careers: [
+    "Machine Learning Engineer",
+    "AI Research Scientist",
+    "Data Scientist",
+    "Computer Vision Engineer",
+    "NLP Specialist"
+  ],
+
+  industryInsights: {
+    relevance: "95%",
+    marketDemand: "High",
+    avgSalary: "12 LPA+"
+  },
+
   why: {
     heading: "Why pursue AI & ML Certification?",
     points: [
@@ -397,6 +273,7 @@ export const courseData = [
       "This course takes you from beginner to expert with projects, certifications, and interview preparation."
     ]
   },
+
   modules: [
     {
       title: "Module 1: Introduction to AI & ML",
@@ -471,9 +348,23 @@ export const courseData = [
       ]
     }
   ],
-  topColor: "linear-gradient(to right, #6366f1, #ec4899)", // Indigo to pink
+
+  roadmap: [
+    { id: 1, title: "AI & ML Foundations", desc: "Intro to AI, ML, DL concepts and roadmap", hours: 10 },
+    { id: 2, title: "Python for Data & ML", desc: "NumPy, Pandas, EDA, visualization", hours: 12 },
+    { id: 3, title: "Maths for ML", desc: "Linear algebra, statistics, gradient descent", hours: 14 },
+    { id: 4, title: "Supervised Learning", desc: "Regression, classification, tree models", hours: 16 },
+    { id: 5, title: "Unsupervised ML", desc: "Clustering, PCA, dimensionality reduction", hours: 12 },
+    { id: 6, title: "Deep Learning", desc: "Neural nets, TensorFlow, Keras", hours: 18 },
+    { id: 7, title: "NLP & Transformers", desc: "Tokenization, embeddings, sentiment analysis", hours: 14 },
+    { id: 8, title: "Projects & Deployment", desc: "End-to-end projects, Flask/Streamlit, cloud deploy", hours: 12 }
+  ],
+
+  topColor: "linear-gradient(to bottom, #6366f1, #ec4899)", // Indigo to pink
   difficultyBar: "#8b5cf6"
 },
+
+
 {
   id: 6,
   slug: "machine-learning-python",
@@ -487,6 +378,28 @@ export const courseData = [
   tag: "AI & Machine Learning",
   description: "Master the entire Machine Learning workflow using Python, from data preprocessing to building and deploying predictive models in real-world scenarios.",
   image: "/assets/images/courses/ml-python-icon.png",
+
+  tools: [
+    "Python, NumPy, Pandas",
+    "Scikit-learn, XGBoost, LightGBM",
+    "Matplotlib, Seaborn",
+    "Streamlit, Flask (for deployment)",
+    "Pickle, Joblib, REST APIs"
+  ],
+  careers: [
+    "Machine Learning Engineer",
+    "Data Scientist",
+    "AI Engineer",
+    "Business Intelligence Analyst",
+    "MLOps Engineer"
+  ],
+
+  industryInsights: {
+    relevance: "92%",
+    marketDemand: "High",
+    avgSalary: "11 LPA+"
+  },
+
   why: {
     heading: "Why take Machine Learning with Python?",
     points: [
@@ -497,6 +410,7 @@ export const courseData = [
       "End-to-end journey: from data cleaning to model deployment, all in Python."
     ]
   },
+
   modules: [
     {
       title: "Module 1: Introduction to Machine Learning",
@@ -571,9 +485,23 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "ML Foundations", desc: "Intro to ML types, workflow, and Python ecosystem", hours: 8 },
+    { id: 2, title: "Python & Data Prep", desc: "EDA, cleaning, feature engineering, scaling", hours: 12 },
+    { id: 3, title: "Supervised Learning", desc: "Regression, KNN, Naive Bayes, trees", hours: 14 },
+    { id: 4, title: "Model Evaluation & Tuning", desc: "Metrics, validation, hyperparameter tuning", hours: 10 },
+    { id: 5, title: "Unsupervised Learning", desc: "Clustering, PCA, feature reduction", hours: 12 },
+    { id: 6, title: "Advanced Algorithms", desc: "XGBoost, SVM, ensembles, stacking", hours: 14 },
+    { id: 7, title: "ML Projects", desc: "End-to-end case studies with real datasets", hours: 10 },
+    { id: 8, title: "Model Deployment", desc: "Flask/Streamlit apps, APIs, cloud deploy", hours: 10 }
+  ],
+
   topColor: "linear-gradient(to right, #38bdf8, #0ea5e9)", // Light to sky blue
   difficultyBar: "#0ea5e9"
 },
+
+
 {
   id: 7,
   slug: "deep-learning-tensorflow",
@@ -587,6 +515,28 @@ export const courseData = [
   isFeatured: true,
   description: "Master deep learning from the ground up. Build real-world neural networks using TensorFlow/Keras and solve problems in vision, NLP, and AI product development.",
   image: "/assets/images/courses/deep-learning-icon.png",
+
+  tools: [
+    "TensorFlow & Keras",
+    "NumPy, Pandas, Matplotlib",
+    "OpenCV for Computer Vision",
+    "TensorBoard for Model Tracking",
+    "Flask / Streamlit for Deployment"
+  ],
+  careers: [
+    "Deep Learning Engineer",
+    "AI Researcher",
+    "Computer Vision Engineer",
+    "NLP Engineer",
+    "ML Ops Engineer"
+  ],
+
+  industryInsights: {
+    relevance: "95%",
+    marketDemand: "High",
+    avgSalary: "14 LPA+"
+  },
+
   why: {
     heading: "Why master Deep Learning with TensorFlow/Keras?",
     points: [
@@ -597,6 +547,7 @@ export const courseData = [
       "This course is your gateway to research roles, LLM fine-tuning, and production-grade AI engineering."
     ]
   },
+
   modules: [
     {
       title: "Module 1: Introduction to Deep Learning",
@@ -671,9 +622,23 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "DL Foundations", desc: "Perceptrons, activations, optimizers, loss functions", hours: 8 },
+    { id: 2, title: "TensorFlow & Keras", desc: "APIs, building, compiling, training models", hours: 10 },
+    { id: 3, title: "CNN & Computer Vision", desc: "Image models, augmentations, classification", hours: 12 },
+    { id: 4, title: "Regularization & Tuning", desc: "Dropout, LR scheduling, fine-tuning", hours: 10 },
+    { id: 5, title: "RNNs & Sequence Models", desc: "RNN, LSTM, GRU, time-series", hours: 12 },
+    { id: 6, title: "Transfer Learning", desc: "VGG16, Inception, custom fine-tuning", hours: 10 },
+    { id: 7, title: "NLP & Text Models", desc: "Embeddings, sentiment, seq-to-seq models", hours: 12 },
+    { id: 8, title: "Projects & Deployment", desc: "End-to-end DL pipeline, ONNX, cloud deploy", hours: 10 }
+  ],
+
   topColor: "linear-gradient(to right, #f43f5e, #ec4899)", // Rose to Pink
   difficultyBar: "#f43f5e"
 },
+
+
 {
   id: 8,
   slug: "prompt-engineering-llms",
@@ -683,10 +648,32 @@ export const courseData = [
   badgeColor: "#f59e0b", // Amber
   duration: "10 weeks",
   students: 6582,
-   isFeatured: true,
+  isFeatured: true,
   tag: "AI & Machine Learning",
   description: "Master LLMs and Prompt Engineering, from fundamentals to advanced RAG and LangChain pipelines. Build smart agents, chatbots, and AI-powered workflows with OpenAI, Hugging Face, and LangChain.",
   image: "/assets/images/courses/prompt-llm-icon.png",
+
+  tools: [
+    "OpenAI GPT-4 / GPT-3.5 APIs",
+    "LangChain Framework",
+    "Hugging Face Transformers",
+    "Vector Databases (FAISS, Chroma, Pinecone)",
+    "Streamlit & Next.js for LLM Apps"
+  ],
+  careers: [
+    "AI Prompt Engineer",
+    "LLM Application Developer",
+    "AI Product Engineer",
+    "Conversational AI Developer",
+    "RAG / AI Solutions Architect"
+  ],
+
+  industryInsights: {
+    relevance: "98%",
+    marketDemand: "High",
+    avgSalary: "₹18 LPA+"
+  },
+
   why: {
     heading: "Why learn Prompt Engineering & LLMs?",
     points: [
@@ -697,6 +684,7 @@ export const courseData = [
       "This course prepares you to build production-grade apps using LLMs for search, automation, summarization, and decision-making."
     ]
   },
+
   modules: [
     {
       title: "Module 1: Foundations of Prompt Engineering",
@@ -771,9 +759,23 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Prompt Engineering Basics", desc: "Zero/Few-shot, CoT prompting, prompt tuning", hours: 8 },
+    { id: 2, title: "LLM Foundations", desc: "OpenAI GPT-4 API, Hugging Face Transformers", hours: 10 },
+    { id: 3, title: "LangChain Core", desc: "Chains, memory, tool usage", hours: 12 },
+    { id: 4, title: "RAG & Vector Databases", desc: "FAISS, Chroma, Pinecone, embedding models", hours: 12 },
+    { id: 5, title: "Function Calling & Tools", desc: "APIs, structured outputs, agents", hours: 10 },
+    { id: 6, title: "Advanced Techniques", desc: "ReAct, self-ask, guardrails, moderation", hours: 10 },
+    { id: 7, title: "Capstone Projects", desc: "Chatbots, AI agents, AI search", hours: 14 },
+    { id: 8, title: "LLMOps & Deployment", desc: "Monitoring, serverless, ethics", hours: 8 }
+  ],
+
   topColor: "linear-gradient(to right, #f59e0b, #f97316)", // Amber to Orange
   difficultyBar: "#f59e0b"
 },
+
+
 {
   id: 9,
   slug: "generative-ai-mastery",
@@ -787,6 +789,28 @@ export const courseData = [
   isFeatured: true,
   description: "Learn to build, fine-tune, and deploy cutting-edge generative models, from image synthesis with Stable Diffusion to text generation with GPT and beyond.",
   image: "/assets/images/courses/genai-mastery-icon.png",
+
+  tools: [
+    "Stable Diffusion & ControlNet",
+    "OpenAI GPT Models",
+    "MidJourney & DALL·E",
+    "RunwayML & Sora (Text-to-Video)",
+    "LangChain for GenAI Pipelines"
+  ],
+  careers: [
+    "Generative AI Engineer",
+    "AI Content Automation Specialist",
+    "Creative AI Tool Developer",
+    "AI Research Associate (GenAI)",
+    "Product Engineer for AI-Powered Tools"
+  ],
+
+  industryInsights: {
+    relevance: "95%",
+    marketDemand: "High",
+    avgSalary: "16 LPA+"
+  },
+
   why: {
     heading: "Why master Generative AI?",
     points: [
@@ -797,6 +821,7 @@ export const courseData = [
       "Build portfolio-ready projects with state-of-the-art GenAI tools."
     ]
   },
+
   modules: [
     {
       title: "Module 1: Foundations of Generative Models",
@@ -853,9 +878,21 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "GenAI Foundations", desc: "Core concepts, GANs vs Diffusion, latent space", hours: 8 },
+    { id: 2, title: "Image Generation", desc: "Stable Diffusion, ControlNet, DreamBooth", hours: 12 },
+    { id: 3, title: "Text Generation with LLMs", desc: "GPT-4, prompts for creativity, tuning", hours: 10 },
+    { id: 4, title: "Multimodal AI", desc: "Text-to-video, image-to-text, speech-to-text", hours: 12 },
+    { id: 5, title: "Portfolio Projects", desc: "AI art gen, resume builder, creative tools", hours: 14 },
+    { id: 6, title: "Deployment & Monetization", desc: "Streamlit apps, safety, AI watermarking", hours: 8 }
+  ],
+
   topColor: "linear-gradient(to right, #8b5cf6, #ec4899)", // Purple to Pink
   difficultyBar: "#a855f7"
 },
+
+
 {
   id: 10,
   slug: "chatgpt-prompt-engineering",
@@ -868,6 +905,28 @@ export const courseData = [
   tag: "Generative AI",
   description: "Master the art of writing powerful prompts for ChatGPT and other LLMs. Learn to craft creative, technical, and structured outputs for real-world tasks.",
   image: "/assets/images/courses/chatgpt-prompt-icon.png",
+
+  tools: [
+    "ChatGPT (GPT-4 & GPT-3.5)",
+    "Prompt Engineering Frameworks (Zero-shot, Few-shot, CoT)",
+    "OpenAI Playground",
+    "Notion AI & Jasper for content automation",
+    "Markdown & CSV formatting with LLMs"
+  ],
+  careers: [
+    "AI Prompt Engineer",
+    "Content Automation Specialist",
+    "SEO & Copywriting with AI",
+    "AI Product Designer",
+    "Business Workflow Automation Expert"
+  ],
+
+  industryInsights: {
+    relevance: "85%",
+    marketDemand: "High",
+    avgSalary: "8 LPA+"
+  },
+
   why: {
     heading: "Why Prompt Engineering with ChatGPT?",
     points: [
@@ -878,6 +937,7 @@ export const courseData = [
       "Includes prompt libraries, templates, and AI tools integration."
     ]
   },
+
   modules: [
     {
       title: "Module 1: Intro to ChatGPT Prompting",
@@ -916,9 +976,19 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Prompting Basics", desc: "System vs user prompts, formatting & CoT", hours: 6 },
+    { id: 2, title: "Prompt Templates", desc: "Workflows for content, code, and research", hours: 8 },
+    { id: 3, title: "Creative Prompt Design", desc: "Persona prompts, chaining & structured outputs", hours: 8 },
+    { id: 4, title: "Real-World Projects", desc: "Automations, content generation & custom plans", hours: 6 }
+  ],
+
   topColor: "linear-gradient(to right, #0ea5e9, #38bdf8)", // Sky blue gradient
   difficultyBar: "#0ea5e9"
 },
+
+
 {
   id: 11,
   slug: "agentic-ai-course",
@@ -932,6 +1002,28 @@ export const courseData = [
   isFeatured: true,
   description: "Build autonomous AI agents using LangGraph, LangChain, and OpenAI Tools. Design multi-step, goal-seeking AI that reasons, acts, and adapts.",
   image: "/assets/images/courses/agentic-ai-icon.png",
+
+  industryInsights: {
+    relevance: "92%",
+    marketDemand: "High",
+    avgSalary: "14 LPA+"
+  },
+
+  tools: [
+    "LangChain & LangGraph",
+    "OpenAI Assistants API",
+    "AutoGPT & CrewAI",
+    "Pinecone/Chroma for Vector DB",
+    "Function Calling & Tool Execution"
+  ],
+  careers: [
+    "AI Automation Engineer",
+    "Agentic AI Developer",
+    "AI Workflow Orchestrator",
+    "RAG & Autonomous Agent Specialist",
+    "LLM Application Architect"
+  ],
+
   why: {
     heading: "Why Agentic AI?",
     points: [
@@ -942,6 +1034,7 @@ export const courseData = [
       "Real-world project deployment: code agents, data agents, research agents."
     ]
   },
+
   modules: [
     {
       title: "Module 1: What is Agentic AI?",
@@ -980,9 +1073,19 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Agentic AI Fundamentals", desc: "Agents vs prompts, architecture & planning", hours: 6 },
+    { id: 2, title: "LangChain Agents", desc: "Toolkits, memory, multi-agent orchestration", hours: 10 },
+    { id: 3, title: "LangGraph & State Machines", desc: "Workflow modeling, retries & loops", hours: 12 },
+    { id: 4, title: "End-to-End Agentic Projects", desc: "Research, data & coding assistants", hours: 8 }
+  ],
+
   topColor: "linear-gradient(to right, #f43f5e, #fb7185)", // Red-Pink
   difficultyBar: "#ef4444"
 },
+
+
 {
   id: 12,
   slug: "data-science-certification",
@@ -992,20 +1095,46 @@ export const courseData = [
   badgeColor: "#3b82f6",
   duration: "24 weeks",
   students: 40000,
-   isFeatured: true,
+  isFeatured: true,
   tag: "Data Science & Analytics",
-  description: "A holistic data science program covering the entire data lifecycle, from collection, cleansing, EDA, feature engineering, ML/DL to deployment using Python, R, Spark & more." ,
+  description: "A holistic data science program covering the entire data lifecycle, from collection, cleansing, EDA, feature engineering, ML/DL to deployment using Python, R, Spark & more.",
   image: "/assets/images/courses/data-science-icon.png",
+
+  industryInsights: {
+    relevance: "95%",
+    marketDemand: "Very High",
+    avgSalary: "12 LPA+"
+  },
+
   why: {
     heading: "Why choose this Data Science Certification?",
     points: [
-      "Master the full data lifecycle, from acquisition to deployment as seen in MNCs like Accenture, VMware, Infosys .",
+      "Master the full data lifecycle, from acquisition to deployment as seen in MNCs like Accenture, VMware, Infosys.",
       "Attain expertise in statistics, ML, NLP, and Data Engineering tools used in real-world applications.",
       "Obtain a recognized IIT/Pravartak-certified credential and access robust placement support.",
       "Gain hands-on experience with live datasets and case studies across domains.",
       "Fast-track your career into high-growth roles with data-driven organizations."
     ]
   },
+
+  tools: [
+    "Python (NumPy, Pandas, Scikit-learn)",
+    "R Programming",
+    "Tableau & Power BI",
+    "Apache Spark & PySpark",
+    "SQL & Hadoop Ecosystem",
+    "Matplotlib, Seaborn, Plotly"
+  ],
+
+  careers: [
+    "Data Scientist",
+    "Machine Learning Engineer",
+    "Business Intelligence Analyst",
+    "Data Engineer",
+    "AI/ML Consultant",
+    "Big Data Analyst"
+  ],
+
   modules: [
     { title: "Module 1: Data Collection & Cleaning", topics: ["Web Scraping & APIs", "Missing Value Strategies", "Normalization & Sampling"] },
     { title: "Module 2: Exploratory Data Analysis (EDA)", topics: ["Univariate & Multivariate Analysis", "Correlation & Visualization", "Outlier Handling"] },
@@ -1018,9 +1147,23 @@ export const courseData = [
     { title: "Module 9: Reporting & Visualization", topics: ["Tableau, Power BI", "Storytelling with Dashboards"] },
     { title: "Module 10: Deployment & Capstone", topics: ["Model Serving (Flask/Streamlit)", "Docker/AWS Deployment", "End-to-End Project"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "Data Collection & Cleaning", desc: "Data acquisition, web scraping, and preprocessing", hours: 16 },
+    { id: 2, title: "EDA & Feature Engineering", desc: "Exploratory data analysis, feature creation", hours: 20 },
+    { id: 3, title: "Statistics & ML", desc: "Regression, classification, and model evaluation", hours: 28 },
+    { id: 4, title: "Unsupervised ML & Time Series", desc: "Clustering, PCA, forecasting", hours: 24 },
+    { id: 5, title: "Deep Learning & NLP", desc: "Neural networks and text processing", hours: 30 },
+    { id: 6, title: "Big Data & Spark", desc: "PySpark, Hadoop ecosystem, and big data tools", hours: 24 },
+    { id: 7, title: "Visualization & BI Tools", desc: "Tableau, Power BI, and dashboards", hours: 16 },
+    { id: 8, title: "Deployment & Capstone", desc: "Flask, Streamlit, AWS, and Docker", hours: 22 }
+  ],
+
   topColor: "linear-gradient(to right, #3b82f6, #6366f1)",
   difficultyBar: "#3b82f6"
 },
+
+
 {
   id: 13,
   slug: "data-science-python",
@@ -1034,6 +1177,13 @@ export const courseData = [
   tag: "Data Science & Analytics",
   description: "Focused on Python-powered data science, this course teaches Pandas, ML, DL, and data storytelling, ideal for analysts and aspiring data scientists.",
   image: "/assets/images/courses/python-ds-icon.png",
+
+  industryInsights: {
+    relevance: "90%",
+    marketDemand: "High",
+    avgSalary: "8 LPA+"
+  },
+
   why: {
     heading: "Why specialize in Python for Data Science?",
     points: [
@@ -1043,6 +1193,25 @@ export const courseData = [
       "Boost employability in data-driven roles with portfolio-ready projects."
     ]
   },
+
+  tools: [
+    "Python, NumPy, Pandas",
+    "Scikit-learn, Statsmodels",
+    "Matplotlib, Seaborn, Plotly",
+    "TensorFlow / Keras (Intro)",
+    "Jupyter, Streamlit",
+    "SQL (Basics for Analytics)",
+    "Git & GitHub"
+  ],
+
+  careers: [
+    "Data Analyst",
+    "Junior Data Scientist",
+    "Machine Learning Engineer (Entry-level)",
+    "Business Intelligence Analyst",
+    "Research/Data Analyst"
+  ],
+
   modules: [
     { title: "Python Foundations", topics: ["Pandas Dataframes", "Data Cleaning", "Visualization with Seaborn/Matplotlib"] },
     { title: "Statistical Analysis", topics: ["Descriptive Stats", "Hypothesis Testing", "ANOVA"] },
@@ -1052,9 +1221,22 @@ export const courseData = [
     { title: "Time Series & NLP", topics: ["Forecasting Models", "Sentiment & Text Analysis"] },
     { title: "Capstone Projects", topics: ["Finance/Data/Operations Analytics Projects"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "Python Foundations", desc: "Data manipulation, cleaning, and visualization", hours: 20 },
+    { id: 2, title: "Statistics & EDA", desc: "Statistical analysis and exploratory data analysis", hours: 18 },
+    { id: 3, title: "Supervised ML", desc: "Regression and classification models", hours: 22 },
+    { id: 4, title: "Unsupervised ML", desc: "Clustering and dimensionality reduction", hours: 16 },
+    { id: 5, title: "Deep Learning Intro", desc: "Neural networks using Keras", hours: 20 },
+    { id: 6, title: "Time Series & NLP", desc: "Forecasting and text analysis", hours: 16 },
+    { id: 7, title: "Capstone Projects", desc: "Hands-on real-world data projects", hours: 24 }
+  ],
+
   topColor: "linear-gradient(to right, #22c55e, #10b981)",
   difficultyBar: "#22c55e"
 },
+
+
 {
   id: 14,
   slug: "business-analytics-powerbi",
@@ -1068,15 +1250,41 @@ export const courseData = [
   tag: "Data Science & Analytics",
   description: "Master business reporting with Excel, data modelling, Power BI, DAX, and dashboard storytelling, the essential skills for BI and analyst roles.",
   image: "/assets/images/courses/powerbi-icon.png",
+
+  industryInsights: {
+    relevance: "85%",
+    marketDemand: "Very High",
+    avgSalary: "6 LPA+"
+  },
+
   why: {
     heading: "Why Business Analytics with Excel & Power BI?",
     points: [
-      "Excel & Power BI are staples in corporate analytics and reporting .",
+      "Excel & Power BI are staples in corporate analytics and reporting.",
       "Learn advanced analytics, charting, and interactive dashboard creation.",
       "Prepare yourself for roles like Business Analyst, Data Analyst, and BI Developer.",
       "Gain a certification from ExcelR and IIT Pravartak for enhanced credibility."
     ]
   },
+
+  tools: [
+    "Microsoft Excel (Advanced Formulas, Power Pivot)",
+    "Power BI Desktop & Service",
+    "Power Query",
+    "DAX (Data Analysis Expressions)",
+    "Data Modelling Tools",
+    "SQL (Basic Queries for BI)",
+    "Visualization & Dashboard Tools"
+  ],
+
+  careers: [
+    "Business Analyst",
+    "Data Analyst",
+    "Power BI Developer",
+    "Reporting Analyst",
+    "Operations & MIS Executive"
+  ],
+
   modules: [
     { title: "Excel for Analytics", topics: ["Advanced Formulas", "PivotTables & Charts", "Power Pivot"] },
     { title: "Data Modelling", topics: ["Tables & Relationships", "Data Modelling Concepts", "Power Query"] },
@@ -1085,9 +1293,21 @@ export const courseData = [
     { title: "Publishing & Sharing", topics: ["Power BI Service", "Row-level Security", "Report Refresh & Gateways"] },
     { title: "Dashboard Storytelling", topics: ["Design Principles", "Performance Optimization", "Real Case Studies"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "Excel for Analytics", desc: "Master advanced Excel techniques, charts, and pivot tables", hours: 12 },
+    { id: 2, title: "Data Modelling", desc: "Learn Power Query and building robust data models", hours: 10 },
+    { id: 3, title: "DAX & Measures", desc: "Master DAX functions and calculated columns", hours: 12 },
+    { id: 4, title: "Power BI Visuals", desc: "Design and customize reports with visuals and filters", hours: 10 },
+    { id: 5, title: "Publishing & Sharing", desc: "Learn Power BI Service, security, and scheduling", hours: 8 },
+    { id: 6, title: "Dashboard Storytelling", desc: "Apply design principles for impactful dashboards", hours: 8 }
+  ],
+
   topColor: "linear-gradient(to right, #f59e0b, #f97316)",
   difficultyBar: "#f59e0b"
 },
+
+
 {
   id: 15,
   slug: "data-analytics-r",
@@ -1101,15 +1321,41 @@ export const courseData = [
   tag: "Data Science & Analytics",
   description: "Use R for statistical analysis, data visualization, reporting, and analytics, perfect for analysts in finance, marketing, and research.",
   image: "/assets/images/courses/r-analytics-icon.png",
+
+  industryInsights: {
+    relevance: "80%",
+    marketDemand: "High",
+    avgSalary: "6 LPA+"
+  },
+
   why: {
     heading: "Why choose Data Analytics using R?",
     points: [
-      "R is one of the most powerful statistical and analytical tools available .",
+      "R is one of the most powerful statistical and analytical tools available.",
       "Used in academia, research, finance, and analytics-heavy roles.",
       "Comprehensive packages like dplyr, ggplot2, Shiny boost productivity.",
       "Gain practical experience analyzing real datasets and automating reports."
     ]
   },
+
+  tools: [
+    "R Programming",
+    "RStudio IDE",
+    "Tidyverse (dplyr, tidyr)",
+    "ggplot2 for Data Visualization",
+    "RMarkdown for Reporting",
+    "Shiny for Interactive Dashboards",
+    "data.table for High-Performance Data Manipulation"
+  ],
+
+  careers: [
+    "Data Analyst (R)",
+    "Business Intelligence Analyst",
+    "Statistical Analyst",
+    "Research Analyst",
+    "Data Visualization Specialist"
+  ],
+
   modules: [
     { title: "R Basics & Dataframes", topics: ["Setup R & RStudio", "Vectors, Lists, Dataframes", "Tidyverse Introduction"] },
     { title: "Statistical Analysis", topics: ["Descriptive Stats", "T-tests & ANOVA", "Correlation & Regression"] },
@@ -1118,9 +1364,22 @@ export const courseData = [
     { title: "Reporting & Automation", topics: ["RMarkdown", "Shiny Deployment", "Batch Reporting"] },
     { title: "Project Showcase", topics: ["Finance Case Study", "Marketing Analytics", "Customer Segmentation"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "R Basics & Dataframes", desc: "Learn R syntax, data structures, and tidyverse essentials", hours: 10 },
+    { id: 2, title: "Statistical Analysis", desc: "Master hypothesis testing, ANOVA, and regression analysis", hours: 12 },
+    { id: 3, title: "Data Visualization", desc: "Build interactive plots and dashboards with ggplot2 & Shiny", hours: 10 },
+    { id: 4, title: "Data Manipulation", desc: "Clean and transform datasets using dplyr, tidyr, and data.table", hours: 10 },
+    { id: 5, title: "Reporting & Automation", desc: "Automate reporting with RMarkdown and Shiny deployment", hours: 8 },
+    { id: 6, title: "Capstone Projects", desc: "Work on finance, marketing, and customer analytics case studies", hours: 10 }
+  ],
+
   topColor: "linear-gradient(to right, #ef4444, #f87171)",
   difficultyBar: "#ef4444"
 },
+
+
+
 {
   id: 16,
   slug: "aws-solutions-architect",
@@ -1131,19 +1390,45 @@ export const courseData = [
   duration: "35 hours",
   students: 15213,
   tag: "Cloud & DevOps",
-  isFeatured: true,
+  isFeatured: false,
   description: "Master AWS core services, architecture best practices, and deployment strategies needed to pass the SAA‑C03 exam and build scalable cloud solutions.",
   image: "/assets/images/courses/aws-architect-icon.png",
+
+  industryInsights: {
+    relevance: "90%",
+    marketDemand: "Very High",
+    avgSalary: "8 LPA+"
+  },
+
   why: {
     heading: "Why become an AWS Solutions Architect?",
     points: [
-      "AWS holds over 30% of the global cloud market,architects are in high demand.",
+      "AWS holds over 30% of the global cloud market, and architects are in high demand.",
       "SAA‑C03 is a leading cloud certification with global recognition.",
-      "Roles like Cloud Architect, DevOps, and Infrastructure Engineer pay 2‑3 × more than general IT roles.",
+      "Roles like Cloud Architect, DevOps, and Infrastructure Engineer pay 2‑3× more than general IT roles.",
       "Gain expertise in EC2, VPC, IAM, RDS, S3, Lambda, and more with hands‑on labs.",
-      "Includes practice exams, real-world scenarios, and certification guidance." 
+      "Includes practice exams, real-world scenarios, and certification guidance."
     ]
   },
+
+  tools: [
+    "AWS Management Console",
+    "EC2, S3, EFS, and Glacier",
+    "VPC & Route53",
+    "IAM & Security Tools",
+    "RDS, DynamoDB, Redshift",
+    "CloudWatch & CloudTrail",
+    "AWS CLI & SDKs"
+  ],
+
+  careers: [
+    "AWS Solutions Architect",
+    "Cloud Architect",
+    "DevOps Engineer",
+    "Infrastructure Engineer",
+    "Site Reliability Engineer (SRE)"
+  ],
+
   modules: [
     { title: "Module 1: AWS Fundamentals", topics: ["Cloud Concepts & AWS Overview", "AWS Global Infrastructure", "IAM & Security Best Practices"] },
     { title: "Module 2: Compute Services", topics: ["EC2 Setup & Optimization", "Load Balancing & Auto Scaling", "Serverless with Lambda & FaaS"] },
@@ -1153,9 +1438,22 @@ export const courseData = [
     { title: "Module 6: Architecture Best Practices", topics: ["Well‑Architected Framework", "Building Resilient Systems", "High Availability"] },
     { title: "Module 7: Exam Simulation & Labs", topics: ["Practice Questions", "Blended Concepts", "Exam Strategies"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "AWS Fundamentals", desc: "Understand core AWS services, IAM, and security concepts.", hours: 5 },
+    { id: 2, title: "Compute & Serverless", desc: "Master EC2, Auto Scaling, and Lambda-based serverless setups.", hours: 6 },
+    { id: 3, title: "Networking & VPC", desc: "Design secure VPCs, subnets, and DNS with Route53.", hours: 5 },
+    { id: 4, title: "Storage & Databases", desc: "Work with S3, RDS, and DynamoDB for high availability.", hours: 6 },
+    { id: 5, title: "Monitoring & Cost Control", desc: "Learn AWS billing, monitoring tools, and Trusted Advisor.", hours: 4 },
+    { id: 6, title: "Architecting & Best Practices", desc: "Implement the AWS Well-Architected Framework.", hours: 5 },
+    { id: 7, title: "Exam Prep & Labs", desc: "Hands-on labs and mock exams for SAA-C03 certification.", hours: 4 }
+  ],
+
   topColor: "linear-gradient(to right, #ff9900, #e65100)",
   difficultyBar: "#ff9900"
 },
+
+
 {
   id: 17,
   slug: "azure-fundamentals",
@@ -1168,24 +1466,62 @@ export const courseData = [
   tag: "Cloud & DevOps",
   description: "Accelerate your cloud journey with a solid foundation in Microsoft Azure concepts, services, security, and pricing, ideal for AZ‑900 certification.",
   image: "/assets/images/courses/azure-icon.png",
+
+  industryInsights: {
+    relevance: "85%",
+    marketDemand: "High",
+    avgSalary: "4.5 LPA+"
+  },
+
   why: {
     heading: "Why start with Azure Fundamentals?",
     points: [
       "AZ‑900 is the gateway credential for Microsoft Azure and cloud roles.",
       "Presents a unified base for solutions, administrators, security, or developer tracks.",
       "Hands‑on labs using the Azure portal prepare you for real-world use.",
-      "Covers management tools, compute, storage, networking, and governance.",
+      "Covers management tools, compute, storage, networking, and governance."
     ]
   },
+
+  tools: [
+    "Azure Portal",
+    "Azure CLI",
+    "Virtual Machines & App Services",
+    "Azure Storage (Blob, File)",
+    "Azure Active Directory (AD)",
+    "Role-Based Access Control (RBAC)",
+    "Azure Security Center"
+  ],
+
+  careers: [
+    "Cloud Support Engineer",
+    "Azure Administrator (Entry Level)",
+    "IT Infrastructure Associate",
+    "Cloud Operations Engineer",
+    "Azure Solutions Trainee"
+  ],
+
   modules: [
     { title: "Module 1: Cloud Concepts", topics: ["Cloud Benefits & Models", "Shared Responsibility Model"] },
     { title: "Module 2: Core Azure Services", topics: ["Compute: VM, App Services", "Storage: Blobs, Files", "Networking Basics"] },
     { title: "Module 3: Security & Governance", topics: ["Azure AD", "RBAC & Policies", "Azure Security Center"] },
     { title: "Module 4: Pricing & Support", topics: ["Cost Management", "SLA & Cycle", "Azure Support Plans"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "Cloud Fundamentals", desc: "Understand cloud models, benefits, and the shared responsibility model.", hours: 4 },
+    { id: 2, title: "Azure Services", desc: "Learn core services: compute, storage, and networking.", hours: 8 },
+    { id: 3, title: "Identity & Security", desc: "Hands-on with Azure AD, RBAC, and governance policies.", hours: 6 },
+    { id: 4, title: "Pricing & SLA", desc: "Cost management, pricing calculator, and Azure support plans.", hours: 4 },
+    { id: 5, title: "Practice Labs", desc: "Perform real Azure portal tasks, deploying resources.", hours: 6 },
+    { id: 6, title: "Exam Prep", desc: "Mock tests and revision for AZ‑900 certification.", hours: 3 }
+  ],
+
   topColor: "linear-gradient(to right, #008AD7, #00ADEF)",
   difficultyBar: "#008AD7"
 },
+
+
 
 
 {
@@ -1200,6 +1536,13 @@ export const courseData = [
   tag: "Cloud & DevOps",
   description: "Deep dive into DevOps culture and practices using CI/CD pipelines, containerization, IaC, monitoring, and collaboration with tools like Jenkins, Docker, Kubernetes, Terraform, and AWS/Azure.",
   image: "/assets/images/courses/devops-icon.png",
+
+  industryInsights: {
+    relevance: "92%",
+    marketDemand: "Very High",
+    avgSalary: "8 LPA+"
+  },
+
   why: {
     heading: "Why become a DevOps Engineer?",
     points: [
@@ -1210,6 +1553,25 @@ export const courseData = [
       "Hands-on labs reflect real-world production environments."
     ]
   },
+
+  tools: [
+    "Jenkins & GitHub Actions",
+    "Docker & Kubernetes",
+    "Terraform & CloudFormation",
+    "AWS & Azure Cloud Services",
+    "Prometheus & Grafana",
+    "ELK Stack",
+    "Ansible & CI/CD Pipelines"
+  ],
+
+  careers: [
+    "DevOps Engineer",
+    "Cloud DevOps Specialist",
+    "Site Reliability Engineer (SRE)",
+    "Infrastructure Automation Engineer",
+    "CI/CD Pipeline Architect"
+  ],
+
   modules: [
     { title: "Module 1: DevOps Principles", topics: ["DevOps Lifecycle & Culture", "CI vs CD vs CT"] },
     { title: "Module 2: Version Control", topics: ["Git Strategies", "Branching & Merging", "GitHub Workflows"] },
@@ -1220,9 +1582,21 @@ export const courseData = [
     { title: "Module 7: Security & Automation", topics: ["Secrets Management", "Security Scans"] },
     { title: "Module 8: Capstone Project", topics: ["End-to-end CICD Pipeline", "Deployment to AWS/Azure"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "DevOps Culture & Basics", desc: "Learn the DevOps lifecycle, CI/CD fundamentals, and collaboration principles.", hours: 6 },
+    { id: 2, title: "Git & Version Control", desc: "Master Git workflows, branching, merging, and GitHub Actions.", hours: 8 },
+    { id: 3, title: "CI/CD Pipeline Setup", desc: "Create Jenkins pipelines with code, testing, and automation.", hours: 10 },
+    { id: 4, title: "Containerization", desc: "Build and deploy Docker containers and Kubernetes workloads.", hours: 12 },
+    { id: 5, title: "Infrastructure as Code", desc: "Automate infrastructure using Terraform and CloudFormation.", hours: 8 },
+    { id: 6, title: "Monitoring & Observability", desc: "Set up Prometheus, Grafana, and ELK stack for logs and metrics.", hours: 8 },
+    { id: 7, title: "Capstone Project", desc: "Develop an end-to-end CI/CD pipeline deploying to AWS/Azure.", hours: 8 }
+  ],
+
   topColor: "linear-gradient(to right, #22c55e, #10b981)",
   difficultyBar: "#22c55e"
 },
+
 {
   id: 19,
   slug: "big-data-hadoop",
@@ -1235,6 +1609,13 @@ export const courseData = [
   tag: "Cloud & DevOps",
   description: "Master the Hadoop ecosystem (HDFS, MapReduce, Spark, Hive, Pig) and process large-scale data efficiently using industry-standard tools and frameworks.",
   image: "/assets/images/courses/hadoop-icon.png",
+
+  industryInsights: {
+    relevance: "88%",
+    marketDemand: "High",
+    avgSalary: "7 LPA+"
+  },
+
   why: {
     heading: "Why study Big Data & Hadoop?",
     points: [
@@ -1244,6 +1625,25 @@ export const courseData = [
       "Ideal for Big Data Engineer, Data Lake Architect, and Analytics roles."
     ]
   },
+
+  tools: [
+    "HDFS & YARN",
+    "MapReduce",
+    "Apache Hive & Pig",
+    "Apache Spark (Core, SQL, MLlib, Streaming)",
+    "Sqoop & Flume",
+    "Kafka",
+    "Oozie & Airflow"
+  ],
+
+  careers: [
+    "Big Data Engineer",
+    "Data Lake Architect",
+    "ETL Developer",
+    "Data Analyst (Big Data)",
+    "Hadoop Administrator"
+  ],
+
   modules: [
     { title: "Module 1: Hadoop Fundamentals", topics: ["HDFS Architecture", "YARN", "MapReduce Basics"] },
     { title: "Module 2: Data Processing with Hive & Pig", topics: ["HiveQL", "Partitioning & Bucketing", "Pig Latin Scripts"] },
@@ -1252,9 +1652,22 @@ export const courseData = [
     { title: "Module 5: Data Ingestion & Workflow", topics: ["Sqoop, Flume, Kafka", "Workflow: Oozie & Airflow"] },
     { title: "Module 6: Big Data Projects", topics: ["ETL Pipeline", "Real-time Dashboard", "Batch Analytics"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "Hadoop Foundations", desc: "Learn HDFS, YARN, and distributed computing basics.", hours: 12 },
+    { id: 2, title: "MapReduce & Data Processing", desc: "Master MapReduce programming and job optimization.", hours: 10 },
+    { id: 3, title: "Hive & Pig for ETL", desc: "Write HiveQL queries and Pig scripts for data pipelines.", hours: 12 },
+    { id: 4, title: "Spark Core & SQL", desc: "Learn RDDs, DataFrames, and Spark SQL operations.", hours: 14 },
+    { id: 5, title: "Advanced Spark & Streaming", desc: "Implement MLlib, GraphX, and Structured Streaming.", hours: 12 },
+    { id: 6, title: "Data Ingestion Tools", desc: "Integrate Sqoop, Flume, and Kafka for data movement.", hours: 10 },
+    { id: 7, title: "Workflow Automation", desc: "Orchestrate pipelines using Oozie & Airflow.", hours: 5 },
+    { id: 8, title: "Capstone Projects", desc: "Build ETL, batch, and real-time analytics projects.", hours: 5 }
+  ],
+
   topColor: "linear-gradient(to right, #f97316, #facc15)",
   difficultyBar: "#f97316"
 },
+
 {
   id: 20,
   slug: "mern-stack-web-development",
@@ -1267,6 +1680,13 @@ export const courseData = [
   tag: "Full Stack Development",
   description: "Master full‑stack JavaScript using MongoDB, Express, React, and Node.js. Build real projects, deploy on cloud, and get job-ready.",
   image: "/assets/images/courses/mern-icon.png",
+
+  industryInsights: {
+    relevance: "92%",
+    marketDemand: "Very High",
+    avgSalary: "6.5 LPA+"
+  },
+
   why: {
     heading: "Why learn MERN Stack?",
     points: [
@@ -1274,9 +1694,28 @@ export const courseData = [
       "React powers modern UIs, and Node/Express handle scalable backend services.",
       "MongoDB offers flexible NoSQL storage and fast prototyping.",
       "You’ll build real-world apps like To‑Do, E‑commerce, Expense Tracker, and more.",
-      "ExcelR’s MERN program has 15k+ enrollments and a strong placement record.",
+      "ExcelR’s MERN program has 15k+ enrollments and a strong placement record."
     ]
   },
+
+  tools: [
+    "React & React Router",
+    "Node.js & Express.js",
+    "MongoDB & Mongoose",
+    "Redux / Context API",
+    "JWT & OAuth Authentication",
+    "Docker & GitHub Actions",
+    "Cloud Platforms (AWS/Heroku/Vercel)"
+  ],
+
+  careers: [
+    "Full Stack JavaScript Developer",
+    "Frontend Developer (React)",
+    "Backend Developer (Node.js)",
+    "Web App Engineer",
+    "Software Developer – MERN Stack"
+  ],
+
   modules: [
     {
       title: "Module 1: Frontend with React",
@@ -1334,9 +1773,21 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "JavaScript & ES6", desc: "Master JS fundamentals, ES6 features, and async programming.", hours: 25 },
+    { id: 2, title: "React Foundations", desc: "Learn components, hooks, routing, and state management.", hours: 40 },
+    { id: 3, title: "Node & Express", desc: "Build REST APIs, authentication, and middleware.", hours: 35 },
+    { id: 4, title: "MongoDB & Mongoose", desc: "Database design, queries, aggregation, and indexing.", hours: 30 },
+    { id: 5, title: "Full Stack Integration", desc: "Connect frontend and backend with authentication.", hours: 40 },
+    { id: 6, title: "DevOps & Cloud Deployment", desc: "Docker, CI/CD pipelines, and cloud hosting.", hours: 35 },
+    { id: 7, title: "Capstone Projects", desc: "Develop and deploy 3+ production-grade applications.", hours: 45 }
+  ],
+
   topColor: "linear-gradient(to right, #f97316, #fb923c)",
   difficultyBar: "#f97316"
 },
+
 {
   id: 21,
   slug: "java-full-stack-spring-angular",
@@ -1346,19 +1797,47 @@ export const courseData = [
   badgeColor: "#3b82f6", // Blue
   duration: "6 months / 350 hours",
   students: 15213,
-  
+
   tag: "Full Stack Development",
   description: "Become a full‑stack engineer with Java Spring Boot backend and Angular frontend. Learn microservices, REST API, data persistence, and modern UI.",
   image: "/assets/images/courses/java-fullstack-icon.png",
+
+  industryInsights: {
+    relevance: "95%",
+    marketDemand: "High",
+    avgSalary: "7 LPA+"
+  },
+
   why: {
     heading: "Why choose Java Full Stack?",
     points: [
       "Spring Boot powers enterprise backends at scale, Angular builds robust frontends.",
       "This combo is highly valued in fintech, e-commerce, and enterprise-grade systems.",
       "You’ll work on real projects: project management, e‑commerce, tax apps, etc.",
-      "Includes DevOps essentials like Docker, Jenkins, AWS deployment." 
+      "Includes DevOps essentials like Docker, Jenkins, AWS deployment."
     ]
   },
+
+  tools: [
+    "Java 17+ & JDK",
+    "Spring Boot & Spring Security",
+    "Hibernate & JPA",
+    "Angular 15+",
+    "TypeScript, RxJS",
+    "Docker & Jenkins",
+    "AWS EC2 & RDS",
+    "PostgreSQL/MySQL",
+    "Git & GitHub"
+  ],
+
+  careers: [
+    "Java Full Stack Developer",
+    "Backend Engineer (Spring Boot)",
+    "Frontend Engineer (Angular)",
+    "Software Engineer (Enterprise Apps)",
+    "Cloud-Native Developer"
+  ],
+
   modules: [
     {
       title: "Module 1: Frontend - Angular",
@@ -1408,9 +1887,21 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Core Java & OOP", desc: "Master Java syntax, OOP, collections, and streams.", hours: 40 },
+    { id: 2, title: "Spring Boot Foundations", desc: "Learn Spring Boot, REST APIs, and security with JWT.", hours: 50 },
+    { id: 3, title: "Database & ORM", desc: "Work with SQL, JPA, Hibernate, and data persistence.", hours: 45 },
+    { id: 4, title: "Angular Framework", desc: "Understand components, services, RxJS, and routing.", hours: 60 },
+    { id: 5, title: "Full Stack Integration", desc: "Connect Angular with Spring APIs and handle auth.", hours: 55 },
+    { id: 6, title: "DevOps & Deployment", desc: "Docker, Jenkins pipelines, and AWS cloud setup.", hours: 50 },
+    { id: 7, title: "Capstone Projects", desc: "Build 3+ enterprise-grade applications.", hours: 50 }
+  ],
+
   topColor: "linear-gradient(to right, #3b82f6, #60a5fa)",
   difficultyBar: "#3b82f6"
 },
+
 {
   id: 22,
   slug: "python-full-stack-django-react",
@@ -1420,10 +1911,17 @@ export const courseData = [
   badgeColor: "#10b981", // Green
   duration: "6 months",
   students: 5400,
-   isFeatured: true,
+  isFeatured: false,
   tag: "Full Stack Development",
   description: "Build scalable full‑stack applications using Django backend and React frontend. Includes REST APIs, token auth, deployment, and CI/CD.",
   image: "/assets/images/courses/python-fullstack-icon.png",
+
+  industryInsights: {
+    relevance: "90%",
+    marketDemand: "High",
+    avgSalary: "6.5 LPA+"
+  },
+
   why: {
     heading: "Why learn Django + React Full Stack?",
     points: [
@@ -1433,6 +1931,27 @@ export const courseData = [
       "Ideal for careers in startups, SaaS, and data-driven web services."
     ]
   },
+
+  tools: [
+    "Python 3.11+",
+    "Django & Django REST Framework",
+    "React 18+",
+    "Redux & React Router",
+    "PostgreSQL / MySQL",
+    "Docker & Docker Compose",
+    "Git & GitHub Actions",
+    "AWS/GCP for Hosting",
+    "Nginx & Gunicorn"
+  ],
+
+  careers: [
+    "Python Full Stack Developer",
+    "Backend Developer (Django)",
+    "Frontend Developer (React)",
+    "SaaS Application Developer",
+    "Web App Engineer"
+  ],
+
   modules: [
     {
       title: "Module 1: Backend - Django",
@@ -1479,9 +1998,20 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Python Foundations", desc: "Cover Python syntax, OOP, virtual environments, and REST basics.", hours: 40 },
+    { id: 2, title: "Django Backend", desc: "Learn Django models, ORM, REST Framework, and JWT auth.", hours: 55 },
+    { id: 3, title: "React Frontend", desc: "React components, hooks, state management, and API calls.", hours: 60 },
+    { id: 4, title: "Full Stack Integration", desc: "CORS, CSRF, token management, and Redux state sync.", hours: 50 },
+    { id: 5, title: "DevOps & Hosting", desc: "Dockerizing, GitHub Actions CI/CD, and cloud deployment.", hours: 45 },
+    { id: 6, title: "Capstone Projects", desc: "Build 2-3 industry-grade web apps.", hours: 50 }
+  ],
+
   topColor: "linear-gradient(to right, #10b981, #06b6d4)",
   difficultyBar: "#10b981"
 },
+
 {
   id: 23,
   slug: "ethical-hacking-ceh",
@@ -1494,6 +2024,13 @@ export const courseData = [
   tag: "Cybersecurity",
   description: "Learn to think like a hacker, understand vulnerabilities, simulate attacks, and secure networks and systems with hands-on tools aligned to the CEH standard.",
   image: "/assets/images/courses/ceh-icon.png",
+
+  industryInsights: {
+    relevance: "95%",
+    marketDemand: "Very High",
+    avgSalary: "7 LPA+"
+  },
+
   why: {
     heading: "Why pursue Ethical Hacking & CEH?",
     points: [
@@ -1504,6 +2041,28 @@ export const courseData = [
       "Build a strong resume with lab work, assessments, and certification readiness."
     ]
   },
+
+  tools: [
+    "Kali Linux",
+    "Metasploit Framework",
+    "Nmap & Nessus",
+    "Wireshark",
+    "Burp Suite",
+    "OWASP ZAP",
+    "John the Ripper",
+    "Hydra",
+    "Aircrack-ng"
+  ],
+
+  careers: [
+    "Penetration Tester",
+    "Security Analyst",
+    "Cybersecurity Consultant",
+    "SOC Analyst",
+    "Vulnerability Assessment Specialist",
+    "Security Auditor"
+  ],
+
   modules: [
     { title: "Module 1: Ethical Hacking Fundamentals", topics: ["Security Concepts", "Ethical Hacking Process", "Types of Hackers"] },
     { title: "Module 2: Footprinting & Reconnaissance", topics: ["WHOIS, DNS, Network Mapping", "OSINT Tools", "Recon Techniques"] },
@@ -1514,9 +2073,20 @@ export const courseData = [
     { title: "Module 7: Web App & Wireless Hacking", topics: ["OWASP Top 10", "SQLi, XSS", "WiFi Attacks & Security (WPA, WEP)"] },
     { title: "Module 8: CEH Exam Prep & Lab", topics: ["Mock Assessments", "Report Writing", "Certification Guidance"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "Networking Basics", desc: "TCP/IP, OSI model, and network security essentials.", hours: 10 },
+    { id: 2, title: "Footprinting & Scanning", desc: "OSINT, DNS, Nmap, and Nessus scanning techniques.", hours: 15 },
+    { id: 3, title: "System Hacking", desc: "Privilege escalation, password attacks, and rootkits.", hours: 20 },
+    { id: 4, title: "Web & Wireless Security", desc: "OWASP Top 10, WiFi attacks, SQL injection, and XSS.", hours: 25 },
+    { id: 5, title: "Malware & Social Engineering", desc: "Trojan analysis, phishing, and social engineering.", hours: 15 },
+    { id: 6, title: "CEH Labs & Mock Exams", desc: "Hands-on hacking practice and certification prep.", hours: 25 }
+  ],
+
   topColor: "linear-gradient(to right, #ef4444, #f97316)",
   difficultyBar: "#ef4444"
 },
+
 {
   id: 24,
   slug: "cybersecurity-analyst",
@@ -1529,16 +2099,45 @@ export const courseData = [
   tag: "Cybersecurity",
   description: "Become a Security Analyst, learn threat detection, SIEM, incident response, and vulnerability management tailored for SOC and enterprise environments.",
   image: "/assets/images/courses/cyber-analyst-icon.png",
+
+  industryInsights: {
+    relevance: "90%",
+    marketDemand: "High",
+    avgSalary: "6.5 LPA+"
+  },
+
   why: {
     heading: "Why become a Cybersecurity Analyst?",
     points: [
-      "Cyber threats are increasing-security analysts are crucial for enterprise defense.",
+      "Cyber threats are increasing – security analysts are crucial for enterprise defense.",
       "Learn to configure SIEM tools (Splunk, ELK), detect anomalies, and respond to incidents.",
       "Gain hands-on skills in vulnerability scanning, malware analysis, and forensics.",
       "Perfect for entry-level security roles with global demand and growing salaries.",
       "Build SOC-ready skills and career-ready capabilities."
     ]
   },
+
+  tools: [
+    "Splunk",
+    "ELK Stack (Elasticsearch, Logstash, Kibana)",
+    "Wireshark",
+    "Nessus / OpenVAS",
+    "Metasploit Framework",
+    "OSQuery",
+    "Suricata / Snort",
+    "Burp Suite",
+    "Security Onion"
+  ],
+
+  careers: [
+    "SOC Analyst (L1/L2)",
+    "Cybersecurity Analyst",
+    "Threat Intelligence Analyst",
+    "Incident Response Specialist",
+    "Vulnerability Management Engineer",
+    "Security Operations Associate"
+  ],
+
   modules: [
     { title: "Module 1: Security Foundations", topics: ["CIA Triad", "Threats & Malware Types", "Network Fundamentals"] },
     { title: "Module 2: SIEM & Log Management", topics: ["What is SIEM?", "Splunk/ELK Setup", "Log Analysis & Alerts"] },
@@ -1549,9 +2148,21 @@ export const courseData = [
     { title: "Module 7: Analyst Tools & Techniques", topics: ["Packet Analysis", "Threat Intel", "SIEM Dashboards"] },
     { title: "Module 8: Career Prep & Certification", topics: ["Resume & Interview Tips", "Mock Assessments", "Cert Guide"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "Week 1-2: Security Fundamentals", desc: "Understand cybersecurity basics, CIA triad, threat landscape.", hours: 15 },
+    { id: 2, title: "Week 3: SIEM Setup & Logs", desc: "Hands-on with Splunk and ELK for log collection and analysis.", hours: 12 },
+    { id: 3, title: "Week 4-5: Vulnerability & Risk", desc: "Perform scans using Nessus/OpenVAS and analyze risk.", hours: 18 },
+    { id: 4, title: "Week 6: Incident Response", desc: "Simulate IR scenarios, create playbooks, forensic basics.", hours: 15 },
+    { id: 5, title: "Week 7: Network & Endpoint Security", desc: "Firewall rules, IDS/IPS, and endpoint monitoring.", hours: 10 },
+    { id: 6, title: "Week 8-9: Threat Intel & Reporting", desc: "Build SIEM dashboards, threat intel reports, compliance docs.", hours: 15 },
+    { id: 7, title: "Week 10: Career & Certifications", desc: "CEH/CompTIA Security+ prep and interview readiness.", hours: 10 }
+  ],
+
   topColor: "linear-gradient(to right, #2563eb, #22c55e)",
   difficultyBar: "#2563eb"
 },
+
 {
   id: 25,
   slug: "soc-analyst",
@@ -1562,8 +2173,15 @@ export const courseData = [
   duration: "8 weeks",
   students: 2890,
   tag: "Cybersecurity",
-  description: "Train as a Security Operations Center (SOC) Analyst,learn real-time monitoring, alert triage, and incident response using SIEM and security tools in a simulated SOC environment.",
+  description: "Train as a Security Operations Center (SOC) Analyst, learn real-time monitoring, alert triage, and incident response using SIEM and security tools in a simulated SOC environment.",
   image: "/assets/images/courses/soc-analyst-icon.png",
+
+  industryInsights: {
+    relevance: "88%",
+    marketDemand: "High",
+    avgSalary: "5.8 LPA+"
+  },
+
   why: {
     heading: "Why become a SOC Analyst?",
     points: [
@@ -1574,6 +2192,26 @@ export const courseData = [
       "Includes simulated SOC labs and shift-based scenarios."
     ]
   },
+
+  tools: [
+    "Splunk",
+    "ELK Stack (Elasticsearch, Logstash, Kibana)",
+    "QRadar",
+    "AlienVault OSSIM",
+    "Wireshark",
+    "OSQuery",
+    "MITRE ATT&CK Navigator",
+    "SOAR Tools (Cortex XSOAR, IBM Resilient)"
+  ],
+
+  careers: [
+    "SOC Analyst (Tier 1)",
+    "SOC Analyst (Tier 2)",
+    "Incident Response Analyst",
+    "Threat Hunter",
+    "Security Monitoring Specialist"
+  ],
+
   modules: [
     { title: "Module 1: SOC Fundamentals", topics: ["Roles & Responsibilities", "SOC Levels 1‑3", "SOC Tools Overview"] },
     { title: "Module 2: SIEM Basics", topics: ["Log Collection & Parsing", "Alert Triage", "Search Queries"] },
@@ -1584,9 +2222,22 @@ export const courseData = [
     { title: "Module 7: SOC Labs & Simulation", topics: ["Mock Dashboards", "Tier‑based Response", "Shift Handover"] },
     { title: "Module 8: Career & Interview Prep", topics: ["Resume, CV Tips", "Mock Interviews", "Cert Guidance"] }
   ],
+
+  roadmap: [
+    { id: 1, title: "Week 1: SOC Overview", desc: "Understand SOC roles, structure, and workflow.", hours: 10 },
+    { id: 2, title: "Week 2: SIEM Introduction", desc: "Hands-on log collection, parsing, and alert generation.", hours: 12 },
+    { id: 3, title: "Week 3: Threat Detection", desc: "IOC hunting, MITRE ATT&CK mapping, and rule creation.", hours: 12 },
+    { id: 4, title: "Week 4: Incident Management", desc: "Triage, response lifecycle, and real case scenarios.", hours: 10 },
+    { id: 5, title: "Week 5: Threat Intelligence", desc: "Use OSINT and intel feeds for threat modeling.", hours: 8 },
+    { id: 6, title: "Week 6: SOAR & Automation", desc: "Automate playbooks with XDR & SOAR tools.", hours: 10 },
+    { id: 7, title: "Week 7: SOC Simulation Labs", desc: "Work on mock dashboards and shift handovers.", hours: 12 },
+    { id: 8, title: "Week 8: Career & Certification Prep", desc: "Interview prep and guidance on certifications.", hours: 8 }
+  ],
+
   topColor: "linear-gradient(to right, #8b5cf6, #ec4899)",
   difficultyBar: "#8b5cf6"
 },
+
 {
   id: 26,
   slug: "aptitude-reasoning-softskills",
@@ -1599,6 +2250,13 @@ export const courseData = [
   tag: "Foundation & Career Launchers",
   description: "Sharpen your aptitude, reasoning, and communication skills, the essential trio for cracking campus placements, internships, and top tech jobs.",
   image: "/assets/images/courses/aptitude-icon.png",
+
+  // industryInsights: {
+  //   relevance: "95%",
+  //   avgSalary: "3-5 LPA (Entry-level)",
+  //   marketDemand: "Very High"
+  // },
+
   why: {
     heading: "Why master Aptitude, Reasoning, and Soft Skills?",
     points: [
@@ -1609,6 +2267,23 @@ export const courseData = [
       "Recommended for all students aiming for internships or fresher roles."
     ]
   },
+
+  tools: [
+    "Aptitude Test Platforms (AMCAT, Cocubes)",
+    "Group Discussion Case Studies",
+    "Mock Interview Platforms",
+    "Communication Skill Frameworks",
+    "Online Assessment Simulators"
+  ],
+
+  careers: [
+    "Software Engineer (Fresher)",
+    "Business Analyst Trainee",
+    "Graduate Engineer Trainee (GET)",
+    "Customer Success Associate",
+    "Management Trainee"
+  ],
+
   modules: [
     {
       title: "Module 1: Quantitative Aptitude",
@@ -1651,9 +2326,20 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Week 1: Quantitative Basics", desc: "Cover number systems, percentages, and ratios with practice sets.", hours: 8 },
+    { id: 2, title: "Week 2: Logical Thinking", desc: "Focus on puzzles, patterns, and reasoning quizzes.", hours: 8 },
+    { id: 3, title: "Week 3: Verbal Communication", desc: "Enhance reading comprehension and grammar.", hours: 8 },
+    { id: 4, title: "Week 4: Soft Skills & GD", desc: "Group discussion strategies and body language training.", hours: 10 },
+    { id: 5, title: "Week 5: Mock Tests", desc: "Full-length placement tests and analysis.", hours: 10 },
+    { id: 6, title: "Week 6: Interview Readiness", desc: "Personal interviews, resume review, and HR Q&A.", hours: 8 }
+  ],
+
   topColor: "linear-gradient(to right, #3b82f6, #06b6d4)",
   difficultyBar: "#3b82f6"
 },
+
 {
   id: 27,
   slug: "resume-interview-prep",
@@ -1666,6 +2352,13 @@ export const courseData = [
   tag: "Foundation & Career Launchers",
   description: "Create a job-winning resume, perfect your personal pitch, and master behavioral & technical interview rounds with expert guidance.",
   image: "/assets/images/courses/resume-icon.png",
+
+  // industryInsights: {
+  //   avgSalary: "3-8 LPA (for job-ready candidates)",
+  //   marketDemand: "High for freshers & entry-level professionals",
+  //   successRate: "60% improvement in interview call rate post optimization"
+  // },
+
   why: {
     heading: "Why focus on Resume & Interview Prep?",
     points: [
@@ -1676,6 +2369,15 @@ export const courseData = [
       "Perfect for final-year students and early-career professionals."
     ]
   },
+
+  careers: [
+    "Software Developer (Fresher)",
+    "Business Analyst Trainee",
+    "Graduate Engineer Trainee (GET)",
+    "Cybersecurity Analyst Intern",
+    "DevOps Trainee Engineer"
+  ],
+
   modules: [
     {
       title: "Module 1: Resume Writing",
@@ -1710,9 +2412,17 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Week 1: Resume & Portfolio", desc: "Craft and polish a recruiter-friendly resume and personal portfolio.", hours: 8 },
+    { id: 2, title: "Week 2: LinkedIn & HR Prep", desc: "Optimize LinkedIn, prepare HR & behavioral answers.", hours: 8 },
+    { id: 3, title: "Week 3: Technical + Mock Interviews", desc: "Participate in mock technical interviews and receive feedback.", hours: 10 }
+  ],
+
   topColor: "linear-gradient(to right, #f59e0b, #fbbf24)",
   difficultyBar: "#f59e0b"
 },
+
 {
   id: 28,
   slug: "git-github-course",
@@ -1725,6 +2435,13 @@ export const courseData = [
   tag: "Foundation & Career Launchers",
   description: "Learn how to manage and collaborate on code using Git and GitHub, a must-have skill for every developer and data scientist.",
   image: "/assets/images/courses/git-icon.png",
+
+  // industryInsights: {
+  //   avgSalary: "5-7 LPA (entry-level developers with Git/GitHub expertise)",
+  //   marketDemand: "Git is a mandatory skill for 95% of tech roles",
+  //   successRate: "70% increase in hiring chances for candidates with GitHub portfolios"
+  // },
+
   why: {
     heading: "Why learn Git & GitHub?",
     points: [
@@ -1735,6 +2452,15 @@ export const courseData = [
       "Essential for interviews and technical assessments."
     ]
   },
+
+  careers: [
+    "Software Developer",
+    "Full Stack Engineer",
+    "Data Scientist (with ML projects on GitHub)",
+    "Open Source Contributor",
+    "DevOps Trainee Engineer"
+  ],
+
   modules: [
     {
       title: "Module 1: Git Basics",
@@ -1761,9 +2487,16 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Week 1: Git Fundamentals", desc: "Learn Git commands, branching, and commit history.", hours: 6 },
+    { id: 2, title: "Week 2: GitHub & Collaboration", desc: "Work with pull requests, code reviews, and GitHub Actions basics.", hours: 6 }
+  ],
+
   topColor: "linear-gradient(to right, #10b981, #3b82f6)",
   difficultyBar: "#10b981"
 },
+
 {
   id: 29,
   slug: "sql-basics-course",
@@ -1776,6 +2509,13 @@ export const courseData = [
   tag: "Foundation & Career Launchers",
   description: "Learn the fundamentals of SQL to query, analyze, and manipulate data, essential for developers, analysts, and data scientists.",
   image: "/assets/images/courses/sql-icon.png",
+
+  // industryInsights: {
+  //   avgSalary: "5-8 LPA (for SQL + Data Analyst roles)",
+  //   marketDemand: "SQL is a core requirement for over 70% of analytics and engineering jobs",
+  //   successRate: "Candidates with SQL proficiency clear 60% of data interviews more easily"
+  // },
+
   why: {
     heading: "Why learn SQL?",
     points: [
@@ -1786,6 +2526,16 @@ export const courseData = [
       "Fundamental for career roles in Data, AI, and Full Stack."
     ]
   },
+
+  careers: [
+    "Data Analyst",
+    "Business Analyst",
+    "Database Administrator",
+    "Backend Developer",
+    "ETL Developer",
+    "Data Scientist (SQL for data extraction)"
+  ],
+
   modules: [
     {
       title: "Module 1: SQL Basics",
@@ -1812,9 +2562,17 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Week 1: SQL Basics", desc: "Learn RDBMS concepts, SELECT, WHERE, and filtering.", hours: 6 },
+    { id: 2, title: "Week 2: Joins & Advanced Queries", desc: "Master joins, subqueries, and GROUP BY.", hours: 6 },
+    { id: 3, title: "Week 3: Practice & Mock Tests", desc: "Solve real-world case studies and mock interview questions.", hours: 6 }
+  ],
+
   topColor: "linear-gradient(to right, #6366f1, #8b5cf6)",
   difficultyBar: "#6366f1"
 },
+
 {
   id: 30,
   slug: "capstone-ai-ml-ds",
@@ -1827,6 +2585,13 @@ export const courseData = [
   tag: "AI Capstone & Labs",
   description: "Build industry-grade capstone projects across Machine Learning, Deep Learning, NLP, and Data Analytics to strengthen your portfolio and job readiness.",
   image: "/assets/images/courses/capstone-icon.png",
+
+  // industryInsights: {
+  //   avgSalary: "8-14 LPA (AI/ML roles with project portfolios)",
+  //   marketDemand: "Strong portfolio projects improve shortlisting chances by 3x.",
+  //   successRate: "Over 70% of ML job listings demand proven project experience."
+  // },
+
   why: {
     heading: "Why Capstone Projects?",
     points: [
@@ -1837,6 +2602,16 @@ export const courseData = [
       "Projects mimic real client problems from the tech industry."
     ]
   },
+
+  careers: [
+    "Machine Learning Engineer",
+    "AI Research Associate",
+    "Data Scientist",
+    "Deep Learning Engineer",
+    "Business Analytics Specialist",
+    "Computer Vision/NLP Engineer"
+  ],
+
   modules: [
     {
       title: "Module 1: AI & ML Capstones",
@@ -1872,9 +2647,19 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Week 1-2: AI/ML Project Design", desc: "Select ML datasets, set up pipelines, and build baseline models.", hours: 10 },
+    { id: 2, title: "Week 3: Deep Learning Projects", desc: "CNN, RNN-based DL models with image or NLP datasets.", hours: 10 },
+    { id: 3, title: "Week 4: Data Science Analytics", desc: "EDA, visualization dashboards, and business insights.", hours: 10 },
+    { id: 4, title: "Week 5: Deployment", desc: "Containerize apps, deploy on cloud platforms (AWS/Heroku).", hours: 8 },
+    { id: 5, title: "Week 6: Portfolio & Resume Boost", desc: "Prepare GitHub repos, project reports, and LinkedIn highlights.", hours: 6 }
+  ],
+
   topColor: "linear-gradient(to right, #ef4444, #f97316)",
   difficultyBar: "#ef4444"
 },
+
 {
   id: 31,
   slug: "ai-labs",
@@ -1887,6 +2672,13 @@ export const courseData = [
   tag: "AI Capstone & Labs",
   description: "Hands-on AI Labs to simulate real-world use cases in Healthcare, Finance, E-commerce, and Security, applying ML/DL/NLP in practical scenarios.",
   image: "/assets/images/courses/ai-labs-icon.png",
+
+  // industryInsights: {
+  //   avgSalary: "12–18 LPA (AI engineers with applied project expertise)",
+  //   marketDemand: "80% of AI roles require real-world deployment experience.",
+  //   successRate: "Portfolio-based AI hiring is 3× faster with lab-based projects."
+  // },
+
   why: {
     heading: "Why AI Labs?",
     points: [
@@ -1897,6 +2689,16 @@ export const courseData = [
       "Backed by expert mentorship and code review cycles."
     ]
   },
+
+  careers: [
+    "AI Engineer",
+    "Machine Learning Engineer",
+    "Computer Vision Specialist",
+    "NLP Engineer",
+    "AI Solutions Architect",
+    "MLOps Engineer"
+  ],
+
   modules: [
     {
       title: "Module 1: Industry Domains",
@@ -1923,9 +2725,18 @@ export const courseData = [
       ]
     }
   ],
+
+  roadmap: [
+    { id: 1, title: "Week 1: Domain Use Cases", desc: "Implement AI models for healthcare, finance, and retail.", hours: 12 },
+    { id: 2, title: "Week 2: Model Interpretability", desc: "Apply SHAP/LIME for explainability and bias checks.", hours: 10 },
+    { id: 3, title: "Week 3: Scaling Pipelines", desc: "Version models and containerize with Docker/MLflow.", hours: 8 },
+    { id: 4, title: "Week 4: Real-Time Deployment", desc: "Deploy AI APIs for live inference and testing.", hours: 6 }
+  ],
+
   topColor: "linear-gradient(to right, #10b981, #14b8a6)",
   difficultyBar: "#10b981"
 },
+
 {
   id: 32,
   slug: "ai-career-tracks",
@@ -1936,55 +2747,79 @@ export const courseData = [
   duration: "12+ weeks",
   students: 5620,
   tag: "AI Capstone & Labs",
-  description: "Structured roadmap for AI/ML/Data Science careers, includes mentorship, mock interviews, GitHub projects, resume sessions, and job application strategies.",
+  description: "A structured and mentorship-driven roadmap for AI, ML, and Data Science careers. Includes curated learning paths, mock interviews, GitHub portfolio building, resume reviews, and strategic job application guidance.",
   image: "/assets/images/courses/ai-career-icon.png",
+  
   why: {
     heading: "Why Career Tracks?",
     points: [
-      "Combines tech skills + projects + career grooming in one track.",
-      "Live mentorship, weekly goal tracking, and job referrals.",
-      "Crack interviews with mock technical + HR rounds.",
-      "Curated roadmap with checkpoints for consistency.",
-      "Resume, GitHub, and LinkedIn profile perfection included."
+      "Combines tech skills, capstone projects, and career grooming in one guided program.",
+      "Weekly mentorship sessions with AI/ML industry experts.",
+      "Real interview simulations with technical and HR mock rounds.",
+      "Curated checkpoints, progress tracking, and accountability to ensure consistency.",
+      "Resume, GitHub, and LinkedIn profile perfection with recruiter insights."
     ]
   },
+
+  careers: [
+    "AI/ML Engineer",
+    "Data Scientist",
+    "ML Ops Engineer",
+    "Business Intelligence Analyst",
+    "AI Research Associate",
+    "Data Engineer (Entry Level)"
+  ],
+
   modules: [
     {
       title: "Phase 1: Foundations + Portfolio",
       topics: [
         "DSA + Python Fundamentals",
-        "ML/DS Mini Projects",
-        "GitHub Project Setup"
+        "Mini ML/DS Projects",
+        "GitHub Portfolio Setup & README Crafting"
       ]
     },
     {
       title: "Phase 2: Resume & LinkedIn Grooming",
       topics: [
-        "Tech Resume Structuring",
-        "LinkedIn Optimization",
-        "Pitching Projects in Interviews"
+        "Tech Resume Structuring & ATS Optimization",
+        "LinkedIn Headline & Keyword Hacks",
+        "Pitching Projects & Case Studies in Interviews"
       ]
     },
     {
       title: "Phase 3: Mock Interview Rounds",
       topics: [
-        "Mock HR + Technical Rounds",
-        "Code + Case Study Rounds",
-        "Feedback with Improvement Plan"
+        "HR + Technical Mock Interviews",
+        "Coding + Case Study Rounds",
+        "Feedback & Improvement Roadmap"
       ]
     },
     {
       title: "Phase 4: Job Application Strategy",
       topics: [
-        "Tracking & Targeting Roles",
-        "Cold Outreach Scripts",
-        "Follow-up Strategies"
+        "Role Mapping & Job Tracking",
+        "Cold Outreach Email Templates",
+        "Networking & Follow-up Playbook"
       ]
     }
   ],
+
+  roadmap: [
+    { week: 1, focus: "DSA + Python Crash Course" },
+    { week: 2, focus: "ML Mini Project 1 + GitHub Setup" },
+    { week: 3, focus: "Resume Draft + LinkedIn Optimization" },
+    { week: 4, focus: "Mock Interview Round 1" },
+    { week: 5, focus: "Advanced Projects + Portfolio Polishing" },
+    { week: 6, focus: "Mock Interview Round 2 + Feedback" },
+    { week: 7, focus: "Job Application Strategy" },
+    { week: 8, focus: "Final Capstone + Career Review" }
+  ],
+
   topColor: "linear-gradient(to right, #6366f1, #8b5cf6)",
   difficultyBar: "#6366f1"
 },
+
 {
   id: 40,
   slug: "power-bi-course",
@@ -1995,18 +2830,36 @@ export const courseData = [
   duration: "6 weeks",
   students: 4675,
   tag: "Programming Fundamentals",
-  description: "Master data modeling, DAX, and interactive dashboards using Microsoft Power BI for business and data analytics.",
+  description: "Master Power BI to analyze, visualize, and present data effectively. Learn data modeling, DAX, and create interactive dashboards for real-world business insights.",
   image: "/assets/images/courses/powerbi-icon.png",
+  
   why: {
     heading: "Why Learn Power BI?",
     points: [
-      "One of the most widely used BI tools in enterprise environments.",
-      "Essential for business analysts, data analysts, and PMs.",
-      "Build real-time dashboards with automated data refresh.",
-      "No-code/low-code modeling and visualization capabilities.",
-      "Highly valued in BFSI, Retail, Marketing, and E-commerce domains."
+      "One of the most widely used BI tools across enterprises.",
+      "Key skill for business analysts, data analysts, and PMs.",
+      "Hands-on dashboard building with real-time data refresh.",
+      "No-code/low-code data modeling and powerful visualization.",
+      "Highly valued across BFSI, Retail, Marketing, and E-commerce sectors."
     ]
   },
+  
+  careers: [
+    "Business Intelligence Analyst",
+    "Data Analyst",
+    "Reporting Specialist",
+    "Business Consultant",
+    "Project Manager (Analytics Focus)"
+  ],
+  
+  tools: [
+    "Power Query",
+    "DAX (Data Analysis Expressions)",
+    "Power BI Desktop & Service",
+    "Excel + Power BI Integration",
+    "SQL as Data Source"
+  ],
+
   modules: [
     {
       title: "Module 1: Power BI Foundations",
@@ -2041,9 +2894,11 @@ export const courseData = [
       ]
     }
   ],
+  
   topColor: "linear-gradient(to right, #3b82f6, #06b6d4)", // Blue to Cyan
   difficultyBar: "#3b82f6"
 },
+
 {
   id: 41,
   slug: "tableau-course",

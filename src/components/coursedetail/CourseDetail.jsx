@@ -6,8 +6,10 @@ import {
   Typography,
   Box
 } from '@mui/material';
+import InsightsIcon from '@mui/icons-material/Insights';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styles from './CourseDetail.module.css';
+import CourseRoadmap from './Courseroadmap';
 
 
 const CourseDetail = ({ course }) => {
@@ -49,12 +51,46 @@ const CourseDetail = ({ course }) => {
       alt="Learning Illustration"
       className={styles.illustration}
     />
+    {course.industryInsights && (
+  <div className={styles.insightsContainer}>
+    <div className={styles.insightsHeader}>
+      <InsightsIcon className={styles.insightsIcon} />
+      <h4 className={styles.insightsTitle}>Industry Insights</h4>
+    </div>
+
+    <div className={styles.insightsStats}>
+      <div className={styles.statItem}>
+        <p className={`${styles.statValue} ${styles.yellow}`}>
+          {course.industryInsights.relevance}
+        </p>
+        <p className={styles.statLabel}>Industry Relevance</p>
+      </div>
+      <div className={styles.statItem}>
+        <p className={`${styles.statValue} ${styles.green}`}>
+          {course.industryInsights.marketDemand}
+        </p>
+        <p className={styles.statLabel}>Market Demand</p>
+      </div>
+      <div className={styles.statItem}>
+        <p className={`${styles.statValue} ${styles.purple}`}>
+          {course.industryInsights.avgSalary}
+        </p>
+        <p className={styles.statLabel}>Avg. Salary</p>
+      </div>
+    </div>
+  </div>
+)}
+
     <Box className={styles.ctaBox}>
       <Typography variant="h6">Ready to start learning?</Typography>
       <button className={styles.ctaButton}>Enroll Now</button>
     </Box>
   </div>
 </div>
+
+  {Array.isArray(course.roadmap) && course.roadmap.length > 0 && (
+        <CourseRoadmap steps={course.roadmap} />
+      )}
 
 
       {/* WHY SECTION */}

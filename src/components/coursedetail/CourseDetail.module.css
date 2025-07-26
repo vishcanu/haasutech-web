@@ -13,7 +13,7 @@
 /* ---------- HEADER ---------- */
 .titleSection {
     
-  background: linear-gradient(135deg,#0072ff, #00c6ff );
+background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
   padding: 0.5rem !important;
   border-radius: 2px;
   margin-top: -1.5rem !important;
@@ -99,6 +99,73 @@
   border-top: 1px solid #e2e8f0;
 }
 
+/*----------industry--------- */
+.insightsContainer {
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(14px);
+  color: #fff;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.insightsHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: -2.5rem !important;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.insightsIcon {
+  font-size: 1.4rem;
+}
+
+.insightsStats {
+  display: flex;
+  justify-content: space-between;
+ 
+  gap: 1rem;
+  text-align: center;
+}
+
+.statItem {
+  flex: 1;
+}
+
+.statValue {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: -0.9rem !important;
+}
+
+.yellow {
+  color: #facc15;
+}
+
+.green {
+  color: #4ade80;
+}
+
+.purple {
+  color: #c084fc;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+
 
 /* ---------- TYPOGRAPHY ---------- */
 .MuiTypography-root {
@@ -176,6 +243,7 @@
   width: 40%;
   padding: 1rem;
   text-align: center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -260,7 +328,54 @@
   .moduleList,
   .sidebar {
     width: 100%;
+    
   }
+
+  .insightsContainer {
+  margin: 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(14px);
+  color: #fff;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.insightsHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: -1.75rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 500;
+}
+
+.insightsIcon {
+  font-size: 0.9rem !important;
+}
+
+
+
+
+
+.statValue {
+  font-size: 0.75rem !important;
+  font-weight: 400;
+  margin-bottom: -0.5rem !important;
+}
+
+
+.statLabel {
+  font-size: 0.6rem !important;
+  color: rgba(255, 255, 255, 0.75);
+}
+
 
 }
 
