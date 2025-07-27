@@ -104,7 +104,7 @@ export default function About() {
         ].map((course, index) => (
           <div key={index} className={styles.courseCard}>
            
-            <Typography variant="body1" className={styles.courseName}>
+            <Typography  className={styles.courseName}>
               {course.name}
             </Typography>
           </div>
