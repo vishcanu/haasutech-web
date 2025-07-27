@@ -31,6 +31,7 @@
   text-decoration: none;
   background: linear-gradient(90deg, #00f2fe, #5b4df1, #00f2fe);
   background-size: 300%;
+  background-clip: text; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shineText 4s linear infinite;
@@ -170,6 +171,7 @@
 .callBtn span {
   background: linear-gradient(90deg, #00ffab, #ffffff, #00ffab);
   background-size: 200%;
+  background-clip: text; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: shineText 4s linear infinite;
@@ -289,14 +291,26 @@
 }
 
 /* 🗂 Drawer Styles */
+/* Target the Drawer's Paper component specifically */
 .drawer {
   width: 200px !important;
   padding: 1rem;
-  background: linear-gradient(to bottom right, #10151f, #1e2c45); 
-  color: #f0f0f0; 
+  background: linear-gradient(to bottom right, #10151f, #1e2c45) !important;
+  color: #f0f0f0 !important;
   animation: slideIn 0.3s ease-in-out;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3); 
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3) !important;
 }
+
+/* Override Material-UI's Paper background */
+.drawer .MuiPaper-root {
+  background: linear-gradient(to bottom right, #10151f, #1e2c45) !important;
+}
+
+/* Or use a more specific selector */
+:global(.MuiDrawer-paper) {
+  background: linear-gradient(to bottom right, #10151f, #1e2c45) !important;
+}
+
 @keyframes slideIn {
   from {
     transform: translateX(100%);
@@ -307,6 +321,7 @@
     opacity: 1;
   }
 }
+
 
 @media (max-width: 768px) {
   .links {

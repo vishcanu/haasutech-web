@@ -241,6 +241,8 @@ background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
 
 .sidebar {
   width: 40%;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   text-align: center;
   align-items: center;
@@ -286,7 +288,113 @@ background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
 
 
 /* ------------------ RESPONSIVE BREAKPOINTS ------------------ */
+@media (max-width: 320px) {
+  .courseWrapper {
+    padding: 1rem;
+  }
 
+  .title {
+    font-size: 1rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: -0.5rem !important;
+  }
+
+  .description {
+    font-size: 0.8rem !important;
+  }
+
+  .moduleHeading {
+    font-size: 1rem !important;
+  }
+.moduleTitle {
+  font-size: 0.8rem !important;
+  font-weight: 400;
+  color: #1e293b;
+  line-height: 1 !important;
+}
+  .topicItem {
+    font-size: 0.70rem !important;
+  }
+  .whyItem {
+  font-size: 0.70rem !important;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  line-height: 1.2 !important;
+}
+ .moduleLayout {
+    flex-direction: column;
+  }
+
+  .moduleList,
+  .sidebar {
+    width: 100%;
+    
+  }
+
+  .insightsContainer {
+  margin: 0.5rem 0;
+  padding: 0.25rem 0.5rem;
+background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
+margin-left: -35px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(14px);
+  color: #fff;
+  display: flex;
+  align-items: center !important;
+  justify-items: center !important;
+  flex-direction: column !important;
+  gap: 1rem;
+}
+.illustration {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  margin-left: -30px !important;
+}
+
+.insightsHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: -1.75rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 500;
+}
+.ctaBox {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center items horizontally */
+  justify-content: center;    /* center items vertically (if space allows) */
+  text-align: center;         /* center text */
+  width: 100%;
+  margin-left: -35px !important;
+}
+
+.insightsIcon {
+  font-size: 0.9rem !important;
+}
+
+
+
+
+
+.statValue {
+  font-size: 0.75rem !important;
+  font-weight: 400;
+  margin-bottom: -0.5rem !important;
+}
+
+
+.statLabel {
+  font-size: 0.6rem !important;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+}
 /* Mobile (XS) */
 @media (max-width: 575px) {
   .courseWrapper {
@@ -335,18 +443,24 @@ background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
   margin: 0.5rem 0;
   padding: 0.25rem 0.5rem;
 background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
-
+margin-left: -35px !important;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(14px);
   color: #fff;
   display: flex;
-  justify-items: center;
-  flex-direction: column;
+  align-items: center !important;
+  justify-items: center !important;
+  flex-direction: column !important;
   gap: 1rem;
 }
-
+.illustration {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  margin-left: -30px !important;
+}
 .insightsHeader {
   display: flex;
   align-items: center;
@@ -354,6 +468,16 @@ background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
   margin-bottom: -1.75rem !important;
   font-size: 0.9rem !important;
   font-weight: 500;
+}
+.ctaBox {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* center items horizontally */
+  justify-content: center;    /* center items vertically (if space allows) */
+  text-align: center;         /* center text */
+  width: 100%;
+  margin-left: -35px !important;
 }
 
 .insightsIcon {
