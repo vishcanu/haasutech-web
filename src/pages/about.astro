@@ -4,15 +4,81 @@ import About from '../components/about/About.jsx';
 import WhyHaasutech from '../components/whyHaasutech/WhyHaasutech.jsx';
 ---
 
+<head>
+  <title>About Us | Haasutech AI</title>
+  <meta 
+    name="description" 
+    content="Haasutech AI, led by IITians and industry experts, offers AI, ML, Data Science, and Full-Stack courses with real-world projects and internships in Noida, Delhi NCR, and Bangalore." 
+  />
+  
+  <meta 
+    name="keywords" 
+    content="Haasutech AI, AI courses Noida, AI training Delhi NCR, best AI internships Bangalore, AI final year projects Noida, industry-driven AI projects Delhi, AI/ML courses Bangalore, best AI training institute Noida, Data Science internships Delhi, full-stack projects Noida, cloud computing courses Delhi NCR, AI DevOps training Bangalore, Haasutech AI company, AI mentorship Delhi, career opportunities AI Bangalore, AI hands-on projects Noida, Haasutech AI reviews, upskilling AI courses Noida, best AI courses Delhi NCR, AI career training Bangalore, AI/ML internship opportunities Noida" 
+  />
+  
+  <meta property="og:title" content="About Haasutech AI" />
+  <meta 
+    property="og:description" 
+    content="Discover how Haasutech AI empowers students and professionals with IITian-led AI courses, internships, and real-world projects across Noida, Delhi, and Bangalore." 
+  />
+  <meta property="og:image" content="/ai-og.png" />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow" />
 
-  <head>
-    <title>About Us | Haasutech AI</title>
-    <meta name="description" content="Learn about Haasutech AI - courses created by IITians and industry experts to help students and professionals upskill in AI and tech." />
-    <meta name="keywords" content="About Haasutech AI, IITians, industry experts, AI education, upskilling" />
-    <meta property="og:title" content="About Haasutech AI" />
-    <meta property="og:description" content="Learn how Haasutech AI helps learners transform their careers with expert-led AI courses." />
-    <meta property="og:image" content="/ai-og.png" />
-  </head>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Haasutech AI",
+    "url": "https://www.haasutech.in",
+    "logo": "https://www.haasutech.in/assets/logo.png",
+    "description": "Haasutech AI provides IITian-led training in AI, Machine Learning, Data Science, Full-Stack Development, Cloud Computing, and DevOps with internships and final-year projects in Noida, Delhi NCR, and Bangalore.",
+    "sameAs": [
+      "https://www.facebook.com/haasutechai",
+      "https://www.linkedin.com/company/haasutechai",
+      "https://www.instagram.com/haasutechai"
+    ],
+    
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Haasutech AI Courses",
+      "itemListElement": [
+        {
+          "@type": "Course",
+          "name": "AI & Machine Learning",
+          "description": "Industry-driven AI and ML course with hands-on projects."
+        },
+        {
+          "@type": "Course",
+          "name": "Data Science & DSA",
+          "description": "Comprehensive Data Science and Algorithms training."
+        },
+        {
+          "@type": "Course",
+          "name": "Full-Stack Development (MERN)",
+          "description": "Learn full-stack web development using MERN stack."
+        },
+        {
+          "@type": "Course",
+          "name": "Cloud Computing (AWS, GCP, Docker)",
+          "description": "Hands-on training in cloud computing and DevOps tools."
+        },
+        {
+          "@type": "Course",
+          "name": "DevOps & MLOps",
+          "description": "Practical DevOps and MLOps skills for deployment and automation."
+        },
+        {
+          "@type": "Course",
+          "name": "Generative AI & Prompt Engineering",
+          "description": "Learn Generative AI, LLMs, and prompt engineering techniques."
+        }
+      ]
+    }
+  }
+  </script>
+</head>
 
 <MainLayout>
   <About client:load />
