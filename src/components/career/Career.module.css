@@ -85,7 +85,7 @@
   gap: 1rem;
   justify-content: center;
   align-items: stretch;
-  margin-bottom: 2.1rem;
+  margin-bottom: 0rem !important;
 }
 .careerCard {
   background: rgba(25,35,61,0.95);
@@ -107,6 +107,7 @@
   animation: fadeInCard 0.7s both;
   will-change: transform;
   border: 1px solid #22304a;
+
 }
 .careerCard:nth-child(1) { animation-delay: .05s;}
 .careerCard:nth-child(2) { animation-delay: .18s;}
@@ -146,6 +147,7 @@
   animation: fadeIn 1s 0.7s backwards;
   color: #a4eaff;
   border: 1px solid #233a5b;
+  margin-bottom: 1.75rem !important;
 }
 
 .email {
@@ -218,7 +220,7 @@
   font-size: 1.08rem;
 }
 .intro, .careerCard, .applyCard {
-  font-size: 0.90rem;
+  font-size: 1rem !important;
 }
 .logo {
   width: 72px;
@@ -228,14 +230,14 @@
 /* === Small Mobiles: 375px up === */
 @media (min-width: 375px) {
   .heading { font-size: 1.1rem !important; }
-  .intro, .careerCard, .applyCard { font-size: 0.9rem !important; }
+  .intro, .careerCard, .applyCard { font-size: 1rem !important; }
   .logo { width: 82px; }
 }
 
 /* === Big Mobiles: 425px up === */
 @media (min-width: 425px) {
   .heading { font-size: 1.2rem !important; }
-  .intro, .careerCard, .applyCard { font-size: 0.9rem !important; }
+  .intro, .careerCard, .applyCard { font-size: 1rem !important; }
   .logo { width: 96px; }
 }
 

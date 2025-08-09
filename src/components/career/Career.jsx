@@ -19,7 +19,27 @@ export default function Career() {
         <p className={styles.intro}>
           <span className={styles.introHighlight}>Join India’s top edtech mission!</span> Teach future-ready AI and tech skills, design capstone projects, and mentor learners alongside IITians and industry leaders in Noida, Delhi, Bangalore & pan-India.
         </p>
-
+{/* Animated Apply block */}
+        <div className={styles.applyCard}>
+          <strong>How to Apply:</strong>
+          <p>
+            Send your resume and portfolio (if any) to<br />
+            <a href="mailto:business@haasutech.com" className={styles.email}>business@haasutech.com</a><br />
+            Mention your preferred location <span className={styles.location}>(Noida, Delhi, Bangalore, remote)</span> and areas of expertise.
+          </p>
+          <div className={styles.whatsappBlock}>
+            <FaWhatsapp className={styles.whatsappIcon} />
+            <span>
+              For details, connect on WhatsApp:
+              <a
+                href="https://wa.me/918932900125"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.whatsappLink}
+              > +91 89329 00125</a>
+            </span>
+          </div>
+        </div>
         {/* Animated career cards instead of plain list */}
         <div className={styles.careerGrid}>
           <div className={styles.careerCard}>
@@ -48,27 +68,7 @@ export default function Career() {
           </div>
         </div>
 
-        {/* Animated Apply block */}
-        <div className={styles.applyCard}>
-          <strong>How to Apply:</strong>
-          <p>
-            Send your resume and portfolio (if any) to<br />
-            <a href="mailto:business@haasutech.com" className={styles.email}>business@haasutech.com</a><br />
-            Mention your preferred location <span className={styles.location}>(Noida, Delhi, Bangalore, remote)</span> and areas of expertise.
-          </p>
-          <div className={styles.whatsappBlock}>
-            <FaWhatsapp className={styles.whatsappIcon} />
-            <span>
-              For details, connect on WhatsApp:
-              <a
-                href="https://wa.me/918932900125"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.whatsappLink}
-              > +91 89329 00125</a>
-            </span>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
