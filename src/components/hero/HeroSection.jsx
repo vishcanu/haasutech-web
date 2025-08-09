@@ -24,7 +24,7 @@ import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import styles from "./HeroSection.module.css";
 import FloatingAIBot from "../aibot/AiBot";
 
-export default function HeroSection() {
+export default function HeroSection({ openBot, setOpenBot }) {
   const [selectedPath, setSelectedPath] = useState("");
   const [hoveredPath, setHoveredPath] = useState("");
   const [openModal, setOpenModal] = useState(false);
@@ -42,7 +42,7 @@ export default function HeroSection() {
   });
   const [submitting, setSubmitting] = useState(false);
   const [timeLeft, setTimeLeft] = useState(getRemainingTime());
-  const [openBot, setOpenBot] = useState(false);
+  // const [openBot, setOpenBot] = useState(false);
 
   const steps = [
     {

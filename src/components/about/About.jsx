@@ -7,31 +7,59 @@ import styles from "./About.module.css";
 
 export default function About() {
   const sections = [
-    {
-      title: "Who We Are",
-      text: (
-        <>
-          At <span className={styles.highlight}>Haasutech AI</span>, we empower
-          businesses and learners with{" "}
-          <span className={styles.highlight}>
-            industry-driven AI and full-stack technology training
-          </span>. Based in{" "}
-          <span className={styles.highlight}>Bangalore, Noida & Delhi NCR</span>
-          , we have trained over{" "}
-          <span className={styles.highlight}>10,000+ learners</span> with
-          IITian-led mentorship and hands-on projects.
-          <br />
-          <br />
-          Our expertise spans{" "}
-          <span className={styles.highlight}>
-            AI/ML, Cloud Computing, Data Science, DevOps, and Full‑Stack
-            Development
-          </span>{" "}
-          — ensuring our learners gain practical, job-ready skills.
-        </>
-      ),
-      image: "/assets/About2.png",
-    },
+   {
+  title: "Who We Are",
+  text: (
+    <>
+      At <span className={styles.highlight}>Haasutech AI</span>, we empower
+      businesses, institutions, and learners with{" "}
+      <span className={styles.highlight}>
+        industry-driven AI, full-stack technology, and EdTech training
+      </span>. Based in{" "}
+      <span className={styles.highlight}>Bangalore, Noida & Delhi NCR</span>, we
+      have trained over{" "}
+      <span className={styles.highlight}>10,000+ learners</span> with
+      IITian-led mentorship and hands-on projects.
+      <br />
+      <br />
+      Our team comprises several accomplished and acclaimed{" "}
+      <span className={styles.highlight}>IITians</span> and{" "}
+      <span className={styles.highlight}>industry professionals</span>. We are
+      passionate about transferring the{" "}
+      <span className={styles.highlight}>
+        expertise and experience gained over the years
+      </span>{" "}
+      to our eager learners.
+      <br />
+      <br />
+      In the fast-evolving{" "}
+      <span className={styles.highlight}>Artificial Intelligence (AI)</span>{" "}
+      space, innovations and disruptions are transforming every industry
+      vertical. Businesses are eager to embrace the{" "}
+      <span className={styles.highlight}>AI paradigm</span> to deliver premium,
+      path-breaking services and applications.
+      <br />
+      <br />
+      To accelerate and sustain{" "}
+      <span className={styles.highlight}>
+        digital transformation initiatives
+      </span>
+      , it is essential to gain mastery over{" "}
+      <span className={styles.highlight}>
+        pioneering technologies, breakthrough architectural styles, and
+        state-of-the-art digital infrastructures
+      </span>
+      . Our primary mission is to empower{" "}
+      <span className={styles.highlight}>
+        institutions, individuals, and innovators
+      </span>{" "}
+      with the right skills to thrive in this rapidly changing technological
+      landscape.
+    </>
+  ),
+  image: "/assets/About2.png",
+},
+,
    {
   title: "Our Courses",
   text: (

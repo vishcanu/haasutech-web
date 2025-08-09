@@ -10,6 +10,7 @@ import InsightsIcon from '@mui/icons-material/Insights';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styles from './CourseDetail.module.css';
 import CourseRoadmap from './Courseroadmap';
+import UrgencyBar from './UrgencyBar';
 
 
 const CourseDetail = ({ course }) => {
@@ -81,10 +82,6 @@ const CourseDetail = ({ course }) => {
   </div>
 )}
 
-    <Box className={styles.ctaBox}>
-      <Typography variant="h6">Ready to start learning?</Typography>
-      <button className={styles.ctaButton}>Enroll Now</button>
-    </Box>
   </div>
 </div>
 
@@ -92,6 +89,7 @@ const CourseDetail = ({ course }) => {
         <CourseRoadmap steps={course.roadmap} />
       )}
 
+      <UrgencyBar />
 
       {/* WHY SECTION */}
       {course.why && (
