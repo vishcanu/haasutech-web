@@ -74,7 +74,7 @@ export default function Footer() {
           <ul className={styles.footerList}>
             <li><Link href="/careers" underline="none">Careers</Link></li>
             <li><Link href="/terms" underline="none">Terms & Conditions</Link></li>
-            <li><Link href="/privacy" underline="none">Privacy Policy</Link></li>
+            <li><Link href="/policy" underline="none">Privacy Policy</Link></li>
           </ul>
         </Grid>
       </Grid>

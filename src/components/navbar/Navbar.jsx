@@ -36,7 +36,8 @@ export default function Navbar() {
     { label: "Career Switch", href: "/career-switch" },
     { label: "Blog", href: "/blog" },
     { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" }
+    { label: "Contact", href: "/contact" },
+     { label: "Careers", href: "/careers" }
   ];
 
   return (

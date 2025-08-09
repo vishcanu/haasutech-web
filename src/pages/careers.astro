@@ -1,0 +1,20 @@
+---
+import MainLayout from '../layouts/Mainlayout.astro';
+import Career from '../components/career/Career.jsx';
+---
+
+<head>
+  <!-- Use the SEO/career tags as in previous example -->
+  <title>Tutor & Instructor Careers | AI, Tech Courses, Final Projects | Haasutech AI</title>
+  <meta name="description" content="Become a tutor or instructor with Haasutech AI—mentor students on practical AI, Machine Learning, Data Science, Cloud & Full Stack courses. Guide final hands-on projects and shape future technologists in Noida, Delhi, Bangalore & across India." />
+  <meta name="keywords" content="AI tutor jobs India, tech instructor careers, teaching jobs Noida, AI teaching positions Delhi, machine learning mentor Bangalore, final project supervisor, capstone instructor roles, Python instructor jobs India, Edtech teaching careers, hands-on tech training, IITian mentor jobs, project-based learning, online instructor India, data science tutor, coding bootcamp instructor, cloud computing mentor, generative AI course instructor, full stack instructor hiring, project-based AI mentorship, instructor careers Haasutech AI, remote teaching jobs India"/>
+  <meta property="og:title" content="Tutor & Instructor Jobs | AI, Tech, Hands-on Projects | Haasutech AI" />
+  <meta property="og:description" content="Haasutech AI is hiring tutors and instructors for AI, ML, and tech courses. Mentor students on final hands-on projects, guide practical learning, and join IITians delivering industry-ready education in Noida, Delhi, Bangalore, and remote India." />
+  <meta property="og:image" content="/ai-og.png" />
+  <meta property="og:url" content="https://haasutech.in/careers" />
+  <meta property="og:type" content="website" />
+</head>
+
+<MainLayout>
+  <Career client:load />
+</MainLayout>

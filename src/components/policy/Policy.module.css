@@ -1,0 +1,71 @@
+.policySection {
+  max-width: 900px;
+  margin: 2.5rem auto 2rem auto;
+  padding: 2rem 1rem 2.6rem 1rem;
+  background: linear-gradient(110deg,#181c24 80%, #1673e8 130%);
+  border-radius: 0px;
+  box-shadow: 0 6px 32px 0 rgba(25,20,60,0.14);
+  color: #e6edfa;
+  font-family: 'Segoe UI','Roboto','Arial',sans-serif;
+}
+
+.heading {
+  color: #8dc5fe;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.1rem;
+  text-shadow: 0 2px 14px #1952ad30;
+  text-align: center;
+}
+
+.intro {
+  font-size: 1.09rem;
+  color: #b9dbfb;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.list {
+  color: #d8e7fe;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin: 1.3rem 0 2.2rem 1.3em;
+  padding: 0;
+}
+
+.list li {
+  margin-bottom: 1.1rem;
+  padding-left: 0.10em;
+}
+
+.link {
+  color: #1ec2e6;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px dotted #1ec2e6;
+  transition: color 0.13s, border-bottom 0.12s;
+}
+.link:hover {
+  color: #41f9fd;
+  border-bottom: 1.7px solid #41f9fd;
+}
+
+.bottomNote {
+  color: #22dc88;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1.4em;
+}
+
+@media (max-width: 600px) {
+  .policySection { padding: 1.3rem 0.5rem 1.6rem 0.5rem; }
+  .heading { font-size: 1.23rem; }
+  .intro, .list, .bottomNote { font-size: 0.97rem; }
+}
+@media (max-width: 400px) {
+  .policySection { border-radius: 0px; padding: 0.85rem 0.11rem 1rem 0.11rem; }
+  .intro, .list, .bottomNote { font-size: 0.90rem; }
+  .heading { font-size: 1.02rem; }
+}

@@ -1,0 +1,270 @@
+.careerSection {
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(to bottom, #181c24 60%, #203054 100%);
+  border-radius: 0px;
+  box-shadow: 0 8px 40px 0 rgba(34,40,60,0.36), 0 1.5px 5px 0 rgba(34,40,64,0.12);
+  padding: 2.2rem 1rem 2.1rem 1rem;
+  overflow: hidden;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  color: #edf5ff;
+}
+
+.backgroundVisual {
+  position: absolute;
+  top: -90px;
+  left: -60px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle at 35% 60%, #181c24 36%, #1952ad 88%);
+  filter: blur(72px);
+  opacity: 0.50;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 110px;
+  margin: 0 auto 1.1rem auto;
+  display: block;
+  animation: fadeIn 1s ease;
+  filter: drop-shadow(0 4px 12px #1952ad88); /* blue glow */
+}
+
+.heading {
+  font-size: 2rem;
+  color: #a6d1ff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.05rem;
+  letter-spacing: 0.12rem;
+  animation: slideDown 0.7s cubic-bezier(.58,.6,.38,1.2);
+  text-shadow: 0 3px 24px #1952ad22;
+}
+
+@keyframes slideDown {
+  0% { opacity:0; transform: translateY(-30px);}
+  100% { opacity:1; transform: translateY(0);}
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.14rem;
+  color: #6ec7fc;
+  margin-bottom: 1.7rem;
+  line-height: 1.7;
+  background: linear-gradient(to bottom,#232b43 45%, #1458a3 80%);
+  border-radius: 7px;
+  padding: 0.7rem 1.4rem;
+  box-shadow: 0 2px 16px 0 rgba(24,82,220,0.18);
+  animation: fadeIn 1.4s 0.4s backwards;
+  border: 1px solid #243e58;
+}
+
+.introHighlight {
+  color: #1ec2e6;
+  font-weight: 700;
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
+  background: linear-gradient(90deg,#1ec2e6,#1952ad 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.careerGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 2.1rem;
+}
+.careerCard {
+  background: rgba(25,35,61,0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 18px 0 rgba(25,82,190,0.07);
+  min-width: 230px;
+  max-width: 300px;
+  flex: 1 1 220px;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.09rem 1.2rem;
+  min-height: 34px;
+  font-size: 1rem;
+  color: #b8d2ff;
+  font-weight: 500;
+  position: relative;
+  transition: transform 0.13s cubic-bezier(.4,.15,.5,1), box-shadow 0.13s, background 0.2s;
+  animation: fadeInCard 0.7s both;
+  will-change: transform;
+  border: 1px solid #22304a;
+}
+.careerCard:nth-child(1) { animation-delay: .05s;}
+.careerCard:nth-child(2) { animation-delay: .18s;}
+.careerCard:nth-child(3) { animation-delay: .34s;}
+.careerCard:nth-child(4) { animation-delay: .5s;}
+.careerCard:nth-child(5) { animation-delay: .65s;}
+.careerCard:nth-child(6) { animation-delay: .87s;}
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(54px) scale(0.96);}
+  to   { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+.careerCard:hover {
+  background: linear-gradient(90deg,#124178 60%,#1968dd 100%);
+  box-shadow: 0 6px 32px 0 rgba(30,180,255,0.11);
+  color: #fff;
+  transform: scale(1.045) translateY(-2px);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  color: #27cdf7;
+  filter: drop-shadow(0 2px 8px #1952adbb);
+  transition: color 0.22s;
+}
+
+.applyCard {
+  background: linear-gradient(90deg,#172840 80%, #1ec2e6 130%);
+  border-radius: 16px;
+  box-shadow: 0 3px 32px 0 rgba(24,32,43,0.11);
+  padding: 1.15rem 2vw;
+  text-align: center;
+  font-size: 1.09rem;
+  margin: 0 auto 0.9rem auto;
+  max-width: 430px;
+  animation: fadeIn 1s 0.7s backwards;
+  color: #a4eaff;
+  border: 1px solid #233a5b;
+}
+
+.email {
+  display: inline-block;
+  color: #1ec2e6;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.1rem;
+  transition: color 0.18s;
+}
+.email:hover { color: #2374d8; text-decoration: underline; }
+
+.location {
+  color: #a6d4fe;
+  font-weight: 500;
+}
+
+.whatsappBlock {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: center;
+  font-size: 1.01rem;
+}
+
+.whatsappIcon {
+  font-size: 1.7rem;
+  color: #27cdf7;
+  filter: drop-shadow(0 3px 8px #27cdf7);
+  animation: pulseWhatsapp 1.1s infinite alternate;
+}
+
+@keyframes pulseWhatsapp {
+  0% { transform: scale(1); filter: drop-shadow(0 3px 8px #27cdf766);}
+  100% { transform: scale(1.12); filter: drop-shadow(0 7px 16px #27cdf799);}
+}
+
+.whatsappLink {
+  color: #1ec2e6;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 0.2em;
+  transition: color 0.2s;
+}
+.whatsappLink:hover { color: #2374d8; text-decoration: underline; }
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+/* Mobile & Tablet responsiveness */
+@media (max-width: 800px) {
+  .careerSection { padding: 1.4rem 0.7rem 1.0rem 0.7rem; }
+  .heading { font-size: 1.14rem; }
+  .careerGrid { gap: 0.55rem; }
+  .careerCard { padding: 0.85rem 0.9rem; font-size: 0.97rem; }
+  .applyCard { padding: 0.62rem 2vw; font-size: 0.92rem;}
+}
+@media (max-width: 550px) {
+  .inner { max-width: 99vw;}
+  .careerGrid { flex-direction: column;}
+  .careerCard { max-width: 99vw; min-width: 65vw;}
+}
+
+/* === Tiny Mobiles: 320px up === */
+@media (min-width: 320px){
+.heading {
+  font-size: 1.08rem;
+}
+.intro, .careerCard, .applyCard {
+  font-size: 0.90rem;
+}
+.logo {
+  width: 72px;
+  margin-bottom: 0.68rem;
+}
+}
+/* === Small Mobiles: 375px up === */
+@media (min-width: 375px) {
+  .heading { font-size: 1.1rem !important; }
+  .intro, .careerCard, .applyCard { font-size: 0.9rem !important; }
+  .logo { width: 82px; }
+}
+
+/* === Big Mobiles: 425px up === */
+@media (min-width: 425px) {
+  .heading { font-size: 1.2rem !important; }
+  .intro, .careerCard, .applyCard { font-size: 0.9rem !important; }
+  .logo { width: 96px; }
+}
+
+/* === Phablet/Small Tablets: 525px up === */
+@media (min-width: 525px) {
+  .heading { font-size: 1.2rem !important; }
+  .intro, .careerCard, .applyCard { font-size: 1rem !important; }
+  .logo { width: 107px; }
+}
+
+/* === Tablet/Desktop: 800px and up === */
+@media (min-width: 800px) {
+  .heading { font-size: 2rem; }
+  .intro, .careerCard, .applyCard { font-size: 1.13rem; }
+  .logo { width: 120px; }
+}
+
+/* === Card/grid stacking up to 550px === */
+@media (max-width: 550px) {
+  .careerGrid { flex-direction: column; }
+  .careerCard { max-width: 100vw; min-width: 72vw; }
+}
+
+@media (max-width: 800px) {
+  .careerSection { padding: 1.1rem 0.29rem 0.8rem 0.29rem; }
+  .logo { margin-bottom: 0.68rem; }
+}
+
+/* Optionally, finer padding for very narrow screens */
+@media (max-width: 375px) {
+  .careerSection { padding-left: 0.2rem; padding-right: 0.2rem; }
+}
